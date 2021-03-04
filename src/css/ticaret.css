@@ -97,6 +97,7 @@ header > *:last-child {
 }
 
 .nav-link.login {
+    font-size: 1.7rem;
     border-radius: 11px;
     padding: .3rem 1.5rem;
     border: 2px solid var(--header-border-color);
@@ -191,7 +192,7 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, .78);
+    background-color: rgba(0, 0, 0, .54);
 }
 
 .hero-container > *:first-child {
@@ -241,8 +242,8 @@ main {
     background-image: url('../assets/body/projection.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 20vh -5vh;
-    padding: 0 0 2em 0;
+    background-position: 20vh 5vh;
+    padding: 0 0 5em 0;
     background-blend-mode: multiply;
 }
 
@@ -297,6 +298,23 @@ main {
     grid-column: 3;
 }
 
+.step-one {
+    position: relative;
+    top: 3em;
+    right: 1.5em;
+}
+.step-two {
+    position: relative;
+    top: .7em;
+    right: 0.5em;
+}
+.step-three {
+    position: relative;
+    top: 3em;
+    left: 1.5em;
+}
+
+
 .steps :is(.title) {
     color: var(--header-border-color);
     font-size: 1.8rem;
@@ -319,7 +337,16 @@ main {
 
 .movies-container {
     padding: var(--fixed-margin);
-    width: 100%;
+}
+
+.mcontainer {
+    position: relative;
+    overflow-x: scroll;
+    height: 25em;
+}
+
+.mcontainer::-webkit-scrollbar {
+    -webkit-appearance: none;
 }
 
 .movie-heading {
@@ -327,38 +354,16 @@ main {
 }
 
 .movies_container {
-    display: grid;
-    grid-column-gap: 1.5rem;
-    grid-template-columns: repeat(8, minmax(auto-fit, 10em));
-    grid-template-areas: "card1 card2 card3 card4 card5 card6 card7";
+    display: flex;
+    gap: 1rem;
+    position: absolute;
 }
-
-.card1 {
-    grid-area: card1;
-}
-.card2 {
-    grid-area: card2;
-}
-.card3 {
-    grid-area: card3;
-}
-.card4 {
-    grid-area: card4;
-}
-.card5 {
-    grid-area: card5;
-}
-.card6 {
-    grid-area: card6;
-}
-.card7 {
-    grid-area: card7;
-}
-
 
 .img-movie {
     height: auto;
     width: 12em;
+    height: 15em;
+    border-radius: var(--border-radius);
 }
 
 .img-movie > img {
@@ -373,13 +378,13 @@ main {
 }
 
 .status {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     opacity: 0.58;
     font-family: PoppinsLighter;
 }
 
 .languages {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     opacity: .58;
     font-family: PoppinsLighter;
 }
@@ -391,10 +396,13 @@ main {
     grid-template-columns: repeat(4, minmax(auto-fit, 10rem));
     grid-template-areas: "logo1 logo2 logo3 logo4";
     padding: 0 var(--fixed-margin);
+    place-items: center;
 }
 
-.move_to_margin {
-    margin: 0 var(--fixed-margin) .5rem;
+.partners-heading {
+    width: 100%;
+    text-align: center;
+    height: 3em;
 }
 
 .logo_p {
@@ -422,6 +430,55 @@ main {
 .logo4 > img {
     height: 2em !important;
 }
+
+/* Footer css */
+
+footer {
+    margin-top: 5em;
+    background-image: url('../assets/footer/movie\ camera\ and\ light.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.btm-options-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto-fit, 5em));
+    grid-template-rows: minmax(10em, 12em);
+}
+
+.btm-options1 {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btm-options1 > *,
+.btm-options2 > * {
+    line-height: 2;
+    font-family: CarosLight;
+}
+
+.btm-options2 {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btm-logo-container {
+    display: grid;
+    grid-template-rows: 6em;
+    padding: 0 var(--fixed-margin);
+}
+
+.btm-logo-container > svg {
+    margin-top: 2em;
+}
+
+
+
 
 
 
