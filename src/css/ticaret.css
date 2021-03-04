@@ -1,0 +1,460 @@
+@font-face {
+    font-family: Caros;
+    src: url('../assets/caros-cufonfonts-webfont/cretype  Caros Bold.woff');
+}
+
+@font-face {
+    font-family: CarosLight;
+    src: url('../assets/caros-cufonfonts-webfont/cretype  Caros Light.woff');
+}
+
+@font-face {
+    font-family: PoppinsBlack;
+    src: url('../assets/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url('../assets/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: BalsamiqSans;
+    src: url('../assets/Balsamiq_Sans/BalsamiqSans-Italic.ttf')
+}
+
+@font-face {
+    font-family: PoppinsLighter;
+    src: url('../assets/caros-cufonfonts-webfont/cretype\ \ Caros\ ExtraLight.woff');
+}
+
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 62.5%;
+    --fixed-margin: 5.4rem;
+    --header-border-color: #f84464;
+    --border-radius: 7px;
+    --header-menu-bg-color: #f9f9f9;
+    --dark-theme-color: #000000;
+    --font-color: #f9f9f9;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    font-size: 2.1rem;
+    background-color: var(--dark-theme-color);
+    -webkit-font-smoothing: antialiased;
+    color: var(--font-color);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Caros;
+}
+
+
+/* Header css */
+
+header {
+    background-color: inherit;
+    display: grid;
+    grid-template-columns: inherit;
+    padding: 2.3rem;
+}
+
+
+header > *:first-child {
+    grid-column: 1/2;
+}
+
+.logo {
+    font-family: BalsamiqSans;
+}
+
+#Group_4 > text {
+    font-weight: lighter;
+    font-family: BalsamiqSans;
+}
+
+header > *:last-child {
+    grid-column: 3/4;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: clamp(.5em, .7em, 1.5em);
+    margin: 0 2rem;
+    display: flex;
+}
+
+.nav-link.login {
+    border-radius: 11px;
+    padding: .3rem 1.5rem;
+    border: 2px solid var(--header-border-color);
+    transition: 0.33s ease-out;
+}
+
+.nav-link.login:hover {
+    background-color: var(--header-border-color);
+}
+
+.nav-link.profile {
+    background: var(--header-menu-bg-color);
+    padding: .5rem 1.5rem;
+    border-radius: var(--border-radius);
+    transition: 0.4s ease-out;
+}
+/* 
+.nav-link.profile:hover {
+    background-color: var(--header-border-color);
+} */
+
+.profile-icon {
+    vertical-align: middle;
+    width: 2rem;
+    margin-left: 6px;
+}
+
+.fa {
+    display: inline-block;
+    width: 20px;
+    height: 2.5px;
+    background: #232323;
+    position: relative;
+    top: 4px;
+    right: 5px;
+    margin-left: 2px;
+}
+.fa::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    top: 5px;
+    left: 0;
+}
+
+.fa::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    top: 10px;
+    left: 0;
+}
+
+
+
+
+
+/* Home Page css */
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto-fit, 1fr));
+}
+
+.container {
+    box-shadow: 0 0 12px -6px rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template-columns:  repeat(2, minmax(auto-fit, 1fr));
+    grid-template-rows: minmax(50vh, 70vh);
+}
+
+/* Hero Container css */
+
+.hero-container {
+    background-image: url('../assets/body/image.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: inherit;
+    grid-template-rows: minmax(50vh, 70vh);
+}
+
+.hero-container > * {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .78);
+}
+
+.hero-container > *:first-child {
+    grid-column: 1;
+    border-right: 10px solid var(--dark-theme-color);
+}
+
+.hero-container > *:last-child {
+    grid-column: 2;
+}
+
+.__h1 {
+    font-size: 1.5em;
+    width: clamp(10em, 15em, 17em);
+    margin-bottom: 0;
+}
+
+.__p {
+    font-size: 0.6em;
+    font-weight: lighter;
+    width: clamp(10em, 20em, 25em);
+    font-family: PoppinsLighter;
+}
+
+.btn {
+    padding: 1.5rem 1rem;
+    background-color: var(--header-border-color);
+    color: var(--font-color);
+    border: 0;
+    border-radius: var(--border-radius);
+    width: 2.5in;
+    outline: 0;
+    transition: 0.2s ease-out;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 3px 12px -5px rgba(255, 255, 255, .5);
+}
+
+
+/* Route Map container css */
+
+.route-map-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto-fit, 1fr));
+    background-image: url('../assets/body/projection.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20vh -5vh;
+    padding: 0 0 2em 0;
+    background-blend-mode: multiply;
+}
+
+.route-map-container > *:first-child {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(4em, 8em);
+    place-items: center;
+}
+
+.route-map-container > *:first-child > * {
+    text-align: center;
+    position: relative;
+    top: 1.5em;
+}
+
+.route-map-container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto-fit, 30em));
+    grid-auto-flow: row;
+    background-image: url('../assets/body/workflow_path.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 80% 80%;
+}
+
+.route-map-container > *:last-child > * {
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center
+}
+
+.step-three {
+    margin-top: 1em;
+}
+
+.route-map-container > *:last-child > * > *:first-child {
+    width: 5em;
+}
+
+.route-map-container > *:last-child > *:first-child {
+    grid-column: 1;
+}
+
+.route-map-container > *:last-child > *:nth-child(2) {
+    grid-column: 2;
+}
+
+.route-map-container > *:last-child > *:last-child {
+    grid-column: 3;
+}
+
+.steps :is(.title) {
+    color: var(--header-border-color);
+    font-size: 1.8rem;
+}
+
+.steps :is(.description) {
+    color: var(--font-color);
+    font-size: 1.2rem;
+    width: max(20ch, 30ch);
+    text-align: center;
+    font-family: PoppinsLighter;
+    margin: 0;
+}
+
+.mark {
+    color: var(--header-border-color);
+}
+
+/*  Movies container css*/
+
+.movies-container {
+    padding: var(--fixed-margin);
+    width: 100%;
+}
+
+.movie-heading {
+    margin-bottom: 3rem;
+}
+
+.movies_container {
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-template-columns: repeat(8, minmax(auto-fit, 10em));
+    grid-template-areas: "card1 card2 card3 card4 card5 card6 card7";
+}
+
+.card1 {
+    grid-area: card1;
+}
+.card2 {
+    grid-area: card2;
+}
+.card3 {
+    grid-area: card3;
+}
+.card4 {
+    grid-area: card4;
+}
+.card5 {
+    grid-area: card5;
+}
+.card6 {
+    grid-area: card6;
+}
+.card7 {
+    grid-area: card7;
+}
+
+
+.img-movie {
+    height: auto;
+    width: 12em;
+}
+
+.img-movie > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+}
+
+.movie-name {
+    font-size: 1.6rem;
+}
+
+.status {
+    font-size: 1.5rem;
+    opacity: 0.58;
+    font-family: PoppinsLighter;
+}
+
+.languages {
+    font-size: 1.5rem;
+    opacity: .58;
+    font-family: PoppinsLighter;
+}
+
+/* Partners container css*/
+
+.logos-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto-fit, 10rem));
+    grid-template-areas: "logo1 logo2 logo3 logo4";
+    padding: 0 var(--fixed-margin);
+}
+
+.move_to_margin {
+    margin: 0 var(--fixed-margin) .5rem;
+}
+
+.logo_p {
+    width: 10rem;
+}
+
+.logo_p img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo1{
+    grid-area: logo1;
+}
+.logo2{
+    grid-area: logo2;
+}
+.logo3{
+    grid-area: logo3;
+}
+.logo4{
+    grid-area: logo4;
+}
+.logo4 > img {
+    height: 2em !important;
+}
+
+
+
+/* Login Page css */
+
+.login-container {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.login-container > *:first-child {
+    grid-column: 2;
+}
+
+/* Location Page css */
+
+.location-container {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.location-container > *:first-child {
+    grid-column: 2;
+}
+
+
+/* Profile Page css */
+
+.profile-container {
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+.profile-container > *:first-child {
+    grid-column: 2;
+}

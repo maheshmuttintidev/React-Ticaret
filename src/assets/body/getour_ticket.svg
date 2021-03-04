@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="165" height="178.539" viewBox="0 0 165 178.539">
+  <defs>
+    <filter id="Ellipse_168" x="0" y="0" width="165" height="165" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-color="#f84464" flood-opacity="0.749"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_265" data-name="Group 265" transform="translate(-1596.761 -1127.5)">
+    <g transform="matrix(1, 0, 0, 1, 1596.76, 1127.5)" filter="url(#Ellipse_168)">
+      <g id="Ellipse_168-2" data-name="Ellipse 168" transform="translate(10.5 7.5)" fill="none" stroke="#fff" stroke-width="6">
+        <circle cx="72" cy="72" r="72" stroke="none"/>
+        <circle cx="72" cy="72" r="69" fill="none"/>
+      </g>
+    </g>
+    <path id="Path_5260" data-name="Path 5260" d="M102.865,46.733v4.732a51.432,51.432,0,1,1-30.5-47.009" transform="translate(1660.514 1277.02) rotate(-120)" fill="none" stroke="#f84464" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <path id="Path_5261" data-name="Path 5261" d="M22.4,0s.111,8.413,3.7,14.691S36.75,25.11,36.75,25.11L20.026,18.2Z" transform="translate(1652.699 1310.827) rotate(-60)" fill="#fff"/>
+    <path id="Subtraction_5" data-name="Subtraction 5" d="M-3722,4325h-28v-3.268c.108.011.22.018.333.018a2.966,2.966,0,0,0,3-2.925,2.967,2.967,0,0,0-3-2.925,3.172,3.172,0,0,0-.333.018V4312h28v3.918a2.949,2.949,0,0,0-2.667,2.907,2.947,2.947,0,0,0,2.667,2.907V4325Z" transform="matrix(0.946, 0.326, -0.326, 0.946, 6618.766, -1670.557)" fill="#f84464"/>
+    <path id="Subtraction_6" data-name="Subtraction 6" d="M-3722,4325h-28v-3.268c.108.011.22.018.333.018a2.966,2.966,0,0,0,3-2.925,2.967,2.967,0,0,0-3-2.925,3.172,3.172,0,0,0-.333.018V4312h28v3.918a2.949,2.949,0,0,0-2.667,2.907,2.947,2.947,0,0,0,2.667,2.907V4325Z" transform="translate(4521.322 -3739.764) rotate(-11)" fill="#f84464"/>
+  </g>
+</svg>
