@@ -35,10 +35,12 @@ html {
     font-size: 62.5%;
     --fixed-margin: 5.4rem;
     --header-border-color: #f84464;
-    --border-radius: 7px;
+    --border-radius: 6px;
     --header-menu-bg-color: #f9f9f9;
     --dark-theme-color: #000000;
     --font-color: #f9f9f9;
+    --header-border-radius: 3px;
+    --secondary-color: #1a1a1a;
 }
 
 body {
@@ -92,14 +94,15 @@ header > *:last-child {
     text-decoration: none;
     color: var(--font-color);
     font-size: clamp(.5em, .7em, 1.5em);
-    margin: 0 2rem;
+    margin: 0 1.5rem;
     display: flex;
 }
 
 .nav-link.login {
+    border-radius: var(--border-radius) !important;
     font-size: 1.7rem;
     border-radius: 11px;
-    padding: .3rem 1.5rem;
+    padding: .4rem 2rem;
     border: 2px solid var(--header-border-color);
     transition: 0.33s ease-out;
 }
@@ -108,11 +111,18 @@ header > *:last-child {
     background-color: var(--header-border-color);
 }
 
+.burger-icon {
+    width: 1.4rem;
+    position: relative;
+    right: .3rem;
+}
+
 .nav-link.profile {
     background: var(--header-menu-bg-color);
-    padding: .5rem 1.5rem;
-    border-radius: var(--border-radius);
+    padding: .6rem 1.5rem;
+    border-radius: var(--border-radius) !important;
     transition: 0.4s ease-out;
+    margin-left: .7rem;
 }
 /* 
 .nav-link.profile:hover {
@@ -123,6 +133,8 @@ header > *:last-child {
     vertical-align: middle;
     width: 2rem;
     margin-left: 6px;
+    position: relative;
+    left: 0.5rem;
 }
 
 .fa {
@@ -242,8 +254,8 @@ main {
     background-image: url('../assets/body/projection.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 20vh 5vh;
-    padding: 0 0 5em 0;
+    background-position: bottom right;
+    padding: 0 0 10em 0;
     background-blend-mode: multiply;
 }
 
@@ -391,6 +403,11 @@ main {
 
 /* Partners container css*/
 
+.partners-container {
+    border-top: 2px solid var(--secondary-color);
+    padding-top: 3.5em;
+}
+
 .logos-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(auto-fit, 10rem));
@@ -435,10 +452,11 @@ main {
 
 footer {
     margin-top: 5em;
-    background-image: url('../assets/footer/movie\ camera\ and\ light.svg');
-    background-size: contain;
+    background-image: url('../assets/body/projection.svg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: bottom right;
+    border-top: 2px solid var(--secondary-color);
 }
 
 .btm-options-container {
