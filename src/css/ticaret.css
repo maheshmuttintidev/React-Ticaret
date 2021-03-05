@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: PoppinsMedium;
+    font-family: CarosMedium;
     src: url('../assets/poppins/Poppins-Medium.ttf');
 }
 
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: PoppinsLighter;
+    font-family: CarosLighter;
     src: url('../assets/caros-cufonfonts-webfont/cretype\ \ Caros\ ExtraLight.woff');
 }
 
@@ -49,13 +49,92 @@ body {
     display: grid;
     font-size: 2.1rem;
     background-color: var(--dark-theme-color);
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
     color: var(--font-color);
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: .7rem;
+    background-color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--header-border-color);
+    border: 2px solid transparent;
+}
+body::-webkit-scrollbar-button {
+    background-color: var(--font-color);
 }
 
 * {
     box-sizing: border-box;
     font-family: Caros;
+}
+
+.auto-adjust {
+    margin: 0 var(--fixed-margin);
+}
+
+._p {
+    font-size: 1.7rem;
+    font-family: CarosMedium;
+}
+
+.m-05 {
+    position: relative;
+    left: .5rem;
+}
+
+.m-1 {
+    position: relative;
+    left: 1rem;
+}
+
+.m-2 {
+    position: relative;
+    left: 1.2rem;
+}
+
+/* Loading Animation */
+
+.loader-1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: 200;
+}
+
+.loader-1 div {
+    position: fixed;
+    top: 47%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    height: 10rem;
+    width: 10rem;
+    border: 10px solid var(--secondary-color);
+    border-radius: 50%;
+    border-top-color: var(--header-border-color);
+    animation: rotate .4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -67,7 +146,6 @@ header {
     grid-template-columns: inherit;
     padding: 2.3rem;
 }
-
 
 header > *:first-child {
     grid-column: 1/2;
@@ -114,12 +192,12 @@ header > *:last-child {
 .burger-icon {
     width: 1.4rem;
     position: relative;
-    right: .3rem;
+    right: -.5rem;
 }
 
 .nav-link.profile {
     background: var(--header-menu-bg-color);
-    padding: .6rem 1.5rem;
+    padding: .6rem 1.2rem;
     border-radius: var(--border-radius) !important;
     transition: 0.4s ease-out;
     margin-left: .7rem;
@@ -226,7 +304,7 @@ main {
     font-size: 0.6em;
     font-weight: lighter;
     width: clamp(10em, 20em, 25em);
-    font-family: PoppinsLighter;
+    font-family: CarosLighter;
 }
 
 .btn {
@@ -238,11 +316,12 @@ main {
     width: 2.5in;
     outline: 0;
     transition: 0.2s ease-out;
+    cursor: pointer;
 }
 
 .btn:hover,
 .btn:focus {
-    box-shadow: 0 3px 12px -5px rgba(255, 255, 255, .5);
+    box-shadow: 0 2px 7px rgba(199, 54, 54, 0.767);
 }
 
 
@@ -337,7 +416,7 @@ main {
     font-size: 1.2rem;
     width: max(20ch, 30ch);
     text-align: center;
-    font-family: PoppinsLighter;
+    font-family: CarosLighter;
     margin: 0;
 }
 
@@ -392,13 +471,13 @@ main {
 .status {
     font-size: 1.3rem;
     opacity: 0.58;
-    font-family: PoppinsLighter;
+    font-family: CarosLighter;
 }
 
 .languages {
     font-size: 1.3rem;
     opacity: .58;
-    font-family: PoppinsLighter;
+    font-family: CarosLighter;
 }
 
 /* Partners container css*/
@@ -453,16 +532,32 @@ main {
 footer {
     margin-top: 5em;
     background-image: url('../assets/body/projection.svg');
-    background-size: cover;
+    background-size: 50em;
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom center;
     border-top: 2px solid var(--secondary-color);
 }
+
+footer svg {
+    position: relative;
+    top: 3rem;
+}
+
+.btm-options1 .nav-link,
+.btm-options2 .nav-link {
+    position: relative;
+    width: 12rem;
+}
+
+.nav-link img {
+    margin-right: 1.3rem;
+}
+
 
 .btm-options-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto-fit, 5em));
-    grid-template-rows: minmax(10em, 12em);
+    grid-template-rows: minmax(8em, 10em);
 }
 
 .btm-options1 {
@@ -503,12 +598,38 @@ footer {
 /* Login Page css */
 
 .login-container {
-    display: grid;
-    grid-template-columns: inherit;
+    /* display: grid;
+    grid-template-columns: inherit; */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
 }
 
-.login-container > *:first-child {
-    grid-column: 2;
+.login-container > *:last-child {
+    /* grid-column: 2; */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+    width: 15em;
+    height: 15em;
+}
+
+.right {
+    position: fixed;
+    right: 2rem;
+    top: 0;
+    cursor: pointer;
+}
+
+.login-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Location Page css */
