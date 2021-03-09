@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1876.131" height="911.183" viewBox="0 0 1876.131 911.183">
+<svg xmlns="http://www.w3.org/2000/svg" width="2000.131" height="911.183" viewBox="0 0 2000.131 911.183">
   <g id="Group_303" data-name="Group 303" transform="translate(42.296 -705.167)">
     <defs>
     <filter id="f1" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="30" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
     </filter>
   </defs>
-    <path filter="url(#f1)" id="Path_5264" data-name="Path 5264" d="M222.1,521.948l1261.959,703.719v23.9l-1625.3,33.567Z" transform="translate(173.946 258.219)" fill="rgba(241,241,241,0.58)" opacity="0.08"/>
+    <path filter="url(#f1)" id="Path_5264" data-name="Path 5264" d="M222.1,521.948l1261.959,703.719v23.9l-1625.3,33.567Z" transform="translate(173.946 258.219)" fill="rgba(241,241,241,0.58)" opacity="0.03"/>
     <g id="Group_197" data-name="Group 197" transform="matrix(0.995, -0.105, 0.105, 0.995, -1417.847, 4870.652)" opacity="0.3">
       <path id="Path_3843" data-name="Path 3843" d="M276.94,123.12c-1.28-.75-3.06-.65-5,.48a15.69,15.69,0,0,0-7.13,12.29c0,2.22.76,3.79,2,4.55.42.25,5.43,2.82,5.82,3.05,1.29.75,3.06.65,5-.48a15.71,15.71,0,0,0,7.13-12.29c0-2.24-.77-3.81-2-4.56C282.33,125.91,277.33,123.35,276.94,123.12Z" transform="matrix(-0.613, -0.785, -0.662, 0.45, 3815.87, -2773.67)" fill="#455a64"/>
       <path id="Path_3844" data-name="Path 3844" d="M265.62,139.25a1.131,1.131,0,0,0,.12.18l-.14-.19h0Z" transform="matrix(-0.613, -0.785, -0.662, 0.45, 3815.87, -2773.67)" fill="#455a64"/>
