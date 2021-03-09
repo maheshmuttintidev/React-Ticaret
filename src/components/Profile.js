@@ -1,13 +1,17 @@
-import React, { Component } from "react"; 
-// import {NavLink} from 'react-router-dom'
+import React, { Component, Suspense } from "react"; 
+const ProfileMenu = React.lazy(() => import('./ProfileMenu'))
 class Profile extends Component {
   render() {
     return (
       <main>
-      <section className="container profile-container">
-        <h1>This is a Profile Page</h1>
-      </section>
-    </main>
+        <Suspense fallback={
+          <div className="loader-1">
+            <div className="loading-child"></div>
+          </div>
+        }>
+          <ProfileMenu />
+        </Suspense>
+      </main>
     );
   }
 }

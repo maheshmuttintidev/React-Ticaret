@@ -41,6 +41,8 @@ html {
     --font-color: #f9f9f9;
     --header-border-radius: 3px;
     --secondary-color: #1a1a1a;
+    --font-size: 1.5rem;
+    --small-font-size: 1.4rem;
 }
 
 body {
@@ -70,7 +72,9 @@ body::-webkit-scrollbar-button {
     background-color: var(--font-color);
 }
 
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     font-family: Caros;
 }
@@ -97,6 +101,91 @@ body::-webkit-scrollbar-button {
 .m-2 {
     position: relative;
     left: 1.2rem;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Profile Menu css */
+
+.menu-container {
+    width: 15em;
+    position: absolute;
+    right: 7rem;
+    top: 7rem;
+    background-color: #1a1a1a;
+    border-radius: var(--border-radius);
+    height: max(14em, 17em);
+    box-shadow: 0 3px 7px -4px var(--header-border-color);
+}
+
+.menu-top-bar {
+    background-color: var(--dark-theme-color);
+}
+
+.menu-top-bar > * {
+    position: relative;
+}
+
+.greet_p {
+    font-size: var(--font-size);
+    left: 2rem;
+}
+
+.menu-login-btn {
+    height: 3rem;
+    padding: 0 2rem;
+    border: 2px solid var(--header-border-color);
+    background-color: inherit;
+    color: var(--font-color);
+    border-radius: var(--header-border-radius);
+    right: 2rem;
+    outline: 0;
+    cursor: pointer;
+}
+
+.menu-options-container {
+    list-style: none;
+}
+
+.option {
+    font-size: var(--small-font-size);
+    line-height: 3;
+}
+
+
+.option-close {
+    padding: 1rem 0;
+    margin-top: 4em;
+    text-align: center;
+    background-color: var(--header-border-color);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: CarosLighter;
+    font-size: var(--small-font-size);
+    border-radius: 0 0 var(--header-border-radius) var(--header-border-radius);
+    cursor: pointer;    
+}
+
+.option > * {
+    position: relative;
+}
+
+.option img {
+    right: 1rem;
+}
+
+.option a {
+    color: var(--font-color);
+    opacity: .3;
+    left: 1rem;
+    text-decoration: none;
+    font-family: CarosLighter;
 }
 
 /* Loading Animation */
@@ -597,16 +686,20 @@ footer svg {
 
 /* Login Page css */
 
-.login-container {
+/* .login-container, */
+.overlay-fixed {
     /* display: grid;
     grid-template-columns: inherit; */
-    position: relative;
+    position: fixed;
+    top: 0;
     height: 100vh;
     width: 100vw;
     z-index: 200;
+    background-color: rgba(0, 0, 0, .6);
 }
 
-.login-container > *:last-child {
+
+.login-form {
     /* grid-column: 2; */
     position: fixed;
     left: 50%;
