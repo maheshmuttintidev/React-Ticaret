@@ -1,6 +1,6 @@
 @font-face {
     font-family: Caros;
-    src: url('../assets/caros-cufonfonts-webfont/cretype  Caros Bold.woff');
+    src: url('../assets/caros-cufonfonts-webfont/cretype  Caros.woff');
 }
 
 @font-face {
@@ -8,10 +8,6 @@
     src: url('../assets/caros-cufonfonts-webfont/cretype  Caros Light.woff');
 }
 
-@font-face {
-    font-family: PoppinsBlack;
-    src: url('../assets/poppins/Poppins-Bold.ttf');
-}
 
 @font-face {
     font-family: CarosMedium;
@@ -70,6 +66,7 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-button {
     background-color: var(--font-color);
+    height: .5rem;
 }
 
 *,
@@ -84,7 +81,7 @@ body::-webkit-scrollbar-button {
 }
 
 ._p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: CarosMedium;
 }
 
@@ -113,7 +110,7 @@ body::-webkit-scrollbar-button {
 
 .menu-container {
     width: 15em;
-    position: absolute;
+    position: fixed;
     right: 7rem;
     top: 7rem;
     background-color: #1a1a1a;
@@ -137,7 +134,7 @@ body::-webkit-scrollbar-button {
 
 .menu-login-btn {
     height: 3rem;
-    padding: 0 2rem;
+    padding: .35rem 2rem;
     border: 2px solid var(--header-border-color);
     background-color: inherit;
     color: var(--font-color);
@@ -145,6 +142,8 @@ body::-webkit-scrollbar-button {
     right: 2rem;
     outline: 0;
     cursor: pointer;
+    font-size: var(--font-size);
+    text-decoration: none;
 }
 
 .menu-options-container {
@@ -152,10 +151,16 @@ body::-webkit-scrollbar-button {
 }
 
 .option {
+    display: flex;
     font-size: var(--small-font-size);
     line-height: 3;
 }
 
+.menu-option {
+    display: inline-block;
+    width: 100%;
+    cursor: not-allowed;
+}
 
 .option-close {
     padding: 1rem 0;
@@ -172,6 +177,14 @@ body::-webkit-scrollbar-button {
     cursor: pointer;    
 }
 
+.option-close > .span {
+    text-decoration: none;
+    color: var(--font-color);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
 .option > * {
     position: relative;
 }
@@ -180,7 +193,7 @@ body::-webkit-scrollbar-button {
     right: 1rem;
 }
 
-.option a {
+.option span {
     color: var(--font-color);
     opacity: .3;
     left: 1rem;
@@ -267,7 +280,7 @@ header > *:last-child {
 
 .nav-link.login {
     border-radius: var(--border-radius) !important;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     border-radius: 11px;
     padding: .4rem 2rem;
     border: 2px solid var(--header-border-color);
@@ -278,62 +291,34 @@ header > *:last-child {
     background-color: var(--header-border-color);
 }
 
-.burger-icon {
-    width: 1.4rem;
-    position: relative;
-    right: -.5rem;
-}
-
 .nav-link.profile {
     background: var(--header-menu-bg-color);
-    padding: .6rem 1.2rem;
+    padding: .6rem .3rem;
     border-radius: var(--border-radius) !important;
     transition: 0.4s ease-out;
     margin-left: .7rem;
 }
-/* 
-.nav-link.profile:hover {
-    background-color: var(--header-border-color);
-} */
+
+.burger-icon {
+    margin-left: .4rem;
+    width: 1.4rem;
+    position: relative;
+    left: .7rem;
+}
+
+.location img {
+    width: 50%;
+    position: relative;
+    left: 2rem;
+}
 
 .profile-icon {
     vertical-align: middle;
     width: 2rem;
     margin-left: 6px;
     position: relative;
-    left: 0.5rem;
+    left: .5rem;
 }
-
-.fa {
-    display: inline-block;
-    width: 20px;
-    height: 2.5px;
-    background: #232323;
-    position: relative;
-    top: 4px;
-    right: 5px;
-    margin-left: 2px;
-}
-.fa::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #232323;
-    top: 5px;
-    left: 0;
-}
-
-.fa::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #232323;
-    top: 10px;
-    left: 0;
-}
-
 
 
 
@@ -371,7 +356,7 @@ main {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, .54);
+    background-color: rgba(0, 0, 0, .75);
 }
 
 .hero-container > *:first-child {
@@ -535,21 +520,21 @@ main {
 
 .movies_container {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     position: absolute;
 }
 
 .img-movie {
     height: auto;
-    width: 12em;
-    height: 15em;
+    width: 11em;
+    height: 16em;
     border-radius: var(--border-radius);
 }
 
 .img-movie > img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    /* object-fit: contain; */
     border-radius: var(--border-radius);
 }
 
@@ -686,44 +671,135 @@ footer svg {
 
 /* Login Page css */
 
-/* .login-container, */
 .overlay-fixed {
-    /* display: grid;
-    grid-template-columns: inherit; */
     position: fixed;
     top: 0;
     height: 100vh;
-    width: 100vw;
+    width: 300vw;
     z-index: 200;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .7);
 }
 
-
 .login-form {
-    /* grid-column: 2; */
+    height: 85vh;
+    width: 100%;
     position: fixed;
     left: 50%;
     top: 50%;
+    background-image: url('../assets/header/chair_shape.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     transform: translate(-50%, -50%);
-    border: 2px solid red;
-    width: 15em;
-    height: 15em;
-}
-
-.right {
-    position: fixed;
-    right: 2rem;
-    top: 0;
-    cursor: pointer;
-}
-
-.login-form {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+.login-form::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../assets/header/lady_with_phone.svg');
+    background-repeat: no-repeat;
+    background-position: 95rem 17rem;
+    background-size: 13rem;
+    z-index: -1;
+}
+
+.right {
+    position: fixed;
+    right: 12rem;
+    top: 3rem;
+    cursor: pointer;
+    text-decoration: none;
+    animation: focus 1s ease-in-out infinite;
+}
+
+@keyframes focus {
+    0% {
+        transform: scale(1)
+    } 100% {
+        transform: scale(1.2)
+    }
+}
+
+.logins-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 15rem;
+}
+
+.user-icon-login {
+    position: relative;
+    left: 12rem;
+    bottom: 7rem;
+}
+
+.user-icon-login > img {
+    height: 80%;
+}
+
+.logins-container button,
+.phone-field {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    width: 30rem;
+    height: 3.5em;
+    border: 0;
+    outline: 0;
+    color: rgba(245, 240, 240, 0.671);
+    font-family: CarosLight;
+    font-size: var(--font-size);
+}
+
+.login-with {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.login-with > * {
+    cursor: pointer;
+}
+
+.google {
+    margin-bottom: 1rem;
+}
+
+.google span {
+    position: relative;
+    right: 1.4rem;
+}
+
+.facebook img {
+    position: relative;
+    left: .6rem;
+}
+
+.login-with span {
+    font-family: CarosLight;
+}
+
+.or {
+    margin: 1rem 0;
+    font-size: var(--small-font-size);
+    font-family: CarosLight;
+}
+
+.phone-field {
+    display: inline-block;
+    padding: 0 1.5rem;
+}
+
 
 /* Location Page css */
 
@@ -735,6 +811,8 @@ footer svg {
 .location-container > *:first-child {
     grid-column: 2;
 }
+
+
 
 
 /* Profile Page css */

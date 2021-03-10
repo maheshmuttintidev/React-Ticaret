@@ -12,43 +12,42 @@ class ProfileMenu extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: "Mahesh"
+      username: ""
     }
   }
   
   render() {
-    // console.log(window.location.pathname)
     return (
       <div className="overlay-fixed profile-container">
         <div className="menu-container">
           <div className="menu-top-bar flex-row">
             <p className="greet_p">Hii... {this.state.username}</p>
-            <button className="menu-login-btn" onClick={this.goToLogin}>Login</button>
+            <NavLink to="/login" className="menu-login-btn">Login</NavLink>
           </div>
           <div className="menu-options">
             <ul className="menu-options-container">
               <li className="option option1">
                 <img src={NotificationIcon} alt="notifications" />
-                <NavLink to="/login">Notifications</NavLink>
+                <span className="menu-option notification">Booked Ticket</span>
               </li>
               <li className="option option2">
                 <img src={TicketHistoryIcon} alt="ticket history" />
-                <NavLink to="/login">Ticket History</NavLink>
+                <span className="menu-option ticket-hist">Ticket History</span>
               </li>
               <li className="option option3">
                 <img src={AboutUsIcon} alt="about us" />
-                <NavLink to="/login">About Us</NavLink>
+                <span className="menu-option about-us">About Us</span>
               </li>
               <li className="option option4">
                 <img src={CustomerHelpIcon} alt="customer help" />
-                <NavLink to="/login">Customer Help</NavLink>
+                <span className="menu-option cust-help">Customer Help</span>
               </li>
               <li className="option option5">
                 <img src={SettingsIcon} alt="settings" />
-                <NavLink to="/login">Settings</NavLink>
+                <span className="menu-option settings">Settings</span>
               </li>
               <li className="option-close option6">
-                <span>Close</span>
+                <NavLink to="/" className="span">Close</NavLink>
               </li>
             </ul>
           </div>
