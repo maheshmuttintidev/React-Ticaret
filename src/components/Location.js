@@ -5,7 +5,7 @@ class Location extends Component {
     return (
       <main>
         <section className="container location-container">
-          <h1>This is a Location Page</h1>
+          <h1>This is a Location Page modified by dhanraj</h1>
         </section>
       </main>
     );
