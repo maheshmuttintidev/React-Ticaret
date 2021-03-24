@@ -16,6 +16,8 @@
 /.github
 /src/drafts
 
+/backup
+
 # testing
 /coverage
 
