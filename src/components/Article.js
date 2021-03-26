@@ -10,6 +10,8 @@ const AboutUs = lazy(() => import('./AboutUs'))
 const BuyTickets = lazy(() => import('./BuyTickets'))
 const MovieDetails = lazy(() => import('./MovieDetails'))
 const TheatreModel = lazy(() => import('./TheatreModel'))
+const ResaleTicketFilling = lazy(() => import ('./ResaleTicketFilling'))
+const TicketsHistory = lazy(() => import('./TicketsHistory'))
 export default class Article extends Component {
     render() {
         return (
@@ -80,6 +82,20 @@ export default class Article extends Component {
                     </div>
                     }>
                         <Route exact path="/theatre-model" component={TheatreModel} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route exact path="/resale-ticket-filling" component={ResaleTicketFilling} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route exact path="/tickets-history" component={TicketsHistory} />
                     </Suspense>
                 </HashRouter>
             </article>

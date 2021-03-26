@@ -30,7 +30,9 @@ html {
     width: 100%;
     font-size: 62.5%;
     --fixed-margin: 7rem;
-    --header-border-color: #f84464;
+    --primary-color: rgba(248,68,100, .95);
+    --mini-heading-font-size: 2.5rem;
+    --normal-p-font-size: 2rem;
     --border-radius: 6px;
     --header-menu-bg-color: #f9f9f9;
     --dark-theme-color: #000000;
@@ -47,11 +49,12 @@ html {
     --success-color: rgba(9,141,44, 1);
     --warning-color: rgba(158, 162, 18, 1);
     --thetre-timing-border-color: #333333;
+    --ticket-card-bg-color: #141414;
 
 }
 
 ::selection {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     color: var(--header-menu-bg-color);
 }
 
@@ -76,7 +79,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     border: 2px solid transparent;
 }
 body::-webkit-scrollbar-button {
@@ -98,6 +101,28 @@ body::-webkit-scrollbar-button {
 ._p {
     font-size: 1.5rem;
     font-family: CarosMedium;
+}
+
+.normal_font {
+    font-family: CarosLighter;
+}
+
+.normalized-font-size {
+    font-size: 1.7rem !important;
+}
+
+.mini-heading {
+    font-size: var(--mini-heading-font-size);
+}
+
+.unified-p {
+    display: inline-block;
+    font-size: var(--small-font-size) !important;
+    position: relative;
+}
+
+.middle-img {
+    vertical-align: middle;
 }
 
 .auto-fit-p {
@@ -131,10 +156,15 @@ body::-webkit-scrollbar-button {
 }
 
 
+.clear-both {
+    margin: auto 3rem;
+}
+
 
 /* Profile Menu css */
 
 .menu-container {
+    z-index: 9999;
     width: 15em;
     position: fixed;
     right: 7rem;
@@ -142,7 +172,7 @@ body::-webkit-scrollbar-button {
     background-color: #1a1a1a;
     border-radius: var(--border-radius);
     height: max(14em, 17em);
-    box-shadow: 0 3px 7px -4px var(--header-border-color);
+    box-shadow: 0 3px 7px -4px var(--primary-color);
 }
 
 .menu-top-bar {
@@ -161,7 +191,7 @@ body::-webkit-scrollbar-button {
 .menu-login-btn {
     height: 3rem;
     padding: .35rem 2rem;
-    border: 2px solid var(--header-border-color);
+    border: 2px solid var(--primary-color);
     background-color: inherit;
     color: var(--font-color);
     border-radius: var(--header-border-radius);
@@ -192,7 +222,7 @@ body::-webkit-scrollbar-button {
     padding: 1rem 0;
     margin-top: 4em;
     text-align: center;
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -246,7 +276,7 @@ body::-webkit-scrollbar-button {
     width: 10rem;
     border: 10px solid var(--secondary-color);
     border-radius: 50%;
-    border-top-color: var(--header-border-color);
+    border-top-color: var(--primary-color);
     animation: rotate .4s ease-in-out infinite;
 }
 
@@ -309,12 +339,12 @@ header > *:last-child {
     font-size: 1.6rem;
     border-radius: 11px;
     padding: .4rem 2rem;
-    border: 2px solid var(--header-border-color);
+    border: 2px solid var(--primary-color);
     transition: 0.33s ease-out;
 }
 
 .nav-link.login:hover {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
 }
 
 .nav-link.profile {
@@ -433,7 +463,7 @@ main {
 
 .btn {
     padding: 1.5rem 1rem;
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     color: var(--font-color);
     border: 0;
     border-radius: var(--border-radius);
@@ -533,7 +563,7 @@ main {
 
 
 .steps :is(.title) {
-    color: var(--header-border-color);
+    color: var(--primary-color);
     font-size: 1.8rem;
 }
 
@@ -547,7 +577,7 @@ main {
 }
 
 .mark {
-    color: var(--header-border-color);
+    color: var(--primary-color);
 }
 
 /*  Movies container css*/
@@ -761,8 +791,8 @@ footer svg {
 
 .register-container .logo-container {
     position: absolute;
-    /* left: 4rem; */
     top: 1em;
+    left: var(--fixed-margin);
 }
 
 .register-form {
@@ -794,6 +824,10 @@ footer svg {
     margin: 0;
 }
 
+.register-footer div {
+    margin-left: var(--fixed-margin);
+}
+
 /* To remove step spinners in input type number input field */
 
 .input-field[type="number"] {
@@ -803,10 +837,28 @@ footer svg {
 
 .input-field::-webkit-outer-spin-button,
 .input-field::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
+    visibility: hidden;
     margin: 0;
 }
 
+.seperator {
+    margin: 0 2rem;
+}
+
+.input-field-container {
+    margin-bottom: 2rem;
+}
+
+.ticaret-input-field {
+    margin-right: 0 !important;
+    position: relative;
+}
+
+.ticaret-input-field::-webkit-outer-spin-button,
+.ticaret-input-field::-webkit-inner-spin-button {
+    visibility: visible;
+}
 
 .otp-section {
     margin: 0;
@@ -840,6 +892,7 @@ footer svg {
 }
 
 
+
 /* Login Page css */
 
 .overlay-fixed {
@@ -847,11 +900,12 @@ footer svg {
     top: 0;
     height: 100vh;
     width: 300vw;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, .7);
     display: flex;
     flex-direction: column;
+    z-index: 0;
+    background-color: rgba(0,0,0,.7);
 }
+
 
 .login-form {
     height: 85vh;
@@ -893,16 +947,7 @@ footer svg {
     bottom: 10vh;
 }
 
-.input-field {
-    display: inline-block;
-    padding: 0 1.5rem;
-    margin: 1rem 0;
-}
 
-.input-field:hover,
-.input-field:focus {
-    box-shadow: 0 2px 5px var(--header-border-color);
-}
 
 .user-icon-login {
     position: relative;
@@ -918,14 +963,22 @@ footer svg {
     width: 30rem;
     height: 3.5em;
     border: 0;
+    display: inline-block;
+    padding: 0 1.5rem;
+    margin: 1rem 0;
     outline: 0;
     color: rgba(245, 240, 240, 0.671);
     font-family: CarosLight;
     font-size: var(--font-size);
 }
 
+.input-field:hover,
+.input-field:focus {
+    box-shadow: 0 2px 5px var(--primary-color);
+}
+
 .form-btn {
-    border: 2px solid var(--header-border-color);
+    border: 2px solid var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     width: 15rem;
@@ -940,7 +993,7 @@ footer svg {
 
 .form-btn:hover,
 .form-btn:focus {
-    box-shadow: 0 2px 5px var(--header-border-color);
+    box-shadow: 0 2px 5px var(--primary-color);
 }
 
 .middle-options {
@@ -984,7 +1037,7 @@ footer svg {
     height: 3.5em;
     border: 0;
     outline: 0;
-    color: var(--header-border-color);
+    color: var(--primary-color);
     font-family: CarosLight;
     font-size: var(--very-small-font-size);
     margin-right: 1rem;
@@ -996,7 +1049,7 @@ footer svg {
 
 .login-with:hover,
 .login-with:focus {
-    box-shadow: 0 2px 5px var(--header-border-color);
+    box-shadow: 0 2px 5px var(--primary-color);
 }
 
 .login-with > * {
@@ -1115,7 +1168,7 @@ footer svg {
 }
 
 .buy-tickets-container::-webkit-scrollbar-thumb {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     border: 2px solid transparent;
 }
 .buy-tickets-container::-webkit-scrollbar-button {
@@ -1185,19 +1238,19 @@ footer svg {
     font-size: var(--font-size);
     text-decoration: none;
     margin-right: 3rem;
-    border: 2px solid var(--header-border-color);
+    border: 2px solid var(--primary-color);
 }
 
 .lang-btn:focus {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
 }
 
 .selected {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
 }
 
 .unselected {
-    background-color: var(--primary-color);
+    background-color: var(--dark-theme-color);
 }
 
 /* Movie Details Css */
@@ -1233,7 +1286,6 @@ footer svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* box-shadow: inset -50rem -2rem 6rem 5rem rgba(0,0,0,.7); */
 }
 
 .movie-details-chair-container {
@@ -1310,24 +1362,31 @@ footer svg {
 }
 
 .circle.small {
-    height: 1rem;
-    width: 1rem;
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 .circle.large {
     height: 1.5rem;
     width: 1.5rem;
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
 }
 
 .this-selected {
     position: relative;
-    top: .5rem;
+    /* bottom: .6rem; */
+    color: var(--primary-color);
+    font-size: var(--font-size);
+}
+
+.clear_padding {
+    padding: 0;
 }
 
 .not-selected {
     position: relative;
     top: 1rem;
+    font-size: var(--very-small-font-size);
 }
 
 .search-bar-container {
@@ -1402,7 +1461,7 @@ footer svg {
     position: absolute;
     height: 2px;
     width: 96%;
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     top: 100.5%;
     left: 50%;
     transform: translateX(-50%);
@@ -1429,7 +1488,7 @@ footer svg {
 }
 
 .theatre-timing-btn._20_percent::before {
-    background-color: var(--header-border-color);
+    background-color: var(--primary-color);
     width: 20%;
     left: 3px;
     transform: translateX(0%);
@@ -1449,8 +1508,8 @@ footer svg {
     position: relative;
 }
 
-.mr-1 {
-    margin-right: 1rem;
+.mb-0 {
+    margin-top: 3rem;
 }
 
 .mr-2 {
@@ -1481,7 +1540,7 @@ footer svg {
 .fixed-page {
     min-height: 100vh;
     min-width: 100vw;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
@@ -1489,7 +1548,7 @@ footer svg {
 }
 
 .auto-adjust-vertical {
-    margin: var(--fixed-margin)
+    margin: 1em var(--fixed-margin);
 }
 
 .theatre-back-icon {
@@ -1497,4 +1556,374 @@ footer svg {
     height: 2rem;
 }
 
+.theatre-model-btn {
+    border: 1px solid var(--gray-color);
+    border-radius: var(--border-radius);
+    background-color: var(--dark-theme-color);
+    color: var(--font-color);
+    font-size: var(--very-small-font-size);
+    width: 5.5em;
+    height: 2.5em;
+    padding: 0;
+}
 
+.make-link:focus,
+.make-link:active,
+.theatre-model-btn:active a,
+.theatre-model-btn:focus a{
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+}
+
+.small_p {
+    font-size: var(--very-small-font-size);
+    color: var(--font-opac-color);
+}
+
+._80_color {
+    color: var(--font-opac-80-color);
+}
+
+.theatre-details-top {
+    display: flex;
+}
+
+.back-link {
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.theatre-info {
+    margin-left: 2rem;
+    margin-top: 0;
+}
+
+.seats-status-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: 3em;
+    margin-top: 2rem;
+}
+
+.seat-icon-div {
+    margin-right: 2em;
+    display: flex;
+    align-items: baseline;
+}
+
+.seat-icon-div img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.seat-icon-div p {
+    position: relative;
+    bottom: .5rem;
+    left: 1rem;
+}
+
+.normal_p {
+    font-size: var(--font-size);
+}
+
+.mb-1 {
+    position: relative;
+    bottom: 1rem;
+}
+
+.theatre-seating-model-container {
+    min-height: 60vh;
+    width: 50vw;
+    background-image: url('../assets/icons_seat_allotment/screen_icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin: 2em auto 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.grids {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    position: relative;
+}
+
+.mr-1 {
+    margin-right: 1rem !important;
+}
+
+
+.middle-seats-grid {
+    margin-top: 2rem;
+    flex-direction: column;
+}
+
+
+.seat-icon {
+    -webkit-appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-image: url("../assets/icons_seat_allotment/not_available_icon.svg");
+    outline: 0;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.seat-icon:checked {
+    background-image: url("../assets/icons_seat_allotment/your_seats_icon.svg");
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.ml-3 {
+    margin-left: 3rem;
+}
+
+.first-seat {
+    margin-left: 2rem;
+}
+
+.flex-default {
+    display: flex;
+}
+
+.available-seat {
+    background-image: url("../assets/icons_seat_allotment/available_icon.svg");
+}
+
+.unavailable-seat {
+    cursor: not-allowed;
+}
+
+.unavailable-seat:checked {
+    background-image: url("../assets/icons_seat_allotment/not_available_icon.svg");
+}
+
+.grid-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+    height: 3rem;
+}
+
+
+.grid-row:last-child {
+    margin-bottom: 0;
+}
+
+.middle-seats-grid div div {
+    display: flex;
+}
+
+.seats-grid-container {
+    position: relative;
+    bottom: 2rem;
+}
+
+.right-sub-seats {
+    margin-left: 2em;
+}
+
+.middle-seats-grid > .grid-row div .seat-icon,
+.top-most-seats-grid div .seat-icon{
+    margin: 1px;
+}
+
+.top-most-seats-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-most-seats-grid div {
+    margin-bottom: .3rem;
+}
+
+.top-most-seats-grid {
+    position: relative;
+    margin: inherit 0;
+}
+
+.book-ticket-payment-btn-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.book-ticket-payment-btn {
+    border: 0;
+    outline: 0;
+    width: 50vw;
+    height: 3em;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    border-radius: var(--border-radius);
+}
+
+
+
+
+
+
+/* Resale Filling form page css */
+
+.resale-form-container {
+    min-height: 100vh;
+    background-image: url("../assets/body/image.svg");
+    background-size: 100% contain;
+    background-repeat: no-repeat;
+    box-shadow: inset 100vw 0 10em 10em rgba(0,0,0,.7),
+    inset 10vw 0 10em 10em rgba(0,0,0, .9);
+}
+
+.flex-date-time{
+    display:flex;
+}
+
+.date-time-field{
+    margin-right: 7rem;
+}
+
+.auto-width{
+    width: 50rem;
+}
+
+.small-width{
+    width: 15rem;
+    margin-right: 5rem;
+}
+
+.normal_p{
+    font-size: 1.5rem;
+}
+
+.date-field{
+    width: 20rem;
+}
+
+.time-field{
+    width: 15rem;
+}
+
+.file-input-field-container {
+    position: relative;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+    -webkit-appearance: none;
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-size: var(--font-size);
+    width: 10rem;
+    height: 3rem;
+    border: 0;
+    border-radius: var(--border-radius);
+    position: absolute;
+    left: 38rem;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: 0;
+    z-index: 1222;
+}
+
+.custom-file-input {
+    position: relative;
+}
+
+.custom-file-input::before {
+    content: 'Upload Your Ticket';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    padding-top: 1.7rem;
+    padding-left: 1.2rem;
+    left: 0;
+    background-color: var(--secondary-color);
+}
+
+
+.form-btn-ticket-form {
+    display: inline-block;
+    text-decoration: none;
+    border: 0 !important;
+    background-color: var(--primary-color);
+    height: 4.5rem !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select{
+    -webkit-appearance: none;
+}
+.select-container {
+    position: relative;
+}
+
+.select-container::before {
+    content: "";
+    position: absolute;
+    left: 47rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--primary-color);
+    clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+    z-index: 1222;
+}
+
+.ticket-history-top-header {
+    display: flex;
+}
+
+.ticket-history-top-header div {
+    margin-right: 3rem;
+}
+
+.ticket-history-top-header div:last-child {
+    margin-left: auto;
+}
+
+.ticket-history-cards-container {
+    margin: var(--fixed-margin) auto;
+}
+
+.history-img {
+    width: 10rem;
+    border-radius: var(--border-radius);
+}
+
+.ticket-history-card {
+    display: flex;
+    background-color: var(--ticket-card-bg-color);
+    align-items: center;
+    border-radius: var(--border-radius);
+    justify-content: space-around;
+    flex-flow: wrap;
+    margin-bottom: 4rem;
+}
+
+.ticket-history-card > * {
+    flex: 1 1 25rem;
+}
+
+.center {
+    text-align: center;
+}
+
+.img-holder {
+    margin-left: 5rem;
+}

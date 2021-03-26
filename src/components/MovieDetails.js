@@ -5,7 +5,6 @@ import FullStarIcon from '../assets/buy_ticket/full_star.svg'
 import EmptyStarIcon from '../assets/buy_ticket/empty_star.svg'
 import TicketSmallIcon from '../assets/buy_ticket/movie_icon.svg'
 import TimerSmallIcon from '../assets/buy_ticket/time_icon.svg'
-import ChairIcon from '../assets/buy_ticket/chair_small_wave.svg'
 import ArrowLeft from '../assets/buy_ticket/arrow-back.svg'
 import ArrowRight from '../assets/buy_ticket/arrow-forward.svg'
 import SearchIcon from '../assets/buy_ticket/search_icon.svg'
@@ -43,15 +42,10 @@ export default class MovieDetails extends Component {
                             Chakra is a cyber-crime thriller where an officer is set on a mission to take down a bunch of goons who practise evil acts on the internet.
                         </div>
                     </div>
-                    <div className="movie-details-chair-container">
-                        <div className="chair-container">
-                            <img src={ChairIcon} alt="" />
-                        </div>
-                    </div>
                 </div>
                 <div className="theatre-list-container auto-adjust">
                     <div className="date-wrapper">
-                        <img src={ArrowLeft} alt="" className="mr-2 apply-cursor" />
+                        <img src={ArrowLeft} alt="" className="mr-2 apply-cursor mb-0" />
                         <div className="dates-scrollable-container">
                             <div className="small-p not-selected">
                                 <span>Sat</span>
@@ -69,7 +63,7 @@ export default class MovieDetails extends Component {
                                 <span className="circle small"></span>
                             </div>
                         </div>
-                        <img src={ArrowRight} alt="" className="ml-1 apply-cursor" />
+                        <img src={ArrowRight} alt="" className="ml-1 apply-cursor mb-0" />
                     </div>
                     <div className="search-bar-container">
                         <div className="search-wrapper">
@@ -84,22 +78,22 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">Gachibowli - Miyapur Rd, Whitefields, Kohtaguda, Telangana 500084</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _100_percent">
+                                <button className="theatre-timing-btn clear_padding _100_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _100_percent">
+                                <button className="theatre-timing-btn clear_padding _100_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _50_percent">
+                                <button className="theatre-timing-btn clear_padding _50_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _70_percent">
+                                <button className="theatre-timing-btn clear_padding _70_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
@@ -112,22 +106,22 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">Central Mall, 5Th Floor, Panjagutta Cross Roa</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _70_percent">
+                                <button className="theatre-timing-btn clear_padding _70_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _100_percent">
+                                <button className="theatre-timing-btn clear_padding _100_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _50_percent">
+                                <button className="theatre-timing-btn clear_padding _50_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _20_percent">
+                                <button className="theatre-timing-btn clear_padding _20_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
@@ -140,22 +134,22 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">5th Floor, Maheshwari Parmeshwari, Kachiguda Cross Roads</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _50_percent">
+                                <button className="theatre-timing-btn clear_padding _50_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _20_percent">
+                                <button className="theatre-timing-btn clear_padding _20_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _20_percent">
+                                <button className="theatre-timing-btn clear_padding _20_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _70_percent">
+                                <button className="theatre-timing-btn clear_padding _70_percent">
                                     <NavLink to="/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
@@ -168,17 +162,25 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">Level 5, Shop No.01, Hyderabad Next Galleria@Irrum Manzil</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _20_percent">
-                                    1:00PM
+                                <button className="theatre-timing-btn clear_padding _20_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        1:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _50_percent">
-                                    4:00PM
+                                <button className="theatre-timing-btn clear_padding _50_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        4:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _70_percent">
-                                    6:00PM
+                                <button className="theatre-timing-btn clear_padding _70_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        6:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _20_percent">
-                                    10:00PM
+                                <button className="theatre-timing-btn clear_padding _20_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        10:00PM
+                                    </NavLink>
                                 </button>
                             </div>
                         </div>
@@ -188,17 +190,25 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">Ts No 2,5 and 6, Ward No. 170</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _100_percent">
-                                    1:00PM
+                                <button className="theatre-timing-btn clear_padding _100_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        1:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _20_percent">
-                                    4:00PM
+                                <button className="theatre-timing-btn clear_padding _20_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        4:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _50_percent">
-                                    6:00PM
+                                <button className="theatre-timing-btn clear_padding _50_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        6:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _70_percent">
-                                    10:00PM
+                                <button className="theatre-timing-btn clear_padding _70_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        10:00PM
+                                    </NavLink>
                                 </button>
                             </div>
                         </div>
@@ -208,17 +218,25 @@ export default class MovieDetails extends Component {
                                 <span className="theatre-location">RK Complex, Road No.2, Opp: L.V.Prasad Eye Institute</span>
                             </div>
                             <div className="theatre-timings-wrapper">
-                                <button className="theatre-timing-btn _20_percent">
-                                    1:00PM
+                                <button className="theatre-timing-btn clear_padding _20_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        1:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _100_percent">
-                                    4:00PM
+                                <button className="theatre-timing-btn clear_padding _100_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        4:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _50_percent">
-                                    6:00PM
+                                <button className="theatre-timing-btn clear_padding _50_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        6:00PM
+                                    </NavLink>
                                 </button>
-                                <button className="theatre-timing-btn _100_percent">
-                                    10:00PM
+                                <button className="theatre-timing-btn clear_padding _100_percent">
+                                    <NavLink to="/theatre-model" className="make-link">
+                                        10:00PM
+                                    </NavLink>
                                 </button>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {NavLink, HashRouter} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Facebook from '../assets/footer/Icon awesome-facebook-f.svg'
 import Twitter from '../assets/footer/Icon awesome-twitter.svg'
 import Instagram from '../assets/footer/Icon awesome-instagram.svg'
@@ -52,8 +52,7 @@ export default class Register extends Component {
                     </div>
                     <button className="form-btn register">Register</button>                  
                 </form>
-                <footer>
-                <HashRouter>
+                <footer className="register-footer">
                     <div className="btm-logo-container">
                         <NavLink to="/">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
@@ -101,7 +100,6 @@ export default class Register extends Component {
                             </a>
                         </div>
                     </div>
-                </HashRouter>
             </footer>
             </div>
         )

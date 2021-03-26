@@ -74,7 +74,7 @@ class Home extends Component {
                         <p className="__p">
                             sell your tickets with us in a easier way and get more points.
                         </p>
-                        <NavLink to="/buy-tickets" className="btn btn-resale">
+                        <NavLink to="/resale-ticket-filling" className="btn btn-resale">
                             Resale Your Ticket
                         </NavLink>
                     </aside>

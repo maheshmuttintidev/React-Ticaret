@@ -14,7 +14,7 @@ import BurgerIcon from '../assets/header/burger_icon.svg'
 export default class Header extends Component {
     render() {
         return (
-            <header className="auto-adjust">
+            <header className="auto-adjust clear-both">
                 <HashRouter>
                     <div className="logo-container">
                         <NavLink to="/" className="nav-link">
@@ -50,7 +50,6 @@ export default class Header extends Component {
                             <img src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
                             <img src={UserIcon} alt="profile" className="profile-icon" />
                         </NavLink>
-                        {/* <NavLink to="/practice" className="nav-link practice">Practice</NavLink> */}
                     </div>
                 </HashRouter>
             </header>
