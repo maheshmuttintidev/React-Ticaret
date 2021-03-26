@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CartIcon from '../assets/tickets_history/shopping_cart.svg'
-import ArrowDown from '../assets/tickets_history/arrow_down.svg'
+// import ArrowDown from '../assets/tickets_history/arrow_down.svg'
 import {CHAKRA} from '../assets/img_links/movies'
 import HalfStarIcon from '../assets/buy_ticket/half_star.svg'
 import FullStarIcon from '../assets/buy_ticket/full_star.svg'
