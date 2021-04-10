@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import CartIcon from '../assets/tickets_history/shopping_cart.svg'
-import ArrowDown from '../assets/tickets_history/arrow_down.svg'
+// import ArrowDown from '../assets/tickets_history/arrow_down.svg'
 import {CHAKRA} from '../assets/img_links/movies'
 import HalfStarIcon from '../assets/buy_ticket/half_star.svg'
 import FullStarIcon from '../assets/buy_ticket/full_star.svg'
 import EmptyStarIcon from '../assets/buy_ticket/empty_star.svg'
+import UserLayout from './UserLayout'
 
 export default class TicketsHistory extends Component {
   render() {
     return (
+    <UserLayout>
       <div className="auto-adjust">
         <div className="ticket-history-top-header">
             <div className="mini-heading">
@@ -112,6 +114,7 @@ export default class TicketsHistory extends Component {
             </div>
         </div>
       </div>
+      </UserLayout>
     )
   }
 }

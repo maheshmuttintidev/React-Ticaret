@@ -98,6 +98,10 @@ body::-webkit-scrollbar-button {
     margin: 0 var(--fixed-margin);
 }
 
+.white {
+    color: var(--font-color) i !important;
+}
+
 ._p {
     font-size: 1.5rem;
     font-family: CarosMedium;
@@ -218,6 +222,19 @@ body::-webkit-scrollbar-button {
     cursor: not-allowed;
 }
 
+.user-option {
+    display: flex;
+    font-size: var(--small-font-size);
+    line-height: 4;
+}
+
+.user-menu-option {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    color: var(--font-color) !important;
+}
+
 .option-close {
     padding: 1rem 0;
     margin-top: 4em;
@@ -255,6 +272,27 @@ body::-webkit-scrollbar-button {
     left: 1rem;
     text-decoration: none;
     font-family: CarosLighter;
+}
+
+.user-option > * {
+    position: relative;
+}
+
+.user-option img {
+    right: 1rem;
+}
+
+.user-option span {
+    opacity: .3;
+    left: 1rem;
+    text-decoration: none;
+    font-family: CarosLighter;
+}
+
+.username-span {
+    font-size: var(--font-size);
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 /* Loading Animation */
@@ -302,7 +340,7 @@ header {
     background-color: inherit;
     display: grid;
     grid-template-columns: inherit;
-    padding: 2.3rem;
+    padding: 2.3rem 0;
 }
 
 header > *:first-child {
@@ -440,6 +478,7 @@ main {
 
 .hero-container > *:last-child {
     grid-column: 2;
+    display: flex;
 }
 
 .__h0 {
@@ -649,6 +688,21 @@ main {
     font-size: 1.3rem;
     opacity: .58;
     font-family: CarosLighter;
+}
+
+
+.arrow-right-container {
+    background-color: var(--dark-theme-color);
+    width: 2rem;
+    border: 2px solid red;
+    position: fixed;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow-right-container img{
+    display: none;
 }
 
 /* Partners container css*/
@@ -1033,7 +1087,7 @@ footer svg {
 .login-with{
     background-color: var(--secondary-color);
     border-radius: var(--border-radius);
-    width: 15rem;
+    width: 14rem;
     height: 3.5em;
     border: 0;
     outline: 0;
@@ -1042,7 +1096,7 @@ footer svg {
     font-size: var(--very-small-font-size);
     margin-right: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1052,8 +1106,14 @@ footer svg {
     box-shadow: 0 2px 5px var(--primary-color);
 }
 
+.login-with img {
+    width: 2rem;
+    margin-left: 2rem;
+}
+
 .login-with > * {
     cursor: pointer;
+    margin-right: 2rem;
 }
 
 .login-with span {
@@ -1106,18 +1166,30 @@ footer svg {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .logins-container {
-        margin-top: -3rem;
+        margin-top: 5rem;
+    }
+    .middle-options {
+        margin-top: -1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .logins-container {
+        margin-top: 4rem;
+    }
+    .middle-options {
+        margin-top: -2rem;
     }
 }
 
 @media (max-width: 320px) {
     .logins-container {
-        margin-top: -1em;
+        margin-top: 1em;
     }
     .middle-options {
-        margin-top: -4em;
+        margin-top: -2em;
     }
 }
 
@@ -1510,6 +1582,10 @@ footer svg {
 
 .mb-0 {
     margin-top: 3rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
 }
 
 .mr-2 {

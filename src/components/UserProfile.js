@@ -1,21 +1,19 @@
 import React, { Component, Suspense } from "react"
-import Home from './Home'
-const ProfileMenu = React.lazy(() => import('./ProfileMenu'))
-class Profile extends Component {
+import UserPage from './UserPage'
+const UserProfileMenu = React.lazy(() => import('./UserProfileMenu'))
+export default class UserProfile extends Component {
   render() {
     return (
       <main>
-          <Home />
+          <UserPage />
           <Suspense fallback={
             <div className="loader-1">
               <div className="loading-child"></div>
             </div>
           }>
-            <ProfileMenu />
+            <UserProfileMenu />
           </Suspense>
         </main>
     )
   }
 }
-
-export default Profile

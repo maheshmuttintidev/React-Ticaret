@@ -1,4 +1,4 @@
-import {REGISTER_USER, LOGIN_USER} from '../constants/user'
+import { REGISTER_USER, LOGIN_USER } from '../constants/userActions'
 export default function userReducer(state = null, action) {
     switch(action.type) {
         case REGISTER_USER:
@@ -11,11 +11,13 @@ export default function userReducer(state = null, action) {
         case LOGIN_USER:
             if(action.payload.data.token) {
                 sessionStorage.setItem("token", action.payload.data.token)
+                sessionStorage.setItem("name", action.payload.data.name)
+                console.log(action.payload.data)
                 return true
             } else {
                 return false
             }
         default:
-            return state
     }
+    return state
 }

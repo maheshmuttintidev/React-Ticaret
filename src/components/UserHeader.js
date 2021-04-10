@@ -1,17 +1,29 @@
-
+// importing necessary libraries to make component and navlinks
 import React, { Component } from 'react'
 import {NavLink, HashRouter} from 'react-router-dom'
+
+// importing css
+import '../css/ticaret.css'
+
+// importing the necessary assets used in header nav bar
 import LocationIcon from '../assets/header/location.svg'
 import UserIcon from '../assets/header/user.svg'
 import BurgerIcon from '../assets/header/burger_icon.svg'
-import '../css/ticaret.css'
-export default class Header extends Component {
+
+export default class UserHeader extends Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+         username: sessionStorage.getItem("name")
+      }
+    }
+
     render() {
         return (
             <header className="auto-adjust clear-both">
                 <HashRouter>
                     <div className="logo-container">
-                        <NavLink to="/" className="nav-link">
+                        <NavLink to="/user" className="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
                                 <g id="Group_191" dataname="Group 191" transform="translate(102 417)">
                                 <g id="Group_5" dataname="Group 5" transform="translate(22 -410.645)">
@@ -37,10 +49,8 @@ export default class Header extends Component {
                         <NavLink to="/location" className="nav-link location">
                             <img src={LocationIcon} alt="location" />
                         </NavLink>
-                        <NavLink to="/login" className="nav-link login">
-                            Login
-                        </NavLink>
-                        <NavLink to="/profile" className="nav-link profile">
+                        <span className="username-span">{this.state.username}</span>
+                        <NavLink to="/user-profile" className="nav-link profile">
                             <img src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
                             <img src={UserIcon} alt="profile" className="profile-icon" />
                         </NavLink>

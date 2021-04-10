@@ -1,15 +1,17 @@
 import React, { Component } from "react"
-// import {NavLink} from 'react-router-dom'
+import Layout from "./Layout"
 class Location extends Component {
   render() {
     return (
-      <main>
-        <section className="container location-container">
-          <h1>This is a Location Page</h1>
-        </section>
-      </main>
-    );
+      <Layout>
+        <main>
+          <section className="container location-container">
+            <h1>This is a Location Page</h1>
+          </section>
+        </main>
+      </Layout>
+    )
   }
 }
 
-export default Location;
+export default Location

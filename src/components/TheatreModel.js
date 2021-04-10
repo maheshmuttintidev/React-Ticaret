@@ -5,6 +5,7 @@ import AvailableIcon from '../assets/icons_seat_allotment/available_icon.svg'
 import YourSeatsIcon from '../assets/icons_seat_allotment/your_seats_icon.svg'
 import NotAvailableIcon from '../assets/icons_seat_allotment/not_available_icon.svg'
 import TicketsIcon from '../assets/icons_seat_allotment/tickets_icon.svg'
+import UserLayout from './UserLayout'
 export default class TheatreModel extends Component {
     constructor(props) {
         super(props)
@@ -56,214 +57,459 @@ export default class TheatreModel extends Component {
 
     render() {
         return (
-            <div className="fixed-page">
-                <div className="auto-adjust-vertical theatre-model-header">
-                    <div className="theatre-details-top">
-                        <div className="back-link">
-                            <NavLink to="/movie-details">
-                                <img src={ArrowLeft} alt="" className="theatre-back-icon" />
-                            </NavLink>
-                        </div>
-                        <div className="theatre-info">
-                            <h2 className="__h1 _80_color normal_p">
-                                AMB Cinema: Gachibowli
-                            </h2>
-                            <p className="small_p">Sun 28 feb</p>
-                            <div className="">
-                                <button className="theatre-model-btn mr-2">
-                                    <NavLink to="/theatre-model" className="make-link">
-                                        1:00PM
-                                    </NavLink>
-                                </button>
-                                <button className="theatre-model-btn mr-2">
-                                    <NavLink to="/theatre-model" className="make-link">
-                                        4:00PM
-                                    </NavLink>
-                                </button>
-                                <button className="theatre-model-btn mr-2">
-                                    <NavLink to="/theatre-model" className="make-link">
-                                        6:00PM
-                                    </NavLink>
-                                </button>
-                                <button className="theatre-model-btn mr-2">
-                                    <NavLink to="/theatre-model" className="make-link">
-                                        10:00PM
-                                    </NavLink>
-                                </button>
+            <UserLayout>
+                <div className="fixed-page">
+                    <div className="auto-adjust-vertical theatre-model-header">
+                        <div className="theatre-details-top">
+                            <div className="back-link">
+                                <NavLink to="/movie-details">
+                                    <img src={ArrowLeft} alt="" className="theatre-back-icon" />
+                                </NavLink>
                             </div>
-                            <div className="flex-default">
-                                {this.updateTicketCount()}
-                                <img src={TicketsIcon} alt="" className="ml-1" />
+                            <div className="theatre-info">
+                                <h2 className="__h1 _80_color normal_p">
+                                    AMB Cinema: Gachibowli
+                                </h2>
+                                <p className="small_p">Sun 28 feb</p>
+                                <div className="">
+                                    <button className="theatre-model-btn mr-2">
+                                        <NavLink to="/theatre-model" className="make-link">
+                                            1:00PM
+                                        </NavLink>
+                                    </button>
+                                    <button className="theatre-model-btn mr-2">
+                                        <NavLink to="/theatre-model" className="make-link">
+                                            4:00PM
+                                        </NavLink>
+                                    </button>
+                                    <button className="theatre-model-btn mr-2">
+                                        <NavLink to="/theatre-model" className="make-link">
+                                            6:00PM
+                                        </NavLink>
+                                    </button>
+                                    <button className="theatre-model-btn mr-2">
+                                        <NavLink to="/theatre-model" className="make-link">
+                                            10:00PM
+                                        </NavLink>
+                                    </button>
+                                </div>
+                                <div className="flex-default">
+                                    {this.updateTicketCount()}
+                                    <img src={TicketsIcon} alt="" className="ml-1" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="seats-status-container">
-                            <div className="seat-icon-div">
-                                <img src={NotAvailableIcon} alt="" />
-                                <p className="small_p _80_color">Not available</p>
-                            </div>
-                            <div className="seat-icon-div">
-                                <img src={AvailableIcon} alt="" />
-                                <p className="small_p _80_color">Available</p>
-                            </div>
-                            <div className="seat-icon-div">
-                                <img src={YourSeatsIcon} alt="" />
-                                <p className="small_p _80_color">Your seats</p>
+                            <div className="seats-status-container">
+                                <div className="seat-icon-div">
+                                    <img src={NotAvailableIcon} alt="" />
+                                    <p className="small_p _80_color">Not available</p>
+                                </div>
+                                <div className="seat-icon-div">
+                                    <img src={AvailableIcon} alt="" />
+                                    <p className="small_p _80_color">Available</p>
+                                </div>
+                                <div className="seat-icon-div">
+                                    <img src={YourSeatsIcon} alt="" />
+                                    <p className="small_p _80_color">Your seats</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="theatre-seating-model-container">
-                    <div className="seats-grid-container">
-                        <div className="grids front-seats-grid">
-                            <div className="left-sub-seats">
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                            </div>
-                            <div className="right-sub-seats">
-                            <input type="checkbox" className="seat-icon first-seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon mr-1" name="seat" />
-                            </div>
-                        </div>
-                        <div className="grids middle-seats-grid">
-                            <div className="grid-row">    
+                    <div className="theatre-seating-model-container">
+                        <div className="seats-grid-container">
+                            <div className="grids front-seats-grid">
                                 <div className="left-sub-seats">
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                 </div>
                                 <div className="right-sub-seats">
+                                <input type="checkbox" className="seat-icon first-seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1 available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon mr-1" name="seat" />
                                 </div>
                             </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                            <div className="grids middle-seats-grid">
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
                                 </div>
-                                <div className="right-sub-seats">
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                </div>
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                    </div>
+                                </div>
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                </div>
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                </div>
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                </div>
+                                <div className="grid-row">    
+                                    <div className="left-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
+                                    <div className="right-sub-seats">
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                        <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
+                            <div className="grids top-most-seats-grid">
+                                <div className="sub-seats grid-row">
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                 </div>
-                                <div className="right-sub-seats">
+                                <div className="sub-seats grid-row">
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
+                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
@@ -276,38 +522,13 @@ export default class TheatreModel extends Component {
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                </div>
-                            </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                                <div className="right-sub-seats">
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
@@ -328,234 +549,16 @@ export default class TheatreModel extends Component {
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                     <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                                 </div>
-                            </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                                <div className="right-sub-seats">
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                            </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                                <div className="right-sub-seats">
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                            </div>
-                            <div className="grid-row">    
-                                <div className="left-sub-seats">
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                                <div className="right-sub-seats">
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                    <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="grids top-most-seats-grid">
-                            <div className="sub-seats grid-row">
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                            </div>
-                            <div className="sub-seats grid-row">
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon available-seat" onClick={this.handleClick} name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
-                                <input type="checkbox" className="seat-icon unavailable-seat" name="seat" />
                             </div>
                         </div>
                     </div>
+                    <div className="book-ticket-payment-btn-container">
+                        <button className="book-ticket-payment-btn apply-cursor">
+                            Book : {this.state.totalMoney}
+                        </button>
+                    </div>
                 </div>
-                <div className="book-ticket-payment-btn-container">
-                    <button className="book-ticket-payment-btn apply-cursor">
-                        Book : {this.state.totalMoney}
-                    </button>
-                </div>
-            </div>
+            </UserLayout>
         )
     }
 }

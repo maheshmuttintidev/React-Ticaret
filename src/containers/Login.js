@@ -1,12 +1,14 @@
-import axios from "axios";
-import React, { Component } from "react";
-import Home from './Home'
-import { NavLink } from 'react-router-dom';
-
+import React, { Component } from "react"
+import Home from '../components/Home'
+import { NavLink } from 'react-router-dom'
 import FbIcon from '../assets/header/fb.svg'
 import GoogleIcon from '../assets/header/gplus.svg'
 import UserIconLogin from '../assets/header/user_icon.svg'
-export default class Login extends Component {
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {loginUser} from '../actions/authUser'
+
+class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -22,21 +24,28 @@ export default class Login extends Component {
     })
   }
 
-  loadUserPage = (e) => {
+  loginRequest = async (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8652/users/register', this.state)
-      .then((res) => {
-        console.log(res.data)
-      }, error => {
-        console.log(error.message)
-      })
+    await this.props.loginUser(this.state)
+    this.props.history.push('/user/:id')
   }
+
+  // componentDidMount() {
+  //   if(this.props.isUserLoggedIn === true) {
+  //     this.props.history.push('/user')
+  //   } else {
+  //     this.props.history.push('/login')
+  //   }
+  // }
+
   render() {
+    // console.log(this.props.isUserLoggedIn)
+
     return (
       <main>
         <Home />
         <section className="overlay-fixed">
-          <form className="login-form" onSubmit={this.loadUserPage} encType="multipart/form-data">
+          <form className="login-form" onSubmit={this.loginRequest} method="POST">
             <NavLink className="right" to="/">
               <div className="close-icon">
                 <svg height="20" viewBox="0 0 329.26933 329" width="20" xmlns="http://www.w3.org/2000/svg">
@@ -78,3 +87,11 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(userAuthState) {
+  return {
+    isUserLoggedIn: userAuthState.isUserLoggedIn
+  }
+}
+
+export default connect(mapStateToProps, dispatch => bindActionCreators({loginUser}, dispatch))(Login)

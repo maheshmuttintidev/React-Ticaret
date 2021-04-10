@@ -1,9 +1,9 @@
 import React, { Component, Suspense, lazy } from "react";
-import {HashRouter, Route} from "react-router-dom"
+import {HashRouter, Route, RouteMatch} from "react-router-dom"
 import '../css/ticaret.css'
 const Home = lazy(() => import('./Home'))
-const Login = lazy(() => import('./Login'))
-const Register = lazy(() => import('./Register'))
+const Login = lazy(() => import('../containers/Login'))
+const Register = lazy(() => import('../containers/Register'))
 const Location = lazy(() => import('./Location'))
 const Profile = lazy(() => import('./Profile'))
 const AboutUs = lazy(() => import('./AboutUs'))
@@ -12,6 +12,8 @@ const MovieDetails = lazy(() => import('./MovieDetails'))
 const TheatreModel = lazy(() => import('./TheatreModel'))
 const ResaleTicketFilling = lazy(() => import ('./ResaleTicketFilling'))
 const TicketsHistory = lazy(() => import('./TicketsHistory'))
+const UserPage = lazy(() => import('./UserPage'))
+const UserProfile = lazy(() => import('./UserProfile'))
 export default class Article extends Component {
     render() {
         return (
@@ -29,7 +31,7 @@ export default class Article extends Component {
                             <div className="loading-child"></div>
                         </div>
                     }>
-                        <Route exact path="/location" component={Location} />
+                        <Route path="/location" component={Location} />
                     </Suspense>
 
                     <Suspense fallback={
@@ -57,6 +59,13 @@ export default class Article extends Component {
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
+                            <div className="loading-child"></div>
+                        </div>
+                    }>
+                        <Route path="/user-profile" component={UserProfile} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
@@ -67,35 +76,42 @@ export default class Article extends Component {
                         <div className="loading-child"></div>
                     </div>
                     }>
-                        <Route exact path="/buy-tickets" component={BuyTickets} />
+                        <Route path="/buy-tickets" component={BuyTickets} />
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
-                        <Route exact path="/movie-details" component={MovieDetails} />
+                        <Route path="/movie-details" component={MovieDetails} />
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
-                        <Route exact path="/theatre-model" component={TheatreModel} />
+                        <Route path="/theatre-model" component={TheatreModel} />
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
-                        <Route exact path="/resale-ticket-filling" component={ResaleTicketFilling} />
+                        <Route path="/resale-ticket-filling" component={ResaleTicketFilling} />
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
-                        <Route exact path="/tickets-history" component={TicketsHistory} />
+                        <Route path="/tickets-history" component={TicketsHistory} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                            <div className="loading-child"></div>
+                        </div>
+                    }>
+                        <Route path="/user" component={UserPage} />
                     </Suspense>
                 </HashRouter>
             </article>

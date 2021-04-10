@@ -1,27 +1,37 @@
-export const MOVIE_1 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_2 = 'https://content.tupaki.com/twdata/2020/0620/photos/movies/Allari%20Naresh%20Nandi%20Character%20Introduction%20posters/normal/Allari%20Naresh%20Nandi%20Character%20Introduction%20posters_2.jpg'
-export const MOVIE_3 = 'https://www.seelatest.com/images/poster/zombie-reddy.jpg'
-export const MOVIE_4 = 'https://animatedviews.com/wp-content/uploads/2020/12/t-and-j-1.jpg'
-export const MOVIE_5 = 'https://cdn.gulte.com/wp-content/uploads/2020/08/Sumanth.jpg'
-export const MOVIE_6 = 'https://www.idreampost.com/uploads/gallery_uploads/2020/01/posts_8S2OwcCWzztqn92Q_1600668653.jpg'
-export const MOVIE_7 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_8 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_9 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_10 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_11 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_12 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_13 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_14 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_15 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_16 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_17 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_18 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_19 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-export const MOVIE_20 = 'https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg'
-
-export const MOVIE_1_NAME = 'CHAKRA'
-export const MOVIE_2_NAME = 'NANDHI'
-export const MOVIE_3_NAME = 'ZOMBIE REDDY'
-export const MOVIE_4_NAME = 'TOM AND JERRY'
-export const MOVIE_5_NAME = 'KAPATADHARI'
-export const MOVIE_6_NAME = 'UPPENA'
+export const Movies = [
+    {
+        id: 0,
+        name: "VAKEEL SAB",
+        img_url: 'https://cdn.celpox.com/bby_uploads/media/e3ed62d11b81cc88d7567695d022665e.jpg'
+    },
+    {
+        id: 1,
+        name: "CHAKRA",
+        img_url: "https://d1ydle56j7f53e.cloudfront.net/assets/gallery/movie/chakra-13939/misc-big/chakra-2.jpg"
+    },
+    {
+        id: 2,
+        name: 'NANDHI',
+        img_url: 'https://content.tupaki.com/twdata/2020/0620/photos/movies/Allari%20Naresh%20Nandi%20Character%20Introduction%20posters/normal/Allari%20Naresh%20Nandi%20Character%20Introduction%20posters_2.jpg'
+    },
+    {
+        id: 3,
+        name: 'ZOMBIE REDDY',
+        img_url: 'https://www.seelatest.com/images/poster/zombie-reddy.jpg'
+    },
+    {
+        id: 4,
+        name: 'TOM AND JERRY',
+        img_url: 'https://animatedviews.com/wp-content/uploads/2020/12/t-and-j-1.jpg'
+    },
+    {
+        id: 5,
+        name: 'KAPATADHARI',
+        img_url: 'https://cdn.gulte.com/wp-content/uploads/2020/08/Sumanth.jpg'
+    },
+    {
+        id: 6,
+        name: 'UPPENA',
+        img_url: 'https://www.idreampost.com/uploads/gallery_uploads/2020/01/posts_8S2OwcCWzztqn92Q_1600668653.jpg'
+    }
+]

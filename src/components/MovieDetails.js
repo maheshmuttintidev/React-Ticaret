@@ -8,10 +8,11 @@ import TimerSmallIcon from '../assets/buy_ticket/time_icon.svg'
 import ArrowLeft from '../assets/buy_ticket/arrow-back.svg'
 import ArrowRight from '../assets/buy_ticket/arrow-forward.svg'
 import SearchIcon from '../assets/buy_ticket/search_icon.svg'
+import UserLayout from './UserLayout'
 export default class MovieDetails extends Component {
     render() {
         return (
-            <>
+            <UserLayout>
                 <div className="movie-details-hero-container">
                     <div className="auto-adjust-padding overlay">
                         <h2 className="__h1">
@@ -242,7 +243,7 @@ export default class MovieDetails extends Component {
                         </div>
                     </div>
                 </div>
-            </>
+            </UserLayout>
         )
     }
 }
