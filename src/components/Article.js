@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from "react";
-import {HashRouter, Route, RouteMatch} from "react-router-dom"
+import {HashRouter, Route} from "react-router-dom"
 import '../css/ticaret.css'
 const Home = lazy(() => import('./Home'))
 const Login = lazy(() => import('../containers/Login'))
