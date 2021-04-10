@@ -1,3 +1,3 @@
-export const LOGIN_URI = 'http://localhost:5000/user/login'
-export const REGISTER_URI = 'http://localhost:5000/user/register'
-export const CHANGE_PASSWORD_URI = 'http://localhost:5000/user/change-password'
+export const LOGIN_URI = 'https://ticaret-001.herokuapp.com/user/login'
+export const REGISTER_URI = 'https://ticaret-001.herokuapp.com/user/register'
+export const CHANGE_PASSWORD_URI = 'https://ticaret-001.herokuapp.com/user/change-password'
