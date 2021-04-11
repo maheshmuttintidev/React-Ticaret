@@ -4,6 +4,7 @@ export default function userReducer(state = null, action) {
         case REGISTER_USER:
             if(action.payload.data.token) {
                 sessionStorage.setItem("token", action.payload.data.token)
+                sessionStorage.setItem("name", action.payload.data.name)
                 return true
             } else {
                 return false
@@ -12,7 +13,6 @@ export default function userReducer(state = null, action) {
             if(action.payload.data.token) {
                 sessionStorage.setItem("token", action.payload.data.token)
                 sessionStorage.setItem("name", action.payload.data.name)
-                console.log(action.payload.data)
                 return true
             } else {
                 return false

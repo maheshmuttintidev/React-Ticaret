@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import Home from '../components/Home'
+import Home from '../components/BeforeAuthenticationComponents/Home'
 import { NavLink } from 'react-router-dom'
-import FbIcon from '../assets/header/fb.svg'
-import GoogleIcon from '../assets/header/gplus.svg'
+import FbIcon from '../assets/header/facebook_icon.png'
+import GoogleIcon from '../assets/header/google_icon.jpg'
 import UserIconLogin from '../assets/header/user_icon.svg'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
@@ -27,20 +27,11 @@ class Login extends Component {
   loginRequest = async (e) => {
     e.preventDefault()
     await this.props.loginUser(this.state)
-    this.props.history.push('/user/:id')
+    this.props.history.push('/user')
+    console.log(this.props.isUserLoggedIn)
   }
 
-  // componentDidMount() {
-  //   if(this.props.isUserLoggedIn === true) {
-  //     this.props.history.push('/user')
-  //   } else {
-  //     this.props.history.push('/login')
-  //   }
-  // }
-
   render() {
-    // console.log(this.props.isUserLoggedIn)
-
     return (
       <main>
         <Home />

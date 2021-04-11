@@ -1,27 +1,40 @@
 
-import ResaleTicketIcon from '../assets/body/resale.svg'
-import BuyOurTicket from '../assets/body/buy_our_ticket.svg'
-import GetOurTicket from '../assets/body/getour_ticket.svg'
-import NetflixIcon from '../assets/body/netflex.svg'
-import PrimeVideoIcon from '../assets/body/prime_video.svg'
-import BookMyShowIcon from '../assets/body/bookmyshow.svg'
-import AhaIcon from '../assets/body/aha.svg'
-import HalfStarIcon from '../assets/buy_ticket/half_star.svg'
-import FullStarIcon from '../assets/buy_ticket/full_star.svg'
-import {Movies as movies} from '../assets/img_links/ImagesLinks'
-import EmptyStarIcon from '../assets/buy_ticket/empty_star.svg'
+import ResaleTicketIcon from '../../assets/body/resale.svg'
+import BuyOurTicket from '../../assets/body/buy_our_ticket.svg'
+import GetOurTicket from '../../assets/body/getour_ticket.svg'
+import NetflixIcon from '../../assets/body/netflex.svg'
+import PrimeVideoIcon from '../../assets/body/prime_video.svg'
+import BookMyShowIcon from '../../assets/body/bookmyshow.svg'
+import AhaIcon from '../../assets/body/aha.svg'
+import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
+import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
+import {Movies as movies} from '../../assets/img_links/ImagesLinks'
+import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
 import React, { Component } from "react"
-import {NavLink} from 'react-router-dom'
+// import {NavLink} from 'react-router-dom'
 import Layout from './Layout'
+
 class Home extends Component {
     constructor(props) {
       super(props)
     
       this.state = {
-         
+         isTokenAvailable: sessionStorage.getItem("token") ? true : false
       }
     }
     
+    componentDidMount() {
+        console.log(this.state.isTokenAvailable)
+    }
+
+    checkAuth = () => {
+        if(this.state.isTokenAvailable) {
+            this.props.history.push('/user')
+        } else {
+            this.props.history.push('/login')
+        }
+    }
+
     loadMovieCard = () => {
         let movie_card = movies.map(movie => {
             return (
@@ -67,9 +80,9 @@ class Home extends Component {
                             <p className="__p">
                                 sell your tickets with us in a easier way and get more points.
                             </p>
-                            <NavLink to="/resale-ticket-filling" className="btn btn-resale">
+                            <button onClick={this.checkAuth} className="btn btn-resale">
                                 Resale Your Ticket
-                            </NavLink>
+                            </button>
                         </aside>
                         <aside className="buy-ticket">
                             <h2 className="__h0">
@@ -78,9 +91,9 @@ class Home extends Component {
                             <p className="__p">
                                 Get your tickets, chill with your show and your security is our priority.
                             </p>
-                            <NavLink to="/buy-tickets" className="btn btn-buy">
+                            <button onClick={this.checkAuth} className="btn btn-buy">
                                 Buy Our Ticket
-                            </NavLink>
+                            </button>
                         </aside>
                     </section>
                     <section className="route-map-container">
@@ -155,4 +168,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Home

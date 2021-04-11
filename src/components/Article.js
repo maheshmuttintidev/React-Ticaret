@@ -1,19 +1,18 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Component, Suspense, lazy } from "react"
 import {HashRouter, Route} from "react-router-dom"
-import '../css/ticaret.css'
-const Home = lazy(() => import('./Home'))
 const Login = lazy(() => import('../containers/Login'))
 const Register = lazy(() => import('../containers/Register'))
-const Location = lazy(() => import('./Location'))
-const Profile = lazy(() => import('./Profile'))
-const AboutUs = lazy(() => import('./AboutUs'))
-const BuyTickets = lazy(() => import('./BuyTickets'))
-const MovieDetails = lazy(() => import('./MovieDetails'))
-const TheatreModel = lazy(() => import('./TheatreModel'))
-const ResaleTicketFilling = lazy(() => import ('./ResaleTicketFilling'))
-const TicketsHistory = lazy(() => import('./TicketsHistory'))
-const UserPage = lazy(() => import('./UserPage'))
-const UserProfile = lazy(() => import('./UserProfile'))
+const Home = lazy(() => import('./BeforeAuthenticationComponents/Home'))
+const Location = lazy(() => import('./BeforeAuthenticationComponents/Location'))
+const Profile = lazy(() => import('./BeforeAuthenticationComponents/Profile'))
+const AboutUs = lazy(() => import('./BeforeAuthenticationComponents/AboutUs'))
+const BuyTickets = lazy(() => import('./AfterAuthenticationComponents/BuyTickets'))
+const MovieDetails = lazy(() => import('./AfterAuthenticationComponents/MovieDetails'))
+const TheatreModel = lazy(() => import('./AfterAuthenticationComponents/TheatreModel'))
+const ResaleTicketFilling = lazy(() => import ('./AfterAuthenticationComponents/ResaleTicketFilling'))
+const TicketsHistory = lazy(() => import('./AfterAuthenticationComponents/TicketsHistory'))
+const UserPage = lazy(() => import('./AfterAuthenticationComponents/UserPage'))
+const UserProfile = lazy(() => import('./AfterAuthenticationComponents/UserProfile'))
 export default class Article extends Component {
     render() {
         return (

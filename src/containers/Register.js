@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
-import Footer from '../components/Footer'
+import Footer from '../components/BeforeAuthenticationComponents/Footer'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {registerUser} from '../actions/authUser'
@@ -25,10 +25,11 @@ class Register extends Component {
         })
     }
 
-    submitAndSendRequest = (e) => {
+    submitAndSendRequest = async (e) => {
         e.preventDefault()
-        this.props.registerUser(this.state)
-        console.log(this.state)
+        await this.props.registerUser(this.state)
+        this.props.history.push('/user')
+        console.log(this.props.isUserLoggedIn)
     }
 
     render() {

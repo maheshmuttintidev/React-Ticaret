@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {NavLink, HashRouter} from 'react-router-dom'
-import Facebook from '../assets/footer/Icon awesome-facebook-f.svg'
-import Twitter from '../assets/footer/Icon awesome-twitter.svg'
-import Instagram from '../assets/footer/Icon awesome-instagram.svg'
-import Linkedin from '../assets/footer/Icon awesome-linkedin.svg'
+import Facebook from '../../assets/footer/Icon awesome-facebook-f.svg'
+import Twitter from '../../assets/footer/Icon awesome-twitter.svg'
+import Instagram from '../../assets/footer/Icon awesome-instagram.svg'
+import Linkedin from '../../assets/footer/Icon awesome-linkedin.svg'
 export default class Footer extends Component {
     render() {
         return (

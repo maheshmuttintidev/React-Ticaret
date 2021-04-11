@@ -11,7 +11,7 @@ export default class UserProfile extends Component {
               <div className="loading-child"></div>
             </div>
           }>
-            <UserProfileMenu />
+            <UserProfileMenu history={this.props.history}/>
           </Suspense>
         </main>
     )

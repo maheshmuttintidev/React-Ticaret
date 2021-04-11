@@ -1,4 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react'
+import './css/ticaret.css'
 const Ticaret = lazy(() => import('./components/TicaretWebsite'))
 
 export default class App extends Component {

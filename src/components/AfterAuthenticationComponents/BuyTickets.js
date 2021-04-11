@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
-import HalfStarIcon from '../assets/buy_ticket/half_star.svg'
-import FullStarIcon from '../assets/buy_ticket/full_star.svg'
-import EmptyStarIcon from '../assets/buy_ticket/empty_star.svg'
-import {Movies as movies} from '../assets/img_links/ImagesLinks'
+import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
+import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
+import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
+import {Movies as movies} from '../../assets/img_links/ImagesLinks'
 import UserLayout from './UserLayout'
 export default class BuyTickets extends Component {
     loadMovieCard = () => {

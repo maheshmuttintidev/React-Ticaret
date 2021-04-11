@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import BookedTicketIcon from '../assets/header_menu/booked_ticket.svg'
-import TicketHistoryIcon from '../assets/header_menu/ticket_history.svg'
-import AboutUsIcon from '../assets/header_menu/aboutus.svg'
-import SettingsIcon from '../assets/header_menu/setting.svg'
+import BookedTicketIcon from '../../assets/header_menu/booked_ticket.svg'
+import TicketHistoryIcon from '../../assets/header_menu/ticket_history.svg'
+import AboutUsIcon from '../../assets/header_menu/aboutus.svg'
+import SettingsIcon from '../../assets/header_menu/setting.svg'
 import { NavLink } from 'react-router-dom'
 class ProfileMenu extends Component {
   constructor(props) {

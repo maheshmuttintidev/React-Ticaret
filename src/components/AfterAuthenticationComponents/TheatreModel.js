@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-import ArrowLeft from '../assets/buy_ticket/arrow-back.svg'
-import AvailableIcon from '../assets/icons_seat_allotment/available_icon.svg'
-import YourSeatsIcon from '../assets/icons_seat_allotment/your_seats_icon.svg'
-import NotAvailableIcon from '../assets/icons_seat_allotment/not_available_icon.svg'
-import TicketsIcon from '../assets/icons_seat_allotment/tickets_icon.svg'
+import ArrowLeft from '../../assets/buy_ticket/arrow-back.svg'
+import AvailableIcon from '../../assets/icons_seat_allotment/available_icon.svg'
+import YourSeatsIcon from '../../assets/icons_seat_allotment/your_seats_icon.svg'
+import NotAvailableIcon from '../../assets/icons_seat_allotment/not_available_icon.svg'
+import TicketsIcon from '../../assets/icons_seat_allotment/tickets_icon.svg'
 import UserLayout from './UserLayout'
 export default class TheatreModel extends Component {
     constructor(props) {

@@ -1,10 +1,9 @@
 
 import React, { Component } from 'react'
 import {NavLink, HashRouter} from 'react-router-dom'
-import LocationIcon from '../assets/header/location.svg'
-import UserIcon from '../assets/header/user.svg'
-import BurgerIcon from '../assets/header/burger_icon.svg'
-import '../css/ticaret.css'
+import LocationIcon from '../../assets/header/location.svg'
+import UserIcon from '../../assets/header/user.svg'
+import BurgerIcon from '../../assets/header/burger_icon.svg'
 export default class Header extends Component {
     render() {
         return (

@@ -1,29 +1,16 @@
-// importing necessary libraries to make component and navlinks
 import React, { Component } from 'react'
 import {NavLink, HashRouter} from 'react-router-dom'
-
-// importing css
-import '../css/ticaret.css'
-
-// importing the necessary assets used in header nav bar
-import LocationIcon from '../assets/header/location.svg'
-import UserIcon from '../assets/header/user.svg'
-import BurgerIcon from '../assets/header/burger_icon.svg'
-
-export default class UserHeader extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-         username: sessionStorage.getItem("name")
-      }
-    }
-
+import Facebook from '../../assets/footer/Icon awesome-facebook-f.svg'
+import Twitter from '../../assets/footer/Icon awesome-twitter.svg'
+import Instagram from '../../assets/footer/Icon awesome-instagram.svg'
+import Linkedin from '../../assets/footer/Icon awesome-linkedin.svg'
+export default class Footer extends Component {
     render() {
         return (
-            <header className="auto-adjust clear-both">
+            <footer className="auto-adjust-padding">
                 <HashRouter>
-                    <div className="logo-container">
-                        <NavLink to="/user" className="nav-link">
+                    <div className="btm-logo-container">
+                        <NavLink to="/">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
                                 <g id="Group_191" dataname="Group 191" transform="translate(102 417)">
                                 <g id="Group_5" dataname="Group 5" transform="translate(22 -410.645)">
@@ -35,7 +22,7 @@ export default class UserHeader extends Component {
                                     <path id="Path_3782" dataname="Path 3782" d="M2844.48-665.825c-.506-.127-4.877,0-4.877,0" transform="translate(-2813.51 678.681)" fill="none" stroke="#ff2424" strokeLinecap="round" strokeWidth="3"/>
                                 </g>
                                 <g id="Group_4" dataname="Group 4" transform="translate(-102 -417)">
-                                    <text id="T" transform="translate(9 44)" fill="#fff" fontSize="35" fontStyle="italic"><tspan x="0" y="0">T</tspan></text>
+                                <text id="T" transform="translate(9 44)" fill="#fff" fontSize="35" fontStyle="italic"><tspan x="0" y="0">T</tspan></text>
                                     <text id="i" transform="translate(30.794 44)" fill="#fff" fontSize="35" fontStyle="italic"><tspan x="0" y="0">i</tspan></text>
                                     <text id="r" transform="translate(79.367 44)" fill="#fff" fontSize="34" fontStyle="italic"><tspan x="0" y="0">r</tspan></text>
                                     <text id="e" transform="translate(95.398 45)" fill="#fff" fontSize="35" fontStyle="italic"><tspan x="0" y="0">e</tspan></text>
@@ -45,18 +32,32 @@ export default class UserHeader extends Component {
                             </svg>
                         </NavLink>
                     </div>
-                    <div className="options-container">
-                        <NavLink to="/location" className="nav-link location">
-                            <img src={LocationIcon} alt="location" />
-                        </NavLink>
-                        <span className="username-span">{this.state.username}</span>
-                        <NavLink to="/user-profile" className="nav-link profile">
-                            <img src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
-                            <img src={UserIcon} alt="profile" className="profile-icon" />
-                        </NavLink>
+                    <div className="btm-options-container">
+                        <div className="btm-options1">
+                            <NavLink className="nav-link about" to="/about-us">About Us</NavLink>
+                            <NavLink className="nav-link ticket-history" to="/">Ticket History</NavLink>
+                        </div>
+                        <div className="btm-options2">
+                            <a className="nav-link fb" href="https://m.facebook.com/maheshmuttinti" target="_blank" rel="noreferrer">
+                                <img src={Facebook} alt="follow us on facebook"/>
+                                Facebook
+                            </a>
+                            <a className="nav-link tw" href="https://twitter.com/MMuttinti" target="_blank" rel="noreferrer">
+                                <img src={Twitter} alt="follow us on twitter"/>
+                                Twitter
+                            </a>
+                            <a className="nav-link ins" href="https://www.instagram.com/mahesh_muttinti/" target="_blank" rel="noreferrer">
+                                <img src={Instagram} alt="follow us on instagram"/>
+                                Instagram
+                            </a>
+                            <a className="nav-link lnk" href="https://www.linkedin.com/in/mahesh-muttinti-4a2b61202/" target="_blank" rel="noreferrer">
+                                <img src={Linkedin} alt="follow us on linkedin"/>
+                                Linkedin
+                            </a>
+                        </div>
                     </div>
                 </HashRouter>
-            </header>
+            </footer>
         )
     }
 }
