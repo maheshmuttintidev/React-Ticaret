@@ -1,4 +1,3 @@
-
 import ResaleTicketIcon from '../../assets/body/resale.svg'
 import BuyOurTicket from '../../assets/body/buy_our_ticket.svg'
 import GetOurTicket from '../../assets/body/getour_ticket.svg'

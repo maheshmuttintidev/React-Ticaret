@@ -14,7 +14,12 @@ import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
 import { NavLink } from 'react-router-dom'
 
 export default class UserPage extends Component {
-
+    // constructor(props) {
+    //   super(props)
+    //   this.state = {
+    //     isTokenAvailable: sessionStorage.getItem("token") ? true : false
+    //   }
+    // }
     loadMovieCard = () => {
         let movie_card = movies.map(movie => {
             return (

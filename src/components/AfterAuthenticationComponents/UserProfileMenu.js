@@ -7,15 +7,28 @@ export default class UserProfileMenu extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      username: sessionStorage.getItem("name")
+      username: sessionStorage.getItem("name"),
+      isTokenAvailable: sessionStorage.getItem("token") ? true : false
     }
   }
+
+  // componentDidMount() {
+  //   if(this.state.isTokenAvailable) {
+  //     this.props.history.push('/user')
+  //     console.log("token is present")
+  //   } else {
+  //     this.props.history.push('/')
+  //     console.log("token is not present")
+  //   }
+  // }
   
   logoutUser = () => {
-    sessionStorage.clear()
-    (sessionStorage.getItem("token")) 
-      ? this.props.history.push('/user')
-      : this.props.history.push('/')
+    if(this.state.isTokenAvailable) {
+      sessionStorage.clear()
+      this.props.history.push('/')
+    } else {
+      this.props.history.push('/user')
+    }
   }
 
   render() {

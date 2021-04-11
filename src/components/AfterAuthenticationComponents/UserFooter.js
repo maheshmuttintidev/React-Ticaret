@@ -10,7 +10,7 @@ export default class Footer extends Component {
             <footer className="auto-adjust-padding">
                 <HashRouter>
                     <div className="btm-logo-container">
-                        <NavLink to="/">
+                        <NavLink to="/user">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
                                 <g id="Group_191" dataname="Group 191" transform="translate(102 417)">
                                 <g id="Group_5" dataname="Group 5" transform="translate(22 -410.645)">
@@ -35,7 +35,7 @@ export default class Footer extends Component {
                     <div className="btm-options-container">
                         <div className="btm-options1">
                             <NavLink className="nav-link about" to="/about-us">About Us</NavLink>
-                            <NavLink className="nav-link ticket-history" to="/">Ticket History</NavLink>
+                            <NavLink className="nav-link ticket-history" to="/tickets-history">Ticket History</NavLink>
                         </div>
                         <div className="btm-options2">
                             <a className="nav-link fb" href="https://m.facebook.com/maheshmuttinti" target="_blank" rel="noreferrer">
