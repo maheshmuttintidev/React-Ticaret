@@ -1,6 +1,6 @@
 // importing necessary libraries to make component and navlinks
 import React, { Component } from 'react'
-import {NavLink, HashRouter} from 'react-router-dom'
+import {NavLink, BrowserRouter as Router} from 'react-router-dom'
 
 // importing the necessary/.. assets used in header nav bar
 import LocationIcon from '../../assets/header/location.svg'
@@ -18,7 +18,7 @@ export default class UserHeader extends Component {
     render() {
         return (
             <header className="auto-adjust clear-both">
-                <HashRouter>
+                <Router forceRefresh={true}>
                     <div className="logo-container">
                         <NavLink to="/user" className="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
@@ -54,7 +54,7 @@ export default class UserHeader extends Component {
                             </div>
                         </NavLink>
                     </div>
-                </HashRouter>
+                </Router>
             </header>
         )
     }

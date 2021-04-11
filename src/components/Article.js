@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from "react"
-import {HashRouter, Route} from "react-router-dom"
+import {BrowserRouter as Router, Route} from "react-router-dom"
 const Login = lazy(() => import('../containers/Login'))
 const Register = lazy(() => import('../containers/Register'))
 const Home = lazy(() => import('./BeforeAuthenticationComponents/Home'))
@@ -17,7 +17,7 @@ export default class Article extends Component {
     render() {
         return (
             <article className="main">
-                <HashRouter>
+                <Router forceRefresh={true}>
                     <Suspense fallback={
                         <div className="loader-1">
                             <div className="loading-child"></div>
@@ -112,7 +112,7 @@ export default class Article extends Component {
                     }>
                         <Route path="/user" component={UserPage} />
                     </Suspense>
-                </HashRouter>
+                </Router>
             </article>
         )
     }

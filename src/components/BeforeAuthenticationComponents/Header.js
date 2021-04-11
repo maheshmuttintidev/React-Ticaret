@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import {NavLink, HashRouter} from 'react-router-dom'
+import {NavLink, BrowserRouter as Router} from 'react-router-dom'
 import LocationIcon from '../../assets/header/location.svg'
 import UserIcon from '../../assets/header/user.svg'
 import BurgerIcon from '../../assets/header/burger_icon.svg'
@@ -8,7 +8,7 @@ export default class Header extends Component {
     render() {
         return (
             <header className="auto-adjust clear-both">
-                <HashRouter>
+                <Router forceRefresh={true}>
                     <div className="logo-container">
                         <NavLink to="/" className="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
@@ -44,7 +44,7 @@ export default class Header extends Component {
                             <img src={UserIcon} alt="profile" className="profile-icon" />
                         </NavLink>
                     </div>
-                </HashRouter>
+                </Router>
             </header>
         )
     }
