@@ -1,21 +1,19 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Component, Suspense, lazy } from "react"
 import {HashRouter, Route} from "react-router-dom"
-import '../css/ticaret.css'
-const Home = lazy(() => import('./Home'))
-const Login = lazy(() => import('./Login'))
-const Location = lazy(() => import('./Location'))
-const Profile = lazy(() => import('./Profile'))
-const AboutUs = lazy(() => import('./AboutUs'))
-const CustomerHelp = lazy(() => import('./CustomerHelp'))
-
+const Login = lazy(() => import('../containers/Login'))
+const Register = lazy(() => import('../containers/Register'))
+const Home = lazy(() => import('./BeforeAuthenticationComponents/Home'))
+const Location = lazy(() => import('./BeforeAuthenticationComponents/Location'))
+const Profile = lazy(() => import('./BeforeAuthenticationComponents/Profile'))
+const AboutUs = lazy(() => import('./BeforeAuthenticationComponents/AboutUs'))
+const BuyTickets = lazy(() => import('./AfterAuthenticationComponents/BuyTickets'))
+const MovieDetails = lazy(() => import('./AfterAuthenticationComponents/MovieDetails'))
+const TheatreModel = lazy(() => import('./AfterAuthenticationComponents/TheatreModel'))
+const ResaleTicketFilling = lazy(() => import ('./AfterAuthenticationComponents/ResaleTicketFilling'))
+const TicketsHistory = lazy(() => import('./AfterAuthenticationComponents/TicketsHistory'))
+const UserPage = lazy(() => import('./AfterAuthenticationComponents/UserPage'))
+const UserProfile = lazy(() => import('./AfterAuthenticationComponents/UserProfile'))
 export default class Article extends Component {
-    // constructor(props) {
-    //     super(props)
-      
-    //     this.state = {
-    //        showPopup: false
-    //     }
-    //   }
     render() {
         return (
             <article className="main">
@@ -32,7 +30,7 @@ export default class Article extends Component {
                             <div className="loading-child"></div>
                         </div>
                     }>
-                        <Route exact path="/location" component={Location} />
+                        <Route path="/location" component={Location} />
                     </Suspense>
 
                     <Suspense fallback={
@@ -40,8 +38,15 @@ export default class Article extends Component {
                             <div className="loading-child"></div>
                         </div>
                     }>
-                        {/* {this.state.showPopup ? <Login closePopup={this.togglePopup.bind(this)} /> : null } */}
                         <Route path="/login" component={Login} />
+                    </Suspense>
+
+                    <Suspense fallback={
+                        <div className="loader-1">
+                            <div className="loading-child"></div>
+                        </div>
+                    }>
+                        <Route path="/register" component={Register} />
                     </Suspense>
 
                     <Suspense fallback={
@@ -53,6 +58,13 @@ export default class Article extends Component {
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
+                            <div className="loading-child"></div>
+                        </div>
+                    }>
+                        <Route path="/user-profile" component={UserProfile} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
                         <div className="loading-child"></div>
                     </div>
                     }>
@@ -60,10 +72,45 @@ export default class Article extends Component {
                     </Suspense>
                     <Suspense fallback={
                         <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route path="/buy-tickets" component={BuyTickets} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route path="/movie-details" component={MovieDetails} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route path="/theatre-model" component={TheatreModel} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route path="/resale-ticket-filling" component={ResaleTicketFilling} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
+                        <div className="loading-child"></div>
+                    </div>
+                    }>
+                        <Route path="/tickets-history" component={TicketsHistory} />
+                    </Suspense>
+                    <Suspense fallback={
+                        <div className="loader-1">
                             <div className="loading-child"></div>
                         </div>
                     }>
-                        <Route exact path="/customer-help" component={CustomerHelp} />
+                        <Route path="/user" component={UserPage} />
                     </Suspense>
                 </HashRouter>
             </article>

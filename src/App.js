@@ -1,9 +1,8 @@
-
 import React, { Component, Suspense, lazy } from 'react'
-
+import './css/ticaret.css'
 const Ticaret = lazy(() => import('./components/TicaretWebsite'))
 
-class App extends Component {
+export default class App extends Component {
     render() {
       return (
         <Suspense fallback={
@@ -16,5 +15,3 @@ class App extends Component {
       );
     }
 }
-
-export default App;
