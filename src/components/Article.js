@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from "react"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 const Login = lazy(() => import('../containers/Login'))
 const Register = lazy(() => import('../containers/Register'))
 const Home = lazy(() => import('./BeforeAuthenticationComponents/Home'))
