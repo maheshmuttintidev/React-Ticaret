@@ -44,13 +44,13 @@ export default class UserHeader extends Component {
                     </div>
                     <div className="options-container">
                         <NavLink to="/location" className="nav-link location">
-                            <img src={LocationIcon} alt="location" />
+                            <img loading="lazy" src={LocationIcon} alt="location" />
                         </NavLink>
                         <span className="username-span">{this.state.username}</span>
                         <NavLink to="/user-profile" className="nav-link profile after-authenticate">
-                            <img src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
+                            <img loading="lazy" src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
                             <div className="user-icon-holder">
-                                <img src={UserIcon} alt="profile" className="profile-icon" />
+                                <img loading="lazy" src={UserIcon} alt="profile" className="profile-icon" />
                             </div>
                         </NavLink>
                     </div>

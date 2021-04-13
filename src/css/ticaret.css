@@ -54,6 +54,26 @@ html {
 
 }
 
+.ml-4 {
+    margin-left: 4rem;
+}
+
+.default-size {
+    font-size: var(--font-size);
+}
+
+.normal-p {
+    font-size: var(--small-font-size);
+}
+
+.very-small-font-size {
+    font-size: var(--very-small-font-size);
+}
+
+.text-left {
+    text-align: left !important;
+}
+
 ::selection {
     background-color: var(--primary-color);
     color: var(--header-menu-bg-color);
@@ -130,6 +150,16 @@ body::-webkit-scrollbar-button {
     vertical-align: middle;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.flex-column.center {
+    justify-content: center;
+    align-items: center;
+}
+
 .auto-fit-p {
     width: 45ch;
 }
@@ -149,6 +179,10 @@ body::-webkit-scrollbar-button {
     left: 1.2rem;
 }
 
+.flex {
+    display: flex;
+}
+
 .flex-row {
     display: flex;
     justify-content: space-between;
@@ -160,6 +194,43 @@ body::-webkit-scrollbar-button {
     margin-right: 1rem;
 }
 
+.close-icon {
+    display: inline-block;
+    color: var(--primary-color);
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+}
+.close-icon-for-login {
+    display: inline-block;
+    color: var(--primary-color);
+    position: absolute;
+    top: -7rem;
+    right: -8rem;
+    cursor: pointer;
+    z-index: 999999;
+    font-size: 5rem;
+}
+
+.close-icon-for-forgot {
+    height: 5rem !important;
+    width: 5rem !important;
+    background-color: red !important;
+    display: inline-block;
+    color: var(--primary-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 999999;
+    font-size: 5rem;
+    border: 3px solid red;
+}
+
+.hover-activate-underline:hover {
+    text-decoration: underline !important;
+}
 
 .clear-both {
     margin: auto 3rem;
@@ -266,6 +337,18 @@ body::-webkit-scrollbar-button {
     cursor: pointer;
 }
 
+
+.differ-btn {
+    width: 95%;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: var(--header-border-radius);
+}
+
+.text-center {
+    text-align: center;
+}
 
 .option-close > .span {
     text-decoration: none;
@@ -1394,8 +1477,8 @@ footer svg {
     box-shadow: inset -10rem 0 0 90rem rgba(0,0,0,.4);
 }
 
-.auto-adjust-padding {
-    padding: 0 var(--fixed-margin);
+.auto-adjust-padding-all {
+    padding: 0 calc(var(--fixed-margin) - 2rem);
 }
 
 .overlay {
@@ -1409,6 +1492,17 @@ footer svg {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.text-white {
+    color: var(--font-color) !important;
+}
+
+.spread-all {
+    display: inline-block;
+    line-height: 3;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .movie-details-chair-container {
@@ -2053,4 +2147,231 @@ footer svg {
 
 .img-holder {
     margin-left: 5rem;
+}
+
+/*  Ticaret Ticket Model CSS */
+
+.ticket-bg-wrapper {
+    width: 80%;
+    height: 45rem;
+    background-image: url("../assets/tickets_history/ticket_bg_1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.booked-ticket-posture-img {
+    width: 15%;
+    height: 10rem;
+    object-fit: cover;
+    position: absolute;
+    top: -3rem;
+    left: -3rem;
+    border-radius: 15px;
+}
+
+.min-100-height {
+    min-height: 100vh;
+}
+
+.booked-stamp-holder {
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    right: -5rem;
+    bottom: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/tickets_history/stamp.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ticket-bg-wrapper {
+    display: flex;
+}
+
+.first-part {
+    margin-top: 2rem;
+}
+
+.second-part {
+    /* border: 3px solid red; */
+    position: relative;
+    left: 5rem;
+}
+
+.second-part > *{
+    margin-bottom: 2rem !important;
+}
+
+.third-part {
+    /* border: 3px solid red; */
+    position: relative;
+    left: 3rem;
+}
+
+.first-part > *{
+    width: 100%;
+    padding: 0 0 0 5rem;
+}
+
+.adapted-ones {
+    flex: 1 1 33%;
+}
+
+.booked-stamp-span {
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+
+.transparent-bg {
+    background-color: var(--dark-theme-color) !important;
+}
+
+.transparent-bg-forgot {
+    background-color: transparent !important;
+}
+
+.align-self-start {
+    align-self: flex-start !important;
+}
+.ml-16 {
+    margin-left: 16rem;
+}
+.w-5 {
+    width: 50%;
+    margin: 0 5rem;
+}
+
+.ml-5 {
+    margin-left: 4.5rem;
+}
+
+.ml-6 {
+    margin-left: 7rem;
+}
+
+.ml-7 {
+    margin-left: 7.5rem;
+}
+
+.ml-8 {
+    margin-left: 9.5rem;
+}
+
+.mh-50 {
+    min-height: 50vh;
+}
+
+.remove-underline {
+    text-decoration: none !important;
+}
+
+/* 404 page css*/
+
+.min-all-100 {
+    min-width: 100vh;
+    min-width: 100vw;
+}
+
+.perfect-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-404-container {
+    width: 300px;
+    height: 300px;
+    background-image: url(../assets/404_page/404_ticaret_style.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 5rem;
+}
+
+/* About us page css */
+
+.about-hero-banner {
+    background-image: url("../assets/about_page/about_hero_bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hero-banner > *{
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+}
+
+.text-justify {
+    text-align: justify;
+    font-size: var(--font-size);
+}
+
+
+.about-hero-banner > * > *{
+    margin-right: 3rem;
+}
+
+.first-part-of-about {
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.first-part-of-about > *{
+    flex: 1 1 50%;
+}
+
+.network-img {
+    height: 50vh;
+    background-image: url("../assets/about_page/networked_collabration.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-part-of-about {
+    margin-top: 4rem;
+}
+
+.auto-adjust-padding {
+    padding: 2rem 5rem 5rem 1rem !important;
+}
+
+.team-container {
+    padding: 1rem 0 5rem 0;
+    border-top: 2px solid var(--secondary-color);
+    margin-top: 3rem;
+}
+
+.team-container > * {
+    margin-right: 4rem;
+    text-align: center;
+    flex: 1 1 50%;
+}
+
+.flex-row.auto-flow {
+    flex-wrap: wrap;
+}
+
+p {
+    font-size: var(--font-size);
+    font-family: CarosLighter;
 }

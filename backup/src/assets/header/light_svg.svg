@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1775.296" height="911.183" viewBox="0 0 1775.296 911.183">
-  <defs>
-    <filter id="f1" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-    </filter>
-  </defs>
-  <path id="Path_5264" data-name="Path 5264" d="M222.1,521.948l1261.959,703.719v23.9l-1625.3,33.567Z" transform="translate(216.242 -446.948)" fill="rgba(241,241,241,0.58)" opacity="0.12" filter="url(#f1)" />
-</svg>

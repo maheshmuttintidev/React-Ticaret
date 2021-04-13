@@ -21,22 +21,22 @@ export default class TicketsHistory extends Component {
             </div>
             <div className="unified-p">
                 <span className="unified-p">5pts </span>
-                <img src={CartIcon} alt="" className="middle-img ml-1" />
+                <img loading="lazy" src={CartIcon} alt="" className="middle-img ml-1" />
             </div> 
         </div>
         <div className="ticket-history-cards-container">
             <div className="ticket-history-card">
                 <div className="img-holder">
-                    <img src={CHAKRA} alt="" className="history-img" />
+                    <img loading="lazy" src={CHAKRA} alt="" className="history-img" />
                 </div>
                 <div className="simple-card-desc">
                     <h2 className="normal_p">CHAKRA</h2>
                     <div className="star-rating-container mg-4">
-                        <img src={FullStarIcon} alt="star1" />
-                        <img src={FullStarIcon} alt="star2" />
-                        <img src={FullStarIcon} alt="star3" />
-                        <img src={HalfStarIcon} alt="star4" />
-                        <img src={EmptyStarIcon} alt="star5" />
+                        <img loading="lazy" src={FullStarIcon} alt="star1" />
+                        <img loading="lazy" src={FullStarIcon} alt="star2" />
+                        <img loading="lazy" src={FullStarIcon} alt="star3" />
+                        <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                        <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                     </div>
                     <p className="normal_p">AMB Cinema: Gachibowli</p>
                     <p className="normal_p">Telugu</p>
@@ -56,16 +56,16 @@ export default class TicketsHistory extends Component {
             </div>
             <div className="ticket-history-card">
                 <div className="img-holder">
-                    <img src={CHAKRA} alt="" className="history-img" />
+                    <img loading="lazy" src={CHAKRA} alt="" className="history-img" />
                 </div>
                 <div className="simple-card-desc">
                     <h2 className="normal_p">CHAKRA</h2>
                     <div className="star-rating-container mg-4">
-                        <img src={FullStarIcon} alt="star1" />
-                        <img src={FullStarIcon} alt="star2" />
-                        <img src={FullStarIcon} alt="star3" />
-                        <img src={HalfStarIcon} alt="star4" />
-                        <img src={EmptyStarIcon} alt="star5" />
+                        <img loading="lazy" src={FullStarIcon} alt="star1" />
+                        <img loading="lazy" src={FullStarIcon} alt="star2" />
+                        <img loading="lazy" src={FullStarIcon} alt="star3" />
+                        <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                        <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                     </div>
                     <p className="normal_p">AMB Cinema: Gachibowli</p>
                     <p className="normal_p">Telugu</p>
@@ -85,16 +85,16 @@ export default class TicketsHistory extends Component {
             </div>
             <div className="ticket-history-card">
                 <div className="img-holder">
-                    <img src={CHAKRA} alt="" className="history-img" />
+                    <img loading="lazy" src={CHAKRA} alt="" className="history-img" />
                 </div>
                 <div className="simple-card-desc">
                     <h2 className="normal_p">CHAKRA</h2>
                     <div className="star-rating-container mg-4">
-                        <img src={FullStarIcon} alt="star1" />
-                        <img src={FullStarIcon} alt="star2" />
-                        <img src={FullStarIcon} alt="star3" />
-                        <img src={HalfStarIcon} alt="star4" />
-                        <img src={EmptyStarIcon} alt="star5" />
+                        <img loading="lazy" src={FullStarIcon} alt="star1" />
+                        <img loading="lazy" src={FullStarIcon} alt="star2" />
+                        <img loading="lazy" src={FullStarIcon} alt="star3" />
+                        <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                        <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                     </div>
                     <p className="normal_p">AMB Cinema: Gachibowli</p>
                     <p className="normal_p">Telugu</p>

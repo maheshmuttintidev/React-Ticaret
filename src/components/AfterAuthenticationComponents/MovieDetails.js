@@ -14,25 +14,25 @@ export default class MovieDetails extends Component {
         return (
             <UserLayout>
                 <div className="movie-details-hero-container">
-                    <div className="auto-adjust-padding overlay">
+                    <div className="auto-adjust-padding-all overlay">
                         <h2 className="__h1">
                             Chakra
                         </h2>
                         <div className="star-rating-container mg-4">
-                            <img src={FullStarIcon} alt="star1" />
-                            <img src={FullStarIcon} alt="star2" />
-                            <img src={FullStarIcon} alt="star3" />
-                            <img src={HalfStarIcon} alt="star4" />
-                            <img src={EmptyStarIcon} alt="star5" />
+                            <img loading="lazy" src={FullStarIcon} alt="star1" />
+                            <img loading="lazy" src={FullStarIcon} alt="star2" />
+                            <img loading="lazy" src={FullStarIcon} alt="star3" />
+                            <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                            <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                         </div>
                         <p className="small-p">Telugu, Tamil</p>
                         <div className="small-desc-container">
                             <div className="">
-                                <img src={TicketSmallIcon} alt="" />
+                                <img loading="lazy" src={TicketSmallIcon} alt="" />
                                 <span className="small-p l-1">Action Thriller</span>
                             </div>
                             <div className="">
-                                <img src={TimerSmallIcon} alt="" />
+                                <img loading="lazy" src={TimerSmallIcon} alt="" />
                                 <span className="small-p l-1">2h 10m</span>
                             </div>
                             <div className="">
@@ -46,7 +46,7 @@ export default class MovieDetails extends Component {
                 </div>
                 <div className="theatre-list-container auto-adjust">
                     <div className="date-wrapper">
-                        <img src={ArrowLeft} alt="" className="mr-2 apply-cursor mb-0" />
+                        <img loading="lazy" src={ArrowLeft} alt="" className="mr-2 apply-cursor mb-0" />
                         <div className="dates-scrollable-container">
                             <div className="small-p not-selected">
                                 <span>Sat</span>
@@ -64,12 +64,12 @@ export default class MovieDetails extends Component {
                                 <span className="circle small"></span>
                             </div>
                         </div>
-                        <img src={ArrowRight} alt="" className="ml-1 apply-cursor mb-0" />
+                        <img loading="lazy" src={ArrowRight} alt="" className="ml-1 apply-cursor mb-0" />
                     </div>
                     <div className="search-bar-container">
                         <div className="search-wrapper">
                             <input type="text" placeholder="Search Theatres" name="theatreName" title="search theatres" className="search-bar-field" />
-                            <img src={SearchIcon} alt="" className="search-icon" />
+                            <img loading="lazy" src={SearchIcon} alt="" className="search-icon" />
                         </div>
                     </div>
                     <div className="theatre-list-wrapper">

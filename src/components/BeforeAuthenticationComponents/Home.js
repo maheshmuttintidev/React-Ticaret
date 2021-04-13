@@ -10,6 +10,7 @@ import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
 import {Movies as movies} from '../../assets/img_links/ImagesLinks'
 import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
 import React, { Component } from "react"
+// import Login from '../../containers/Login'
 // import {NavLink} from 'react-router-dom'
 import Layout from './Layout'
 
@@ -26,10 +27,16 @@ class Home extends Component {
         console.log(this.state.isTokenAvailable)
     }
 
+    // renderLoginPopup = () => {
+    //     return <Login />
+    // }
+
     checkAuth = () => {
         if(this.state.isTokenAvailable) {
             this.props.history.push('/user')
         } else {
+            // return <Login />
+            // this.renderLoginPopup()
             this.props.history.push('/login')
         }
     }
@@ -39,7 +46,7 @@ class Home extends Component {
             return (
                 <div key={movie.id}>
                     <div className="img-movie">
-                        <img src={movie.img_url} alt="movie img"/>
+                        <img loading="lazy" src={movie.img_url} alt="movie img"/>
                     </div>
                 </div>
             )
@@ -52,11 +59,11 @@ class Home extends Component {
             return (
                 <div key={movie.id} className="movie-details">
                     <div className="star-rating-container">
-                        <img src={FullStarIcon} alt="star1" />
-                        <img src={FullStarIcon} alt="star2" />
-                        <img src={FullStarIcon} alt="star3" />
-                        <img src={HalfStarIcon} alt="star4" />
-                        <img src={EmptyStarIcon} alt="star5" />
+                        <img loading="lazy" src={FullStarIcon} alt="star1" />
+                        <img loading="lazy" src={FullStarIcon} alt="star2" />
+                        <img loading="lazy" src={FullStarIcon} alt="star3" />
+                        <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                        <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                     </div>
                     <h2 className="movie-name">{movie.name}</h2>
                     <p className="status">UA</p>
@@ -68,6 +75,7 @@ class Home extends Component {
     }
 
     render() {
+        // {this.renderLoginPopup()}
         return (
             <Layout>
                 <main>
@@ -101,7 +109,7 @@ class Home extends Component {
                         </div>
                         <div className="flow-map-container">
                             <div className="steps step-one">
-                                <img src={ResaleTicketIcon} alt="reselling ticket" />
+                                <img loading="lazy" src={ResaleTicketIcon} alt="reselling ticket" />
                                 <p className="title resale-title">
                                     Reselling tickets
                                 </p>
@@ -110,7 +118,7 @@ class Home extends Component {
                                 </p>
                             </div>
                             <div className="steps step-two">
-                                <img src={BuyOurTicket} alt="buy our ticket" />
+                                <img loading="lazy" src={BuyOurTicket} alt="buy our ticket" />
                                 <p className="title buy-ticket-title">
                                     Buy our ticket
                                 </p>
@@ -119,7 +127,7 @@ class Home extends Component {
                                 </p>
                             </div>
                             <div className="steps step-three">
-                                <img src={GetOurTicket} alt="get your ticket" />
+                                <img loading="lazy" src={GetOurTicket} alt="get your ticket" />
                                 <p className="title get-ticket-title">
                                     Get your ticket
                                 </p>
@@ -148,16 +156,16 @@ class Home extends Component {
                         <h2 className="__h1 partners-heading">Partners</h2>
                         <div className="logos-container">
                             <div className="logo_p logo1">
-                                <img src={BookMyShowIcon} alt="partners avatars" />
+                                <img loading="lazy" src={BookMyShowIcon} alt="partners avatars" />
                             </div>
                             <div className="logo_p logo2">
-                                <img src={PrimeVideoIcon} alt="partners avatars" />
+                                <img loading="lazy" src={PrimeVideoIcon} alt="partners avatars" />
                             </div>
                             <div className="logo_p logo3">
-                                <img src={NetflixIcon} alt="partners avatars" />
+                                <img loading="lazy" src={NetflixIcon} alt="partners avatars" />
                             </div>
                             <div className="logo_p logo4">
-                                <img src={AhaIcon} alt="partners avatars" />
+                                <img loading="lazy" src={AhaIcon} alt="partners avatars" />
                             </div>
                         </div>
                     </section>

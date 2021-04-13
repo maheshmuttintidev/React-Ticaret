@@ -11,7 +11,7 @@ export default class BuyTickets extends Component {
             return (
                 <>
                     <div key={movie.id} className="buy-movie-img-movie">
-                        <img src={movie.img_url} alt="movie img"/>
+                        <img loading="lazy" src={movie.img_url} alt="movie img"/>
                     </div>
                 </>
             )
@@ -25,11 +25,11 @@ export default class BuyTickets extends Component {
                 <>
                     <div key={movie.id} className="buy-movie-details">
                         <div className="star-rating-container">
-                            <img src={FullStarIcon} alt="star1" />
-                            <img src={FullStarIcon} alt="star2" />
-                            <img src={FullStarIcon} alt="star3" />
-                            <img src={HalfStarIcon} alt="star4" />
-                            <img src={EmptyStarIcon} alt="star5" />
+                            <img loading="lazy" src={FullStarIcon} alt="star1" />
+                            <img loading="lazy" src={FullStarIcon} alt="star2" />
+                            <img loading="lazy" src={FullStarIcon} alt="star3" />
+                            <img loading="lazy" src={HalfStarIcon} alt="star4" />
+                            <img loading="lazy" src={EmptyStarIcon} alt="star5" />
                         </div>
                         <h2 className="movie-name">{movie.name}</h2>
                         <p className="status">UA</p>

@@ -7,7 +7,7 @@ import Linkedin from '../../assets/footer/Icon awesome-linkedin.svg'
 export default class Footer extends Component {
     render() {
         return (
-            <footer className="auto-adjust-padding">
+            <footer className="auto-adjust-padding-all">
                 <Router forceRefresh={true}>
                     <div className="btm-logo-container">
                         <NavLink to="/user">
@@ -39,19 +39,19 @@ export default class Footer extends Component {
                         </div>
                         <div className="btm-options2">
                             <a className="nav-link fb" href="https://m.facebook.com/maheshmuttinti" target="_blank" rel="noreferrer">
-                                <img src={Facebook} alt="follow us on facebook"/>
+                                <img loading="lazy" src={Facebook} alt="follow us on facebook"/>
                                 Facebook
                             </a>
                             <a className="nav-link tw" href="https://twitter.com/MMuttinti" target="_blank" rel="noreferrer">
-                                <img src={Twitter} alt="follow us on twitter"/>
+                                <img loading="lazy" src={Twitter} alt="follow us on twitter"/>
                                 Twitter
                             </a>
                             <a className="nav-link ins" href="https://www.instagram.com/mahesh_muttinti/" target="_blank" rel="noreferrer">
-                                <img src={Instagram} alt="follow us on instagram"/>
+                                <img loading="lazy" src={Instagram} alt="follow us on instagram"/>
                                 Instagram
                             </a>
                             <a className="nav-link lnk" href="https://www.linkedin.com/in/mahesh-muttinti-4a2b61202/" target="_blank" rel="noreferrer">
-                                <img src={Linkedin} alt="follow us on linkedin"/>
+                                <img loading="lazy" src={Linkedin} alt="follow us on linkedin"/>
                                 Linkedin
                             </a>
                         </div>

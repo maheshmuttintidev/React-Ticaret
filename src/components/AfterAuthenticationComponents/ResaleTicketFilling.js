@@ -43,7 +43,7 @@ export default class ResaleTicketFilling extends Component {
                                 <input className="input-field" name="totalAmount" type="number" placeholder="Price per ticket"/>
                             </div>
                             <div className="resale-btn-container mb-2">
-                                <NavLink to="/tickets-history" className="form-btn form-btn-ticket-form normal_p">Resale tickets</NavLink>
+                                <NavLink to="/fill-ur-details" className="form-btn form-btn-ticket-form normal_p">Resale tickets</NavLink>
                             </div>
                         </form>
                     </div>

@@ -34,14 +34,14 @@ export default class Header extends Component {
                     </div>
                     <div className="options-container">
                         <NavLink to="/location" className="nav-link location">
-                            <img src={LocationIcon} alt="location" />
+                            <img loading="lazy" src={LocationIcon} alt="location" />
                         </NavLink>
                         <NavLink to="/login" className="nav-link login">
                             Login
                         </NavLink>
                         <NavLink to="/profile" className="nav-link profile">
-                            <img src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
-                            <img src={UserIcon} alt="profile" className="profile-icon" />
+                            <img loading="lazy" src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
+                            <img loading="lazy" src={UserIcon} alt="profile" className="profile-icon" />
                         </NavLink>
                     </div>
                 </Router>

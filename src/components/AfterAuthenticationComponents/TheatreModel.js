@@ -63,7 +63,7 @@ export default class TheatreModel extends Component {
                         <div className="theatre-details-top">
                             <div className="back-link">
                                 <NavLink to="/movie-details">
-                                    <img src={ArrowLeft} alt="" className="theatre-back-icon" />
+                                    <img loading="lazy" src={ArrowLeft} alt="" className="theatre-back-icon" />
                                 </NavLink>
                             </div>
                             <div className="theatre-info">
@@ -95,20 +95,20 @@ export default class TheatreModel extends Component {
                                 </div>
                                 <div className="flex-default">
                                     {this.updateTicketCount()}
-                                    <img src={TicketsIcon} alt="" className="ml-1" />
+                                    <img loading="lazy" src={TicketsIcon} alt="" className="ml-1" />
                                 </div>
                             </div>
                             <div className="seats-status-container">
                                 <div className="seat-icon-div">
-                                    <img src={NotAvailableIcon} alt="" />
+                                    <img loading="lazy" src={NotAvailableIcon} alt="" />
                                     <p className="small_p _80_color">Not available</p>
                                 </div>
                                 <div className="seat-icon-div">
-                                    <img src={AvailableIcon} alt="" />
+                                    <img loading="lazy" src={AvailableIcon} alt="" />
                                     <p className="small_p _80_color">Available</p>
                                 </div>
                                 <div className="seat-icon-div">
-                                    <img src={YourSeatsIcon} alt="" />
+                                    <img loading="lazy" src={YourSeatsIcon} alt="" />
                                     <p className="small_p _80_color">Your seats</p>
                                 </div>
                             </div>
@@ -554,7 +554,7 @@ export default class TheatreModel extends Component {
                     </div>
                     <div className="book-ticket-payment-btn-container">
                         <button className="book-ticket-payment-btn apply-cursor">
-                            Book : {this.state.totalMoney}
+                            <NavLink className="spread-all text-white remove-underline" to="/user-ticaret-ticket">Book : {this.state.totalMoney}</NavLink>
                         </button>
                     </div>
                 </div>
