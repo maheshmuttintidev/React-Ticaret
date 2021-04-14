@@ -58,7 +58,7 @@ export default class UserProfileMenu extends Component {
               </li>
               <li className="user-option option3">
                 <img loading="lazy" src={AboutUsIcon} alt="about us" />
-                <NavLink to="/about-us" className="user-menu-option remove-underline about-us">About Us</NavLink>
+                <NavLink to="/special/about-us" className="user-menu-option remove-underline about-us">About Us</NavLink>
               </li>
               <li className="user-option option4">
                 <img loading="lazy" src={SettingsIcon} alt="settings" />

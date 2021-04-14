@@ -20,12 +20,13 @@ export default class UserPage extends Component {
     //     isTokenAvailable: sessionStorage.getItem("token") ? true : false
     //   }
     // }
+
     loadMovieCard = () => {
         let movie_card = movies.map(movie => {
             return (
                 <div key={movie.id}>
                     <div className="img-movie">
-                        <img loading="lazy" src={movie.img_url} alt="movie img"/>
+                        <img onClick={this.redirectToMovieDetails} loading="lazy" src={movie.img_url} alt="movie img"/>
                     </div>
                 </div>
             )
@@ -51,6 +52,9 @@ export default class UserPage extends Component {
             )
         })
         return movie_details
+    }
+    redirectToMovieDetails = () => {
+        this.props.history.push('/movie-details')
     }
   render() {
     return (

@@ -7,53 +7,51 @@ import BookMyShowIcon from '../../assets/body/bookmyshow.svg'
 import AhaIcon from '../../assets/body/aha.svg'
 import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
 import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
-import {Movies as movies} from '../../assets/img_links/ImagesLinks'
+import { Movies as movies } from '../../assets/img_links/ImagesLinks'
 import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
+import Layout from './Layout'
 import React, { Component } from "react"
+import {NavLink} from 'react-router-dom'
 // import Login from '../../containers/Login'
 // import {NavLink} from 'react-router-dom'
-import Layout from './Layout'
+
+// const modalRef = createRef()
 
 class Home extends Component {
     constructor(props) {
-      super(props)
-    
-      this.state = {
-         isTokenAvailable: sessionStorage.getItem("token") ? true : false
-      }
-    }
-    
-    componentDidMount() {
-        console.log(this.state.isTokenAvailable)
-    }
+        super(props)
 
-    // renderLoginPopup = () => {
-    //     return <Login />
-    // }
-
-    checkAuth = () => {
-        if(this.state.isTokenAvailable) {
-            this.props.history.push('/user')
-        } else {
-            // return <Login />
-            // this.renderLoginPopup()
-            this.props.history.push('/login')
+        this.state = {
+            isTokenAvailable: sessionStorage.getItem("token") ? true : false
         }
     }
+
+    redirectToMovieDetails = () => {
+        this.props.history.push('/movie-details')
+    }
+    componentDidMount() {
+        console.log(this.state.isTokenAvailable)
+        // modalRef.current.style.display = "none"
+    }
+
+    // closeModal = () => {
+    //     modalRef.current.style.display = "none"
+    // }
+
 
     loadMovieCard = () => {
         let movie_card = movies.map(movie => {
             return (
                 <div key={movie.id}>
                     <div className="img-movie">
-                        <img loading="lazy" src={movie.img_url} alt="movie img"/>
+                        <img onClick={this.redirectToMovieDetails} loading="lazy" src={movie.img_url} alt="movie img" />
                     </div>
                 </div>
             )
         })
         return movie_card
     }
-    
+
     loadMovieDetails = () => {
         let movie_details = movies.map(movie => {
             return (
@@ -75,9 +73,20 @@ class Home extends Component {
     }
 
     render() {
-        // {this.renderLoginPopup()}
         return (
             <Layout>
+                {/*
+                    <div ref={modalRef} className="overlay-fixed">
+                        <div className="modal-container">
+                            <div className="content-container">
+                                <span className="apply-cursor text-white top-right" onClick={this.closeModal}>&times;</span>
+                                <h3>You have to Login or Register First to access the feature</h3>
+                                <p>Please Login, Option is at the top right Corner</p>
+                            </div>
+                        </div>
+                    </div>
+                */}
+
                 <main>
                     <section className="container hero-container">
                         <aside className="resale-ticket">
@@ -87,9 +96,9 @@ class Home extends Component {
                             <p className="__p">
                                 sell your tickets with us in a easier way and get more points.
                             </p>
-                            <button onClick={this.checkAuth} className="btn btn-resale">
+                            <NavLink to="/login" onClick={this.checkAuth} className="btn remove-underline btn-resale">
                                 Resale Your Ticket
-                            </button>
+                            </NavLink>
                         </aside>
                         <aside className="buy-ticket">
                             <h2 className="__h0">
@@ -98,9 +107,9 @@ class Home extends Component {
                             <p className="__p">
                                 Get your tickets, chill with your show and your security is our priority.
                             </p>
-                            <button onClick={this.checkAuth} className="btn btn-buy">
+                            <NavLink to="/login" onClick={this.checkAuth} className="btn remove-underline btn-buy">
                                 Buy Our Ticket
-                            </button>
+                            </NavLink>
                         </aside>
                     </section>
                     <section className="route-map-container">

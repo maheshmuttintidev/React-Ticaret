@@ -5,7 +5,7 @@ export default class ResaleTicketFilling extends Component {
     render() {
         return (
             <UserLayout>
-                <div className="auto-adjust">
+                <div className="auto-adjust-padding-all">
                     <div className="resale-form-container">
                         <h2 className="normal_p _80_color normal_font normalized-font-size">Resale your ticket</h2>
                         <form className="resale-ticket-filling-form">
@@ -42,7 +42,7 @@ export default class ResaleTicketFilling extends Component {
                             <div className="input-field-container">
                                 <input className="input-field" name="totalAmount" type="number" placeholder="Price per ticket"/>
                             </div>
-                            <div className="resale-btn-container mb-2">
+                            <div className="resale-btn-container">
                                 <NavLink to="/fill-ur-details" className="form-btn form-btn-ticket-form normal_p">Resale tickets</NavLink>
                             </div>
                         </form>

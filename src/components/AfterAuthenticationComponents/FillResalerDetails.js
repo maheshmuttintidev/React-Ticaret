@@ -11,7 +11,7 @@ export default class FillResalerDetailse extends Component {
                     <input className="input-field" type="number" placeholder="Account Number" />
                     <input className="input-field" type="text" placeholder="Card Holder Name" />
                     <input className="input-field" type="text" placeholder="IFSC code" />
-                    <NavLink to="/" className="form-btn form-btn-ticket-form" type="submit">Submit</NavLink>
+                    <NavLink to="/user" className="form-btn form-btn-ticket-form" type="submit">Submit</NavLink>
                 </form>
             </UserLayout>
         )

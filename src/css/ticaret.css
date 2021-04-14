@@ -38,6 +38,9 @@ html {
     --dark-theme-color: #000000;
     --font-color: #f9f9f9;
     --header-border-radius: 3px;
+    --pure-cause-color: #f06a11;
+    --pure-warning-color: #c4d429;
+    /* --success-color: #098d2c; */
     --secondary-color: #1a1a1a;
     --mini-heading-font-size: 1.7rem;
     --font-size: 1.5rem;
@@ -52,6 +55,20 @@ html {
     --ticket-card-bg-color: #141414;
     --after-authenticate-profile-menu-color: #2c2c2c;
 
+}
+
+.none {
+    display: none;
+}
+
+.success-color {
+    color: var(--success-color);
+}
+.pure-warning-color {
+    color: var(--pure-warning-color);
+}
+.pure-cause-color {
+    color: var(--pure-cause-color);
 }
 
 .ml-4 {
@@ -407,6 +424,12 @@ body::-webkit-scrollbar-button {
     margin-left: 1rem;
 }
 
+.hover-primary:hover,
+.hover-primary:focus {
+    background-color: var(--primary-color);
+    box-shadow: 0 !important;
+}
+
 /* Loading Animation */
 
 .loader-1 {
@@ -417,18 +440,13 @@ body::-webkit-scrollbar-button {
     z-index: 200;
 }
 
-.loader-1 div {
+.loader-1 svg {
     position: fixed;
-    top: 47%;
-    left: 47%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 10rem;
-    width: 10rem;
-    border: 10px solid var(--secondary-color);
-    border-radius: 50%;
-    border-top-color: var(--primary-color);
-    animation: rotate .4s ease-in-out infinite;
 }
+
 
 @keyframes rotate {
     from {
@@ -1089,10 +1107,52 @@ footer svg {
     width: 300vw;
     display: flex;
     flex-direction: column;
-    z-index: 0;
+    z-index: 9999;
     background-color: rgba(0,0,0,.7);
 }
 
+.normalize-list {
+    width: 35ch;
+}
+
+.normalize-list > li {
+    font-size: var(--font-size);
+    line-height: 1.5;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.terms-desc-p {
+    width: 50ch;
+    text-align: center !important;
+}
+
+.bold_font {
+    font-family: Caros;
+}
+
+.terms-container {
+    z-index: 99999999 !important;
+    position: fixed;
+    height: 80vh;
+    width: max-content;
+    padding: 1rem 3rem 2rem;
+    z-index: 99999999 !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-theme-color);
+    box-shadow: 0 2px 5px var(--primary-color);
+    border-radius: var(--border-radius);
+}
 
 .login-form {
     height: 85vh;
@@ -1764,7 +1824,7 @@ footer svg {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 0;
     background-color: var(--dark-theme-color);
 }
 
@@ -1985,14 +2045,65 @@ footer svg {
     border: 0;
     outline: 0;
     width: 50vw;
-    height: 3em;
     background-color: var(--primary-color);
     color: var(--font-color);
     border-radius: var(--border-radius);
 }
 
+.modal-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50vh;
+    margin: auto;
+}
+
+.content-container span {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    font-size: 5rem;
+}
+
+.content-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-width: 300px;
+    width: 350px;
+    max-width: 500px;
+    padding: 6rem !important;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color) !important;
+    z-index: 9999999 !important;
+}
 
 
+.expand-details-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.expand-icon-container {
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.expand-icon-container img{
+    display: inline-block;
+    width: 1.4rem;
+}
 
 
 
@@ -2073,6 +2184,11 @@ footer svg {
     background-color: var(--secondary-color);
 }
 
+.resale-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
 
 .form-btn-ticket-form {
     display: inline-block;
@@ -2123,7 +2239,10 @@ footer svg {
 }
 
 .history-img {
-    width: 10rem;
+    width: 15rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: 90% 15%;
     border-radius: var(--border-radius);
 }
 
@@ -2131,14 +2250,18 @@ footer svg {
     display: flex;
     background-color: var(--ticket-card-bg-color);
     align-items: center;
-    border-radius: var(--border-radius);
-    justify-content: space-around;
+    border-radius: var(--border-radius) var(--border-radius) 0;
+    justify-content: space-evenly;
     flex-flow: wrap;
     margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+    padding: 1rem 0;
 }
 
 .ticket-history-card > * {
     flex: 1 1 25rem;
+    text-align: center;
 }
 
 .center {
@@ -2371,7 +2494,25 @@ footer svg {
     flex-wrap: wrap;
 }
 
+.team-members > * {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 100vh;
+}
+
 p {
     font-size: var(--font-size);
     font-family: CarosLighter;
+}
+
+.load-path1,
+.load-path2 {
+    stroke-dasharray: 100;
+    animation: dash 5s linear alternate-reverse infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 1000;
+    }
 }

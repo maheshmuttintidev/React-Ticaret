@@ -1,22 +1,70 @@
 import React, { Component } from "react"
 import UserLayout from './UserLayout'
 
-export default class AboutUs extends Component {
+class AboutUs extends Component {
   render() {
     return (
       <UserLayout>
         <main>
-          <section className="flex-container auto-adjust">
-            <h1 className="__h2">Ticaret:</h1>
-            <p className="normal_p">Ticaret is a brand company to virtual ticket resale.</p>
-            <ul>
-              <li className="normal_p">Here U can <span className="mark">Resell</span> your unnecessary ticket/ tickets</li>
-              <li className="normal_p">U will get the <span className="mark">70% of amount</span> whenever ticket gets purchased by other after you put that ticket in this Ticaret Website</li>
-              <li className="normal_p">Hence, U are <span className="mark">saving the ticket</span> and you will get the 70% of amount instead of losing total amount U paid for the ticket</li>
-            </ul>
+          <header className="about-hero-banner mh-50">
+            <div className="flex-row">
+              <h3>Header1</h3>
+              <h3>Header2</h3>
+              <h3>Header3</h3>
+            </div>
+            <div className="flex-row">
+              <p>Paragraph1</p>
+              <p>Paragraph2</p>
+              <p>Paragraph3</p>
+            </div>
+          </header>
+          <section className="auto-adjust">
+            <div className="flex-row first-part-of-about">
+              <div className="">
+                <h3>Lorem Ipsum</h3>
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+              </div>
+              <div className="network-img"></div>
+            </div>
+            <div className="flex-row second-part-of-about">
+              <div className=""></div>
+              <div className="">
+                <h3>Lorem Ipsum</h3>
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+              </p>
+              </div>
+            </div>
           </section>
+          <div className="team-container auto-adjust-padding">
+            <h3 className="text-center">Team</h3>
+            <section className="auto-adjust">
+              <div className="team-members flex-row auto-flow">
+                <div>
+                  <p>Dhanraj</p>
+                  <p>Rohith</p>
+                  <p>Bharadwaj</p>
+                  <p>Sai Krishna</p>
+                  <p>Thiru Hruday Reddy</p>
+                  <p>Priya Likhita</p>
+                </div>
+                <div>
+                  <p>Varun Reddy</p>
+                  <p>Vamshi</p>
+                  <p>Rushi</p>
+                  <p>Naveen</p>
+                  <p>Akhila Sai</p>
+                  <p>Mahesh Muttinti</p>
+                </div>
+              </div>
+            </section>
+          </div>
         </main>
       </UserLayout>
     );
   }
 }
+
+export default AboutUs;

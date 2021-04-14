@@ -41,15 +41,23 @@ class AboutUs extends Component {
           <div className="team-container auto-adjust-padding">
             <h3 className="text-center">Team</h3>
             <section className="auto-adjust">
-              <div className="flex-row auto-flow">
-                <p>Dhanraj</p>
-                <p>Rohith</p>
-                <p>Bharadwaj</p>
-                <p>Sai Krishna</p>
-                <p>Thiru Hruday Reddy</p>
-                <p>Priya Likhita</p>
-                <p>Akhila Sai</p>
-                <p>Mahesh Muttinti</p>
+              <div className="team-members flex-row auto-flow">
+                <div>
+                  <p>Dhanraj</p>
+                  <p>Rohith</p>
+                  <p>Bharadwaj</p>
+                  <p>Sai Krishna</p>
+                  <p>Thiru Hruday Reddy</p>
+                  <p>Priya Likhita</p>
+                </div>
+                <div>
+                  <p>Varun Reddy</p>
+                  <p>Vamshi</p>
+                  <p>Rushi</p>
+                  <p>Naveen</p>
+                  <p>Akhila Sai</p>
+                  <p>Mahesh Muttinti</p>
+                </div>
               </div>
             </section>
           </div>

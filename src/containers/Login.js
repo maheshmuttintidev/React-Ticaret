@@ -53,7 +53,7 @@ class Login extends Component {
               </div>
               <input className="input-field phone" minLength="10" maxLength="10" max="9999999999" pattern="[-+]?[0-9]" type="number" placeholder="Mobile Number" name="phoneNumber" onChange={this.handleChange.bind(this)} required /><br />
               <input className="input-field password" minLength="8" maxLength="20" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" type="password" placeholder="password" name="password" onChange={this.handleChange.bind(this)} required /><br />
-              <button className="form-btn" type="submit">Login</button>  
+              <button className="form-btn hover-primary" type="submit">Login</button>  
             </div>
           </form>
           <div className="middle-options">
