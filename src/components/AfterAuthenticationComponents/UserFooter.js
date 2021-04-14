@@ -34,7 +34,7 @@ export default class Footer extends Component {
                     </div>
                     <div className="btm-options-container">
                         <div className="btm-options1">
-                            <NavLink className="nav-link about" to="/about-us">About Us</NavLink>
+                            <NavLink className="nav-link about" to="/special/about-us">About Us</NavLink>
                             <NavLink className="nav-link ticket-history" to="/tickets-history">Ticket History</NavLink>
                         </div>
                         <div className="btm-options2">
