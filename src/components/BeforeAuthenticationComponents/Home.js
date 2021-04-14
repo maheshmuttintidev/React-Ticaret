@@ -12,10 +12,6 @@ import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
 import Layout from './Layout'
 import React, { Component } from "react"
 import {NavLink} from 'react-router-dom'
-// import Login from '../../containers/Login'
-// import {NavLink} from 'react-router-dom'
-
-// const modalRef = createRef()
 
 class Home extends Component {
     constructor(props) {
@@ -29,14 +25,6 @@ class Home extends Component {
     redirectToMovieDetails = () => {
         this.props.history.push('/movie-details')
     }
-    componentDidMount() {
-        console.log(this.state.isTokenAvailable)
-        // modalRef.current.style.display = "none"
-    }
-
-    // closeModal = () => {
-    //     modalRef.current.style.display = "none"
-    // }
 
 
     loadMovieCard = () => {
@@ -75,18 +63,6 @@ class Home extends Component {
     render() {
         return (
             <Layout>
-                {/*
-                    <div ref={modalRef} className="overlay-fixed">
-                        <div className="modal-container">
-                            <div className="content-container">
-                                <span className="apply-cursor text-white top-right" onClick={this.closeModal}>&times;</span>
-                                <h3>You have to Login or Register First to access the feature</h3>
-                                <p>Please Login, Option is at the top right Corner</p>
-                            </div>
-                        </div>
-                    </div>
-                */}
-
                 <main>
                     <section className="container hero-container">
                         <aside className="resale-ticket">

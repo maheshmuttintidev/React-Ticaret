@@ -4,7 +4,7 @@ import TicketHistoryIcon from '../../assets/tickets_history/ticket_history.svg'
 import AboutUsIcon from '../../assets/tickets_history/about_us.svg'
 import SettingsIcon from '../../assets/tickets_history/settings.svg'
 import {NavLink} from 'react-router-dom'
-
+import auth from '../../auth/auth'
 const profileMenuRef = createRef()
 export default class UserProfileMenu extends Component {
   constructor(props) {
@@ -15,23 +15,11 @@ export default class UserProfileMenu extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   if(this.state.isTokenAvailable) {
-  //     this.props.history.push('/user')
-  //     console.log("token is present")
-  //   } else {
-  //     this.props.history.push('/')
-  //     console.log("token is not present")
-  //   }
-  // }
   
   logoutUser = () => {
-    if(this.state.isTokenAvailable) {
-      sessionStorage.clear()
+    auth.logout(() => {
       this.props.history.push('/')
-    } else {
-      this.props.history.push('/user')
-    }
+    })
   }
 
   closeProfileMenu = () => {

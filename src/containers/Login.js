@@ -7,6 +7,7 @@ import UserIconLogin from '../assets/header/user_icon.svg'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {loginUser} from '../actions/authUser'
+import auth from '../auth/auth'
 
 const loginPopupRef = createRef()
 
@@ -29,13 +30,13 @@ class Login extends Component {
   loginRequest = async (e) => {
     e.preventDefault()
     await this.props.loginUser(this.state)
-    this.props.history.push('/user')
-    console.log(this.props.isUserLoggedIn)
+    auth.login(() => {
+      this.props.history.push('/user')
+    })
   }
 
   closePopup = () => {
     loginPopupRef.current.style.display = "none"
-    // loginPopupRef.current.style.display = "block"
   }
 
   
