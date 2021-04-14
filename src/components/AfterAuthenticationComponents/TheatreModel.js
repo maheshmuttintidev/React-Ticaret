@@ -5,7 +5,7 @@ import AvailableIcon from '../../assets/icons_seat_allotment/available_icon.svg'
 import YourSeatsIcon from '../../assets/icons_seat_allotment/your_seats_icon.svg'
 import NotAvailableIcon from '../../assets/icons_seat_allotment/not_available_icon.svg'
 import TicketsIcon from '../../assets/icons_seat_allotment/tickets_icon.svg'
-import UserLayout from './UserLayout'
+// import UserLayout from './UserLayout'
 const modalRef = createRef()
 export default class TheatreModel extends Component {
     constructor(props) {
