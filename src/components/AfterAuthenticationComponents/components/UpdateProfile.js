@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import UserLayout from './UserLayout'
+import UserLayout from '../layout/UserLayout'
 
 export default class UpdateProfile extends Component {
     

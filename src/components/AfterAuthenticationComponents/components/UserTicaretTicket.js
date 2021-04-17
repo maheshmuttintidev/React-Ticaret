@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import UserLayout from './UserLayout'
-import Image from '../../assets/movies/khiladi hero.jpg'
-import Clock from '../../assets/tickets_history/clock.svg'
-import Calender from '../../assets/tickets_history/calender_icon.svg'
-import RowChairs from '../../assets/tickets_history/row_chairs.svg'
-import TicketRow from '../../assets/tickets_history/ticket_row.svg'
-import QrCode from '../../assets/tickets_history/qr_code.svg'
+import UserLayout from '../layout/UserLayout'
+import Image from '../../../assets/movies/khiladi hero.jpg'
+import Clock from '../../../assets/tickets_history/clock.svg'
+import Calender from '../../../assets/tickets_history/calender_icon.svg'
+import RowChairs from '../../../assets/tickets_history/row_chairs.svg'
+import TicketRow from '../../../assets/tickets_history/ticket_row.svg'
+import QrCode from '../../../assets/tickets_history/qr_code.svg'
 
 export default class UserTicaretTicket extends Component {
 

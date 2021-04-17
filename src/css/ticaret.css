@@ -211,14 +211,6 @@ body::-webkit-scrollbar-button {
     margin-right: 1rem;
 }
 
-.close-icon {
-    display: inline-block;
-    color: var(--primary-color);
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
-}
 .close-icon-for-login {
     display: inline-block;
     color: var(--primary-color);
@@ -233,16 +225,13 @@ body::-webkit-scrollbar-button {
 .close-icon-for-forgot {
     height: 5rem !important;
     width: 5rem !important;
-    background-color: red !important;
-    display: inline-block;
+    display: block;
     color: var(--primary-color);
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    top: 0em;
+    left: 4.5em;
     cursor: pointer;
-    z-index: 999999;
     font-size: 5rem;
-    border: 3px solid red;
 }
 
 .hover-activate-underline:hover {
@@ -251,6 +240,10 @@ body::-webkit-scrollbar-button {
 
 .clear-both {
     margin: auto 3rem;
+}
+
+.active-spark:active {
+    background-color: var(--primary-color) !important;
 }
 
 
@@ -311,10 +304,27 @@ body::-webkit-scrollbar-button {
     cursor: not-allowed;
 }
 
+.user-option.option1 {
+    margin-top: -2rem;
+}
+
 .user-option {
     display: flex;
     font-size: var(--small-font-size);
     line-height: 4;
+    z-index: 1;
+    width: 115%;
+    position: relative;
+    left: -15%;
+    padding: 0 3rem;
+}
+
+.user-option:hover {
+    background-color: rgba(124, 116, 116, 0.1);
+}
+
+.apply-hover:hover {
+    background-color: var(--secondary-color);
 }
 
 .user-menu-container {
@@ -336,6 +346,7 @@ body::-webkit-scrollbar-button {
     cursor: pointer;
     color: white !important;
     opacity: 1 !important;
+    margin-left: .5rem;
 }
 
 .option-close,
@@ -442,6 +453,8 @@ body::-webkit-scrollbar-button {
 
 .loader-1 svg {
     position: fixed;
+    height: 300px;
+    width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1107,7 +1120,7 @@ footer svg {
     width: 300vw;
     display: flex;
     flex-direction: column;
-    z-index: 9999;
+    z-index: 999;
     background-color: rgba(0,0,0,.7);
 }
 
@@ -1193,8 +1206,6 @@ footer svg {
     position: relative;
     bottom: 10vh;
 }
-
-
 
 .user-icon-login {
     position: relative;
@@ -1681,6 +1692,7 @@ footer svg {
     outline: 0;
 }
 
+
 .search-bar-field:focus,
 .search-bar-field:hover {
     box-shadow: 0 5px 7px -2px rgba(199, 54, 54, 0.767);
@@ -1791,6 +1803,10 @@ footer svg {
 
 .mb-2 {
     margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem !important;
 }
 
 .mr-2 {
@@ -2508,11 +2524,26 @@ p {
 .load-path1,
 .load-path2 {
     stroke-dasharray: 100;
-    animation: dash 5s linear alternate-reverse infinite;
+    animation: dash 3s linear alternate-reverse infinite;
 }
 
 @keyframes dash {
     to {
         stroke-dashoffset: 1000;
     }
+}
+
+.passwordFieldContainer {
+    position: relative;
+}
+
+.passwordFieldContainer button {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

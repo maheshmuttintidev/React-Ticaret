@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
-import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
-import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
-import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
-import {Movies as movies} from '../../assets/img_links/ImagesLinks'
-import UserLayout from './UserLayout'
+import HalfStarIcon from '../../../assets/buy_ticket/half_star.svg'
+import FullStarIcon from '../../../assets/buy_ticket/full_star.svg'
+import EmptyStarIcon from '../../../assets/buy_ticket/empty_star.svg'
+import {Movies as movies} from '../../../assets/img_links/ImagesLinks'
+import UserLayout from '../layout/UserLayout'
 export default class BuyTickets extends Component {
     loadMovieCard = () => {
         let movie_card = movies.map(movie => {
@@ -53,7 +53,7 @@ export default class BuyTickets extends Component {
                     </div>
                     <h2 className="_p movies-heading">Movies</h2>
                     <div className="buy-tickets-moives-container">
-                        <NavLink to="/movie-details" className="buy-ticket-movie-img-container">
+                        <NavLink to="/user/movie-details" className="buy-ticket-movie-img-container">
                             {this.loadMovieCard()}
                         </NavLink>
                         <div className="buy-ticket-movie-details-container">

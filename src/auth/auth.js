@@ -1,13 +1,9 @@
+// import {loginUser} from '../actions/authUser'
+// import {connect} from 'react-redux'
+// import {bindActionCreators} from 'redux'
 class Authentication {
     constructor() {
         this.authenticated = false
-    }
-
-    login(callback) {
-        if(sessionStorage.getItem("token")) {
-            this.authenticated = true
-        }
-        callback()
     }
 
     logout(callback) {
@@ -21,5 +17,4 @@ class Authentication {
         return this.authenticated
     }
 }
-
-export default  new Authentication()
+export default new Authentication()

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {NavLink, BrowserRouter as Router} from 'react-router-dom'
-import Facebook from '../../assets/footer/Icon awesome-facebook-f.svg'
-import Twitter from '../../assets/footer/Icon awesome-twitter.svg'
-import Instagram from '../../assets/footer/Icon awesome-instagram.svg'
-import Linkedin from '../../assets/footer/Icon awesome-linkedin.svg'
+import Facebook from '../../../assets/footer/Icon awesome-facebook-f.svg'
+import Twitter from '../../../assets/footer/Icon awesome-twitter.svg'
+import Instagram from '../../../assets/footer/Icon awesome-instagram.svg'
+import Linkedin from '../../../assets/footer/Icon awesome-linkedin.svg'
 export default class Footer extends Component {
     render() {
         return (
@@ -35,7 +35,7 @@ export default class Footer extends Component {
                     <div className="btm-options-container">
                         <div className="btm-options1">
                             <NavLink className="nav-link about" to="/about-us">About Us</NavLink>
-                            <NavLink className="nav-link ticket-history" to="/tickets-history">Ticket History</NavLink>
+                            <NavLink className="nav-link ticket-history" to="/user/tickets-history">Ticket History</NavLink>
                         </div>
                         <div className="btm-options2">
                             <a className="nav-link fb" href="https://m.facebook.com/maheshmuttinti" target="_blank" rel="noreferrer">

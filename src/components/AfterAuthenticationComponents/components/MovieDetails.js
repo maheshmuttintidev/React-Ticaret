@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import {NavLink} from 'react-router-dom'
-import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
-import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
-import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
-import TicketSmallIcon from '../../assets/buy_ticket/movie_icon.svg'
-import TimerSmallIcon from '../../assets/buy_ticket/time_icon.svg'
-import ArrowLeft from '../../assets/buy_ticket/arrow-back.svg'
-import ArrowRight from '../../assets/buy_ticket/arrow-forward.svg'
-import SearchIcon from '../../assets/buy_ticket/search_icon.svg'
-import UserLayout from './UserLayout'
+import HalfStarIcon from '../../../assets/buy_ticket/half_star.svg'
+import FullStarIcon from '../../../assets/buy_ticket/full_star.svg'
+import EmptyStarIcon from '../../../assets/buy_ticket/empty_star.svg'
+import TicketSmallIcon from '../../../assets/buy_ticket/movie_icon.svg'
+import TimerSmallIcon from '../../../assets/buy_ticket/time_icon.svg'
+import ArrowLeft from '../../../assets/buy_ticket/arrow-back.svg'
+import ArrowRight from '../../../assets/buy_ticket/arrow-forward.svg'
+import SearchIcon from '../../../assets/buy_ticket/search_icon.svg'
+import UserLayout from '../layout/UserLayout'
 export default class MovieDetails extends Component {
     render() {
         return (
@@ -80,22 +80,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _70_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>
@@ -108,22 +108,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _70_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>
@@ -136,22 +136,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _70_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>
@@ -164,22 +164,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _70_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>
@@ -192,22 +192,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _70_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>
@@ -220,22 +220,22 @@ export default class MovieDetails extends Component {
                             </div>
                             <div className="theatre-timings-wrapper">
                                 <button className="theatre-timing-btn clear_padding _20_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         1:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         4:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _50_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         6:00PM
                                     </NavLink>
                                 </button>
                                 <button className="theatre-timing-btn clear_padding _100_percent">
-                                    <NavLink to="/theatre-model" className="make-link">
+                                    <NavLink to="/user/theatre-model" className="make-link">
                                         10:00PM
                                     </NavLink>
                                 </button>

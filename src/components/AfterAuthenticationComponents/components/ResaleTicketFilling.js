@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {NavLink} from 'react-router-dom'
-import UserLayout from './UserLayout'
+import UserLayout from '../layout/UserLayout'
 export default class ResaleTicketFilling extends Component {
     render() {
         return (
@@ -43,7 +43,7 @@ export default class ResaleTicketFilling extends Component {
                                 <input className="input-field" name="totalAmount" type="number" placeholder="Price per ticket"/>
                             </div>
                             <div className="resale-btn-container">
-                                <NavLink to="/fill-ur-details" className="form-btn form-btn-ticket-form normal_p">Resale tickets</NavLink>
+                                <NavLink to="/user/fill-ur-details" className="form-btn form-btn-ticket-form normal_p">Resale tickets</NavLink>
                             </div>
                         </form>
                     </div>

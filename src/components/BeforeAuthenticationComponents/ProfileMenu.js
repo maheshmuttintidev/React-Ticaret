@@ -25,7 +25,7 @@ class ProfileMenu extends Component {
         <div className="menu-container">
           <div className="menu-top-bar flex-row">
             <p className="greet_p">Hii... {this.state.username}</p>
-            <NavLink to="/login" className="menu-login-btn">Login</NavLink>
+            <NavLink to="/login" className="menu-login-btn apply-hover active-spark">Login</NavLink>
           </div>
           <div className="menu-options">
             <ul className="menu-options-container">

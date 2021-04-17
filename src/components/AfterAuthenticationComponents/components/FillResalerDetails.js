@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import UserLayout from './UserLayout'
+import UserLayout from '../layout/UserLayout'
 import {NavLink} from 'react-router-dom'
 
 export default class FillResalerDetailse extends Component {

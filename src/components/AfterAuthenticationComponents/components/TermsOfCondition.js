@@ -25,7 +25,7 @@ export default class TermsOfCondition extends Component {
                 buyer.</li>
             </ol>
             <button onClick={this.closeModal} className="form-btn transparent-bg">Cancel</button>
-            <NavLink className="spread-all text-white remove-underline" to="/user-ticaret-ticket">Accept</NavLink>
+            <NavLink className="spread-all text-white remove-underline" to="/user/ticaret-ticket">Accept</NavLink>
         </div>
         )
     }

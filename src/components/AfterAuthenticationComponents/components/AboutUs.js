@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import UserLayout from './UserLayout'
+import UserLayout from '../layout/UserLayout'
 
 class AboutUs extends Component {
   render() {

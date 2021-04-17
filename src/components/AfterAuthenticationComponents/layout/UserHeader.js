@@ -3,9 +3,9 @@ import React, { Component } from 'react'
 import {NavLink, BrowserRouter as Router} from 'react-router-dom'
 
 // importing the necessary/.. assets used in header nav bar
-import LocationIcon from '../../assets/header/location.svg'
-import UserIcon from '../../assets/tickets_history/user_icon.svg'
-import BurgerIcon from '../../assets/tickets_history/burger_icon.svg'
+import LocationIcon from '../../../assets/header/location.svg'
+import UserIcon from '../../../assets/tickets_history/user_icon.svg'
+import BurgerIcon from '../../../assets/tickets_history/burger_icon.svg'
 
 export default class UserHeader extends Component {
     constructor(props) {
@@ -43,11 +43,11 @@ export default class UserHeader extends Component {
                         </NavLink>
                     </div>
                     <div className="options-container">
-                        <NavLink to="/location" className="nav-link location">
+                        <NavLink to="/user/location" className="nav-link location">
                             <img loading="lazy" src={LocationIcon} alt="location" />
                         </NavLink>
                         <span className="username-span">{this.state.username}</span>
-                        <NavLink to="/user-profile" className="nav-link profile after-authenticate">
+                        <NavLink to="/user/profile" className="nav-link profile after-authenticate">
                             <img loading="lazy" src={BurgerIcon} alt="Burger Icon" className="burger-icon"/>
                             <div className="user-icon-holder">
                                 <img loading="lazy" src={UserIcon} alt="profile" className="profile-icon" />

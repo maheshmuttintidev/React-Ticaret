@@ -1,32 +1,24 @@
-import ResaleTicketIcon from '../../assets/body/resale.svg'
-import BuyOurTicket from '../../assets/body/buy_our_ticket.svg'
-import GetOurTicket from '../../assets/body/getour_ticket.svg'
-import NetflixIcon from '../../assets/body/netflex.svg'
-import PrimeVideoIcon from '../../assets/body/prime_video.svg'
-import BookMyShowIcon from '../../assets/body/bookmyshow.svg'
-import AhaIcon from '../../assets/body/aha.svg'
-import HalfStarIcon from '../../assets/buy_ticket/half_star.svg'
-import FullStarIcon from '../../assets/buy_ticket/full_star.svg'
-import { Movies as movies } from '../../assets/img_links/ImagesLinks'
-import EmptyStarIcon from '../../assets/buy_ticket/empty_star.svg'
-import Layout from './Layout'
-import React, { Component } from "react"
-import {NavLink} from 'react-router-dom'
+import React, { Component } from 'react'
+import UserLayout from '../layout/UserLayout'
+import ResaleTicketIcon from '../../../assets/body/resale.svg'
+import BuyOurTicket from '../../../assets/body/buy_our_ticket.svg'
+import GetOurTicket from '../../../assets/body/getour_ticket.svg'
+import NetflixIcon from '../../../assets/body/netflex.svg'
+import PrimeVideoIcon from '../../../assets/body/prime_video.svg'
+import BookMyShowIcon from '../../../assets/body/bookmyshow.svg'
+import AhaIcon from '../../../assets/body/aha.svg'
+import HalfStarIcon from '../../../assets/buy_ticket/half_star.svg'
+import FullStarIcon from '../../../assets/buy_ticket/full_star.svg'
+import { Movies as movies } from '../../../assets/img_links/ImagesLinks'
+import EmptyStarIcon from '../../../assets/buy_ticket/empty_star.svg'
+import { NavLink } from 'react-router-dom'
+// import queryString from 'query-string'
 
-class Home extends Component {
+export default class UserPage extends Component {
     constructor(props) {
         super(props)
-
         this.state = {
             isTokenAvailable: sessionStorage.getItem("token") ? true : false
-        }
-    }
-
-    showLogin = () => {
-        if(this?.props?.history){
-            this.props.history.push('/login')
-        } else {
-            alert("Login to Buy the Tickets..!")
         }
     }
 
@@ -35,7 +27,7 @@ class Home extends Component {
             return (
                 <div key={movie.id}>
                     <div className="img-movie">
-                        <img onClick={this.showLogin} loading="lazy" src={movie.img_url} alt="movie img" />
+                        <img onClick={this.redirectToMovieDetails} loading="lazy" src={movie.img_url} alt="movie img" />
                     </div>
                 </div>
             )
@@ -62,33 +54,41 @@ class Home extends Component {
         })
         return movie_details
     }
+    redirectToMovieDetails = () => {
+        this.props.history.push('/user/movie-details')
+    }
 
+    componentDidMount() {
+        //    console.log(queryString.parse(this.props.location.search))
+        //    console.log(this.props.location.search)
+
+    }
     render() {
         return (
-            <Layout>
+            <UserLayout>
                 <main>
                     <section className="container hero-container">
                         <aside className="resale-ticket">
                             <h2 className="__h0">
                                 Wanna Sell your Ticket?
-                            </h2>
+                </h2>
                             <p className="__p">
                                 sell your tickets with us in a easier way and get more points.
-                            </p>
-                            <NavLink to="/login" onClick={this.checkAuth} className="btn remove-underline btn-resale">
+                </p>
+                            <NavLink to="/user/resale-ticket-filling" className="btn btn-resale">
                                 Resale Your Ticket
-                            </NavLink>
+                </NavLink>
                         </aside>
                         <aside className="buy-ticket">
                             <h2 className="__h0">
                                 Buy your valuable Ticket
-                            </h2>
+                </h2>
                             <p className="__p">
                                 Get your tickets, chill with your show and your security is our priority.
-                            </p>
-                            <NavLink to="/login" onClick={this.checkAuth} className="btn remove-underline btn-buy">
+                </p>
+                            <NavLink to="/user/buy-tickets" className="btn btn-buy">
                                 Buy Our Ticket
-                            </NavLink>
+                </NavLink>
                         </aside>
                     </section>
                     <section className="route-map-container">
@@ -100,28 +100,28 @@ class Home extends Component {
                                 <img loading="lazy" src={ResaleTicketIcon} alt="reselling ticket" />
                                 <p className="title resale-title">
                                     Reselling tickets
-                                </p>
+                    </p>
                                 <p className="description resale-description">
                                     sell your ticket you will refund money with <span className="mark">70%</span> amount as per ticket
-                                </p>
+                    </p>
                             </div>
                             <div className="steps step-two">
                                 <img loading="lazy" src={BuyOurTicket} alt="buy our ticket" />
                                 <p className="title buy-ticket-title">
                                     Buy our ticket
-                                </p>
+                    </p>
                                 <p className="description resale-description">
                                     buy our ticket from our <span className="mark">sellers of ticket</span> with secure and available location of thearters
-                                </p>
+                    </p>
                             </div>
                             <div className="steps step-three">
                                 <img loading="lazy" src={GetOurTicket} alt="get your ticket" />
                                 <p className="title get-ticket-title">
                                     Get your ticket
-                                </p>
+                    </p>
                                 <p className="description resale-description">
                                     after buying the ticket we will provide <span className="mark">ticket with our logo</span> in softcopy through message or email which you will shown in thearters.
-                                </p>
+                    </p>
                             </div>
                         </div>
                     </section>
@@ -158,9 +158,7 @@ class Home extends Component {
                         </div>
                     </section>
                 </main>
-            </Layout>
-        );
+            </UserLayout>
+        )
     }
 }
-
-export default Home

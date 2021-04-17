@@ -1,10 +1,10 @@
 import React, { Component, createRef } from 'react'
 import { NavLink } from 'react-router-dom'
-import ArrowLeft from '../../assets/buy_ticket/arrow-back.svg'
-import AvailableIcon from '../../assets/icons_seat_allotment/available_icon.svg'
-import YourSeatsIcon from '../../assets/icons_seat_allotment/your_seats_icon.svg'
-import NotAvailableIcon from '../../assets/icons_seat_allotment/not_available_icon.svg'
-import TicketsIcon from '../../assets/icons_seat_allotment/tickets_icon.svg'
+import ArrowLeft from '../../../assets/buy_ticket/arrow-back.svg'
+import AvailableIcon from '../../../assets/icons_seat_allotment/available_icon.svg'
+import YourSeatsIcon from '../../../assets/icons_seat_allotment/your_seats_icon.svg'
+import NotAvailableIcon from '../../../assets/icons_seat_allotment/not_available_icon.svg'
+import TicketsIcon from '../../../assets/icons_seat_allotment/tickets_icon.svg'
 // import UserLayout from './UserLayout'
 const modalRef = createRef()
 export default class TheatreModel extends Component {
@@ -89,7 +89,7 @@ export default class TheatreModel extends Component {
                             <div className="flex">
                                 <button onClick={this.closeModal} className="form-btn transparent-bg">Cancel</button>
                                 <button className="bg-primary form-btn ml-2">
-                                    <NavLink className="spread-all text-white remove-underline" to="/user-ticaret-ticket">Accept</NavLink>
+                                    <NavLink className="spread-all text-white remove-underline" to="/user/ticaret-ticket">Accept</NavLink>
                                 </button>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ export default class TheatreModel extends Component {
                     <div className="auto-adjust-vertical theatre-model-header">
                         <div className="theatre-details-top">
                             <div className="back-link">
-                                <NavLink to="/movie-details">
+                                <NavLink to="/user/movie-details">
                                     <img loading="lazy" src={ArrowLeft} alt="" className="theatre-back-icon" />
                                 </NavLink>
                             </div>
@@ -108,22 +108,22 @@ export default class TheatreModel extends Component {
                                 <p className="small_p">Sun 28 feb</p>
                                 <div className="">
                                     <button className="theatre-model-btn mr-2">
-                                        <NavLink to="/theatre-model" className="make-link">
+                                        <NavLink to="/user/theatre-model" className="make-link">
                                             1:00PM
                                         </NavLink>
                                     </button>
                                     <button className="theatre-model-btn mr-2">
-                                        <NavLink to="/theatre-model" className="make-link">
+                                        <NavLink to="/user/theatre-model" className="make-link">
                                             4:00PM
                                         </NavLink>
                                     </button>
                                     <button className="theatre-model-btn mr-2">
-                                        <NavLink to="/theatre-model" className="make-link">
+                                        <NavLink to="/user/theatre-model" className="make-link">
                                             6:00PM
                                         </NavLink>
                                     </button>
                                     <button className="theatre-model-btn mr-2">
-                                        <NavLink to="/theatre-model" className="make-link">
+                                        <NavLink to="/user/theatre-model" className="make-link">
                                             10:00PM
                                         </NavLink>
                                     </button>
