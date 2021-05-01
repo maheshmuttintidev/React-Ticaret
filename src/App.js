@@ -1,17 +1,10 @@
-import React, { Component, Suspense, lazy } from 'react'
-import './css/ticaret.css'
-const Ticaret = lazy(() => import('./components/TicaretWebsite'))
-
-export default class App extends Component {
-    render() {
-      return (
-        <Suspense fallback={
-          <div className="loader-1">
-            <div className="loading-child"></div>
-          </div>
-        }>
-          <Ticaret />
-        </Suspense>
-      );
-    }
+import Home from './components/Home'
+function App() {
+    return (
+      <div>
+        <Home />
+      </div>
+    )
 }
+
+export default App

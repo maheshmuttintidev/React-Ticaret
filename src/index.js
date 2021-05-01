@@ -1,20 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import {applyMiddleware, createStore} from 'redux'
-import {Provider} from 'react-redux'
-import ReduxPromise from 'redux-promise'
-import allReducers from './reducers'
-import {BrowserRouter as Router} from 'react-router-dom'
-
-
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore)
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import './index.css'
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(allReducers)}>
-    <Router forceRefresh={true}>
+    <React.StrictMode>
       <App />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
-);
+    </React.StrictMode>,
+    document.getElementById('root')
+)
