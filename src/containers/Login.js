@@ -9,6 +9,7 @@ export default function Login(props) {
     useEffect(() => {
         setCloseMenu(prevState => !prevState)
     }, [])
+    console.log(closeMenu)
     if(isClose) { 
         return ReactDOM.createPortal(
             <div className="overlay-fixed-full">

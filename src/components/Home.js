@@ -60,27 +60,27 @@ function Menu(props) {
     )
 }
 
-function Location() {
-    const [value, setValue] = useState('0,0')
-    const [error, setError] = useState(null)
+// function Location() {
+//     const [value, setValue] = useState('0,0')
+//     const [error, setError] = useState(null)
 
-    useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                setValue(position.coords.latitude + ',' + position.coords.longitude)
-                setError(null)
-            },
-                (error) => setError(error.message)
-            )
-        }
+//     useEffect(() => {
+//         if (navigator.geolocation) {
+//             navigator.geolocation.getCurrentPosition((position) => {
+//                 setValue(position.coords.latitude + ',' + position.coords.longitude)
+//                 setError(null)
+//             },
+//                 (error) => setError(error.message)
+//             )
+//         }
 
-    }, [])
-    return (
-        <>
-            <input type="text" placeholder="Enter Location" value={value} onChange={e => setValue(e.target.value)} />
-        </>
-    )
-}
+//     }, [])
+//     return (
+//         <>
+//             <input type="text" placeholder="Enter Location" value={value} onChange={e => setValue(e.target.value)} />
+//         </>
+//     )
+// }
 
 export default function Home() {
     const [isClicked, setIsClicked] = useState(false)
