@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import {NavLink} from 'react-router-dom'
 import LocationIcon from '../assets/header/location.svg'
 import UserIcon from '../assets/header/user.svg'
 import BurgerMenuIcon from '../assets/header/burger_icon.svg'
@@ -21,20 +22,16 @@ import FbIcon from '../assets/footer/Icon awesome-facebook-f.svg'
 import InstaIcon from '../assets/footer/Icon awesome-instagram.svg'
 import LinkedInIcon from '../assets/footer/Icon awesome-linkedin.svg'
 import TwitterIcon from '../assets/footer/Icon awesome-twitter.svg'
-import Login from '../containers/Login'
-function Menu(props) {
-    const [toggle, setToggle] = useState(false)
-    useEffect(() => {
-        console.log(toggle)
-    }, [toggle])
+
+
+const Menu = () => {
     return (
         <>
-            {toggle ? <Login closeMenu={props.isAppeared} /> : ''}
             <div className="overlay-fixed">
                 <div className="sub-menu-wrapper">
                     <div>
                         <p className="">Hi...</p>
-                        <p className="sub-menu-login-option" onClick={() => setToggle(prevState => !prevState)}>Login</p>
+                        <NavLink to="/login" className="sub-menu-login-option">Login</NavLink>
                     </div>
                     <div>
                         <div>
@@ -60,31 +57,10 @@ function Menu(props) {
     )
 }
 
-// function Location() {
-//     const [value, setValue] = useState('0,0')
-//     const [error, setError] = useState(null)
 
-//     useEffect(() => {
-//         if (navigator.geolocation) {
-//             navigator.geolocation.getCurrentPosition((position) => {
-//                 setValue(position.coords.latitude + ',' + position.coords.longitude)
-//                 setError(null)
-//             },
-//                 (error) => setError(error.message)
-//             )
-//         }
-
-//     }, [])
-//     return (
-//         <>
-//             <input type="text" placeholder="Enter Location" value={value} onChange={e => setValue(e.target.value)} />
-//         </>
-//     )
-// }
 
 export default function Home() {
     const [isClicked, setIsClicked] = useState(false)
-
     const loadMovieCard = () => {
         let movie_card = movies.map(movie => {
             return (
@@ -117,9 +93,10 @@ export default function Home() {
         })
         return movie_details
     }
-
+    
+    
     return (
-        <>
+        <div>
             <header className="home-header">
                 <div className="logo-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="144.84" height="60" viewBox="0 0 155.84 60" className="logo">
@@ -144,17 +121,19 @@ export default function Home() {
                 </div>
                 <div className="nav-wrapper">
                     <div className="location-option">
-                        <img src={LocationIcon} alt="" />
+                        <NavLink to="/location" className="nav-link">
+                            <img src={LocationIcon} alt="" />
+                        </NavLink>
                     </div>
                     <div className="login-option">
-                        <p className="mini-sub-heading">Login</p>
+                        <NavLink to="/login" className="nav-link mini-sub-heading">Login</NavLink>
                     </div>
                     <div className="sub-menu-option">
                         <div onClick={() => setIsClicked(prevState => !prevState)}>
                             <img src={BurgerMenuIcon} alt="" />
                             <img src={UserIcon} alt="" />
                         </div>
-                        {isClicked && <Menu isAppeared={isClicked}/>}
+                        {isClicked && <Menu />}
                     </div>
                 </div>
             </header>
@@ -271,20 +250,6 @@ export default function Home() {
                     </div>
                 </div>
             </footer>
-        </>
+        </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

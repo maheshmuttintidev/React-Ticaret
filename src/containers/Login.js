@@ -1,21 +1,17 @@
-import {useState, useEffect} from 'react'
+import { NavLink } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import UserIcon from '../assets/register/user_profile_icon.svg'
 import GoogleIcon from '../assets/header/google_icon.svg'
 import FbIcon from '../assets/header/facebook_icon.svg'
-export default function Login(props) {
-    const [isClose, setIsClose] = useState(true)
-    const [closeMenu, setCloseMenu] = useState(true)
-    useEffect(() => {
-        setCloseMenu(prevState => !prevState)
-    }, [])
-    console.log(closeMenu)
-    if(isClose) { 
-        return ReactDOM.createPortal(
+import Home from '../components/Home'
+export default function Login() {
+    return ReactDOM.createPortal(
+        <>
+            <Home />
             <div className="overlay-fixed-full">
-            <div className="form-wrapper">
-                    <div className="close-btn" onClick={() => setIsClose(prevState => !prevState)}>
-                        <span>&times;</span>
+                <div className="form-wrapper">
+                    <div className="close-btn">
+                        <NavLink className="nav-link span" to="/">&times;</NavLink>
                     </div>
                     <img src={UserIcon} alt="" className="user-icon-login" />
                     <form method="" className="form-control">
@@ -42,10 +38,8 @@ export default function Login(props) {
                         </div>
                     </div>
                 </div>
-            </div>,
-            document.getElementById('portal')
-        )
-    } else {
-        return ''
-    }
+            </div>
+        </>,
+        document.getElementById('portal')
+    )
 }

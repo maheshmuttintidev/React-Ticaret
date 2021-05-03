@@ -91,6 +91,23 @@ p {
   font-size: var(--font-size, 18px) !important;
 }
 
+.btn {
+  border: 0;
+  outline: 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-font-color);
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
 /* Normalize inline elements*/
 img,
 span,
@@ -253,8 +270,18 @@ header > *:last-child > *:nth-child(2):active {
 .sub-menu-login-option {
   border: 1px solid var(--secondary-color);
   border-radius: 5px;
-  padding: 2px 1rem;
+  height: 1.8rem;
+  width: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  top: 1rem;
+  color: var(--primary-font-color);
   transition: background-color .1s ease-out;
+  font-size: 18px !important;
+  
 }
 .sub-menu-option {
   position: relative;
@@ -554,14 +581,20 @@ input::placeholder {
   margin-left: .5rem;
 }
 .close-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 1.5rem 1.5rem 0 0;
-  color: var(--secondary-color);
+  height: 2rem;
+  width: 2rem;
   cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
-.close-btn span {
+@media only screen and (max-width: 375px) {
+  .close-btn {
+    right: 5rem;
+  }
+}
+.close-btn .span {
+  color: var(--secondary-color);
   font-size: 2rem !important;
   font-weight: bolder;
 }
