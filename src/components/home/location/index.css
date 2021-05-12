@@ -1,0 +1,34 @@
+.location-popup-wrapper {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 253px;
+    background-color: var(--primary-bg-color);
+    height: 300px;
+    top: 100%;
+    left: -220px;
+    border-radius: 14px;
+    margin-top: .5rem;
+    color: white;
+    z-index: 8;
+    padding: 1rem 2rem;
+    box-shadow: 0 3px 11px var(--secondary-color);
+    transition: animation .4s ease-out;
+    animation: pop-down .2s ease;
+    transform-origin: top;
+}
+
+@keyframes pop-down {
+    from {
+        transform: scale(.7);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.input-field.location {
+    width: 100%;
+    margin: .5rem auto 0;
+    height: 40px;
+}
