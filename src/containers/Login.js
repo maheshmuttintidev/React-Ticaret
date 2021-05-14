@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 import UserIcon from '../assets/register/user_profile_icon.svg'
 import GoogleIcon from '../assets/header/google_icon.svg'
 import FbIcon from '../assets/header/facebook_icon.svg'
@@ -17,17 +18,20 @@ export default function Login() {
                     </div>
                     <img src={UserIcon} alt="" className="user-icon-login" />
                     <form method="" className="form-control">
-                        <input type="number" placeholder="Mobile Number" className="input-field number" />
-                        <input type="password" placeholder="Password" className="input-field password" />
-                        <button type="submit" className="form-btn">Login</button>
+                        <input type="number" placeholder="Mobile Number" className="input-field number" name="mobileNumber" required/>
+                        <input type="password" placeholder="Password" className="input-field password" name="password" required/>
+                        <button type="submit" className="form-btn login">Login</button>
                     </form>
                     <div className="alternative-auths-wrapper">
                         <div>
-                            <p className="paragraph forgot-password">Forgot Password?</p>
+                            <p className="paragraph forgot-password">
+                                <NavLink className="nav-link forgot-password" to="/forgot-password">Forgot Password?</NavLink>
+                            </p>
                         </div>
                         <div>
-                            <p className="paragraph signup-text">Need Account? 
-                            <NavLink className="nav-link register" to="/register">Sign up</NavLink>
+                            <p>
+                                <span className="paragraph signup-text">Need Account? </span>
+                                <NavLink className="nav-link register" to="/register">Sign up</NavLink>
                             </p>
                         </div>
                         <div className="auth-btns-wrapper">
@@ -46,4 +50,10 @@ export default function Login() {
         </>,
         document.getElementById('portal')
     )
+}
+
+
+Login.propTypes = {
+    mobileNumber: PropTypes.number.isRequired,
+    password: PropTypes.string.isRequired
 }

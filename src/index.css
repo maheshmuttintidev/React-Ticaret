@@ -135,6 +135,7 @@
     height: 100%;
     width: 100%;
     --primary-bg-color: #0C0C0C;
+    --primary-bg-color1: #0d0d0d;
     --primary-font-color: #FFFFFF;
     --gray-border-color: #707070;
     --gray-font-color: rgba(249, 249, 249, .5);
@@ -144,7 +145,8 @@
     --secondary-color: rgba(248, 68, 100, .95);
     --secondary-full-color: rgba(248, 68, 100, 1);
     --input-fields-bg-color: rgba(112, 112, 112, 0.31);
-    --red-box-shadow-color: rgba(248, 68, 100, 75);
+    --red-box-shadow-color: rgba(248, 68, 100, .75);
+    --overlay-bg-color: rgba(0, 0, 0, .75);
     font-family: "Caros Regular";
 }
 
@@ -167,7 +169,7 @@ body {
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: "Caros Regular";
+    font-family: "Caros Regular", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -202,12 +204,6 @@ h6 {
     font-family: "Caros Bold";
     line-height: 24px;
     margin: .5rem 0;
-}
-
-.paragraph.forgot-password,
-.paragraph.signup-text {
-    font-family: "Caros Regular";
-    opacity: .5;
 }
 
 .paragraph.movie-card {
@@ -302,4 +298,9 @@ img::before {
 .nav-wrapper>*:nth-child(2) {
     width: 122px;
     height: 37px;
+}
+
+.input-field:hover,
+.input-field:focus {
+    box-shadow: 0 3px 5px var(--secondary-color);
 }

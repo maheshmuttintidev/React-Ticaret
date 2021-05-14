@@ -4,6 +4,7 @@ import Login from './containers/Login'
 import Location from './components/home/location'
 import NotFound from './components/errorPage'
 import Register from './containers/Register'
+import ForgotPasswordModel from './containers/ForgotPasswordModel'
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route path="/login" component={Login}/>
           <Route path="/register" component={Register}/>
+          <Route path="/forgot-password" component={ForgotPasswordModel} />
           <Route path="/location" component={Location}/>
           <Route path="*" component={NotFound} />
         </Switch>

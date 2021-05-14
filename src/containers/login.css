@@ -147,3 +147,25 @@ input::placeholder {
 .logo-wrapper.error-page {
   margin: 1rem 0 0 3rem;
 }
+
+.nav-link.forgot-password {
+  text-decoration: underline;
+}
+
+.paragraph.forgot-password,
+.paragraph.signup-text {
+    font-family: "Caros Regular";
+    opacity: .5;
+}
+
+.paragraph.forgot-password:hover {
+    opacity: 1;
+}
+
+.nav-link.register {
+  opacity: .5;
+}
+
+.nav-link.register:hover {
+  opacity: 1;
+}

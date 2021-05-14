@@ -1,7 +1,7 @@
 .register-page-hero {
-  max-height: 100vh;
+  min-height: 100vh;
   background-image: url("../assets/header/register_bg.png");
-  background-size: 100% 100%;
+  background-size: contain;
   padding-bottom: 2rem;
   background-color: whitesmoke;
   position: relative;
