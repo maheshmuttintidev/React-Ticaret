@@ -124,13 +124,6 @@
     src: local('Caros Black Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Black Italic.woff') format('woff');
 }
 
-@font-face {
-    font-family: 'SegoeUI-Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('SegoeUI-Italic'), url('../src/assets/caros-cufonfonts-webfont/BalsamiqSans-Italic.ttf') format('ttf');
-}
-
 :root {
     height: 100%;
     width: 100%;
@@ -170,6 +163,7 @@ body {
 *::before {
     box-sizing: border-box;
     font-family: "Caros Regular", Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 
