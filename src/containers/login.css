@@ -33,6 +33,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .alternative-auths-wrapper > * {
   margin: 0 !important;
 }
+
 .input-field {
   border: 0;
   outline: 0;
@@ -74,7 +75,6 @@ input::placeholder {
   background-color: var(--secondary-color);
 }
 .auth-btns-wrapper {
-  padding-top: 2rem;
   width: max-content;
   display: flex;
   flex-wrap: wrap;
@@ -149,6 +149,7 @@ input::placeholder {
 }
 .nav-link.forgot-password {
   text-decoration: underline;
+  margin-bottom: 0;
 }
 
 .paragraph.forgot-password,

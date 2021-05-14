@@ -16,7 +16,7 @@ export default function Register() {
                 <div className="register-wrapper">
                     <h2 className="sub-heading">
                         Create an account
-                </h2>
+                    </h2>
                     <form className="form-control register">
                         <div className="register-inputs">
                             <div>
