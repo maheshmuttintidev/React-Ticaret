@@ -2,6 +2,7 @@ import AhaIcon from '../../../assets/body/aha.svg'
 import BookMyShowIcon from '../../../assets/body/bookmyshow.svg'
 import NetflixIcon from '../../../assets/body/netflex.svg'
 import PrimeVideoIcon from '../../../assets/body/prime_video.svg'
+import './index.css'
 
 export default function Section3() {
     return (

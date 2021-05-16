@@ -1,13 +1,43 @@
+import { useState } from 'react'
+import { connect /*, useSelector */ } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 import UserIcon from '../assets/register/user_profile_icon.svg'
 import GoogleIcon from '../assets/header/google_icon.svg'
 import FbIcon from '../assets/header/facebook_icon.svg'
 import Home from '../components/home/home'
+import { login } from '../actions'
 import './login.css'
 
-export default function Login() {
+export default connect(null, { login })(props => {
+    const [mobileNumber, setMobileNumber] = useState()
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+    // const isUserLoggedIn = useSelector(state => state.isUserLoggedIn) -> redux state
+    const isUserLoggedIn = props?.isUserLoggedIn // by use of render prop
+    
+    const loginUser = async (e) => {
+        e.preventDefault()
+        try {
+            await props.login({ mobileNumber, password })
+            const errorMessage = JSON.parse(sessionStorage.getItem("userMessage"))
+            if(errorMessage) {
+                setError(errorMessage?.message)
+            }
+            if(isUserLoggedIn) {
+                props.history.push(`/ticaretor/${props?.userId}`)
+            } else {
+                props.history.push('/login')
+            }
+        } catch (err) {
+            alert("Server is not running..!")
+        }
+    }
+    
+    if(props?.userId) {
+        props.history.push(`/ticaretor/${props?.userId}`)
+    }
+    
     return ReactDOM.createPortal(
         <>
             <Home />
@@ -17,9 +47,14 @@ export default function Login() {
                         <NavLink className="nav-link close" to="/">&times;</NavLink>
                     </div>
                     <img src={UserIcon} alt="" className="user-icon-login" />
-                    <form method="" className="form-control">
-                        <input type="number" placeholder="Mobile Number" className="input-field number" name="mobileNumber" required/>
-                        <input type="password" placeholder="Password" className="input-field password" name="password" required/>
+                    <form method="" className="form-control" onSubmit={loginUser}>
+                        {error &&
+                            <div style={{ color: 'var(--secondary-color)', paddingTop: '7px', margin: "auto" }}>
+                                <span>{error}</span>
+                            </div>
+                        }
+                        <input type="number" placeholder="Mobile Number" className="input-field number" name="mobileNumber" onChange={(e) => setMobileNumber(e.target.value)} required />
+                        <input type="password" placeholder="Password" className="input-field password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                         <button type="submit" className="form-btn login">Login</button>
                     </form>
                     <div className="alternative-auths-wrapper">
@@ -31,7 +66,7 @@ export default function Login() {
                         <div>
                             <p>
                                 <span className="paragraph signup-text">Need Account? </span>
-                                <NavLink className="nav-link register" to="/register">Sign up</NavLink>
+                                <NavLink className="nav-link register" to="/register">Sign up / Register</NavLink>
                             </p>
                         </div>
                         <div className="auth-btns-wrapper">
@@ -50,10 +85,4 @@ export default function Login() {
         </>,
         document.getElementById('portal')
     )
-}
-
-
-Login.propTypes = {
-    mobileNumber: PropTypes.number.isRequired,
-    password: PropTypes.string.isRequired
-}
+})

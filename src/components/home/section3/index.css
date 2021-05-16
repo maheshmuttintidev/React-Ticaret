@@ -1,0 +1,22 @@
+
+  .section4-wrapper {
+    margin: 2rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5rem 0;
+  }
+  
+  .section4-wrapper > *:last-child {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 3rem 5rem;
+  }
+  .section4-wrapper > *:last-child > * {
+    width: 10em;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+  }

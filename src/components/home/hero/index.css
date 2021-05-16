@@ -1,7 +1,5 @@
-
 .section1-wrapper {
-    min-height: 450px;
-    max-height: 100vh;
+    height: clamp(500px, 600px, 700px);
     background-image: url('../../../assets/header/hero_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,6 +12,7 @@
     text-align: center;
     gap: 2em;
     margin-bottom: 0;
+    scroll-snap-align: start;
   }
   .section1-wrapper::after {
     content: "";

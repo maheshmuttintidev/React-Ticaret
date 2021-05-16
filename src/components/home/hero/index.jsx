@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom'
 import './index.css'
-export default function Hero() {
+export default function Hero({fullName}) {
     return  (
         <section className="section1-wrapper">
             <div>
@@ -8,8 +8,8 @@ export default function Hero() {
                 <p className="small-paragraph">
                     sell your tickets with us in a easier way and get more points.
                 </p>
-                <button type="button">
-                    <NavLink className="nav-link paragraph" to="/login">Resale Your Ticket</NavLink>
+                <button className="paragraph" type="button">
+                    {fullName ? 'Resale Your Ticket' :<NavLink className="nav-link paragraph" to="/login">Resale Your Ticket</NavLink>}
                 </button>
             </div>
             <div>
@@ -18,7 +18,7 @@ export default function Hero() {
                     Get your tickets, chill with your show and your security is our priority.
                     </p>
                 <button className="paragraph" type="button">
-                    <NavLink className="nav-link paragraph" to="/login">Buy Our Ticket</NavLink>
+                    {fullName ? 'Buy Our Ticket' : <NavLink className="nav-link paragraph" to="/login">Buy Our Ticket</NavLink>}
                 </button>
             </div>
         </section>

@@ -3,6 +3,7 @@ import EmptyStarIcon from '../../../assets/buy_ticket/empty_star.svg'
 import HalfStarIcon from '../../../assets/buy_ticket/half_star.svg'
 import FullStarIcon from '../../../assets/buy_ticket/full_star.svg'
 import './index.css'
+
 export default function Section2() {
     const loadMovieCard = () => {
         let movie_card = movies.map(movie => {

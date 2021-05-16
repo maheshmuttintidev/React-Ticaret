@@ -5,7 +5,11 @@ import Section2 from './section2'
 import Section3 from './section3'
 import Footer from './footer'
 
-export default function Home() {
+export default function Home(props) {
+    const isUserLoggedIn = props?.isUserLoggedIn
+    if(isUserLoggedIn) {
+        props?.history?.push(`/ticaretor/${props?.userId}`)
+    }
     return (
         <>
             <Header />
