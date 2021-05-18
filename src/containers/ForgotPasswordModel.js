@@ -1,28 +1,36 @@
 import React, { useState, useEffect } from 'react'
+import {useSelector, useDispatch} from 'react-redux'
 import ReactDOM from 'react-dom'
-import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import {forgotPassword} from '../redux/actions/user.actions'
 import Home from '../components/home/home'
 import './forgotpassword.css'
 
 const continueRef = React.createRef()
 export default function ForgotPasswordModel(props) {
-    const [emailID, setEmailID] = useState('')
+    const [mobileNumber, setmobileNumber] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
-    const [emailIDValidateError, setEmailIDValidateError] = useState('')
+    const [mobileNumberValidateError, setmobileNumberValidateError] = useState('')
     const [passwordValidateError, setPasswordValidateError] = useState('')
     const [confirmPasswordValidateError, setConfirmPasswordValidateError] = useState('')
-    const isUserLoggedIn = props?.isUserLoggedIn
+    const [isInvalidCredentials, setIsInvalidCredentials] = useState('')
+    const isUserLoggedIn = useSelector(state => state.isLoggedin)
+    const history = useHistory()
+    const dispatch = useDispatch()
 
+    if(isUserLoggedIn) {
+        history.push('/ticaretor')
+    }
     useEffect(() => {
-        if (emailID) {
-            if (!emailID.includes("@gmail.com") || emailID.length < 18) {
-                setEmailIDValidateError("Invalid Email..!")
+        if (mobileNumber) {
+            if (mobileNumber.length > 10 || mobileNumber.length < 10) {
+                setmobileNumberValidateError("Invalid Mobile Number..!")
             } else {
-                setEmailIDValidateError("")
+                setmobileNumberValidateError("")
             }
         }
-    }, [emailID])
+    }, [mobileNumber])
 
 
     useEffect(() => {
@@ -48,20 +56,16 @@ export default function ForgotPasswordModel(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if(!emailIDValidateError && !passwordValidateError && !confirmPasswordValidateError) {
-            if (isUserLoggedIn) {
-                props.history.push(`/ticaretor/${props?.userId}`)
-            } else {
-                props.history.push("/")
+        if (!mobileNumberValidateError && !passwordValidateError && !confirmPasswordValidateError) {
+            try {
+                dispatch(forgotPassword({mobileNumber, password}))
+                history.push('/')
+            } catch(err) {
+                console.log(err)
             }
-        } 
-        else {
-            alert("Invalid Credentials")
         }
-    }
-    if(isUserLoggedIn) {
-        if (props?.userId) {
-            props.history.push(`/ticaretor/${props?.userId}`)
+        else {
+            setIsInvalidCredentials("Invalid Credentials")
         }
     }
 
@@ -70,14 +74,15 @@ export default function ForgotPasswordModel(props) {
             <Home />
             <div className="popup-forgot__password-overlay">
                 <div className="popup-forgot__password-wrapper">
-                    <span className="close-btn">
-                        <NavLink to="/login" className="nav-link close">&times;</NavLink>
+                    <span className="close-btn" onClick={() => history.push('/')}>
+                        <span className="nav-link close">&times;</span>
                     </span>
                     <form className="form-forgot__password" method="POST" onSubmit={handleSubmit}>
+                        <span style={{color: "var(--secondary-color)"}}>{isInvalidCredentials && isInvalidCredentials}</span>
                         <div>
-                            <input placeholder="Email Address" type="email" value={emailID} className="input-field" name="emailID" onChange={(e) => setEmailID(e.target.value)} required autoComplete="off" />
+                            <input placeholder="Mobile Number" type="number" value={mobileNumber} className="input-field" name="mobileNumber" onChange={(e) => setmobileNumber(e.target.value)} required autoComplete="off" />
                         </div>
-                        {emailIDValidateError && <span className="error-msg-span">{emailIDValidateError}</span>}
+                        {mobileNumberValidateError && <span className="error-msg-span">{mobileNumberValidateError}</span>}
                         <div>
                             <input placeholder="New Password" type="password" value={password} className="input-field" name="password" onChange={(e) => setPassword(e.target.value)} required autoComplete="off" />
                         </div>

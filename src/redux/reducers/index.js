@@ -2,7 +2,7 @@ import {combineReducers} from 'redux'
 import {UserReducer} from './user.reducer'
 
 const rootReducer = combineReducers({
-    isUserLoggedIn: UserReducer
+    isLoggedin: UserReducer
 })
 
 export default rootReducer

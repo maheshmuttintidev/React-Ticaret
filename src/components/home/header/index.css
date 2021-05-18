@@ -14,7 +14,6 @@ header {
 header > * {
   flex: 1 1 auto;
   align-self: flex-start;
-  cursor: pointer;
 }
 
 header > *:last-child {
@@ -186,7 +185,6 @@ header > *:last-child > *:nth-child(2):active {
 }
 
 .btnEnabled {
-  border: 3px dotted red;
   display: flex;
   border: 0;
   height: max-content;
@@ -207,7 +205,7 @@ header > *:last-child > *:nth-child(2):active {
   text-align: inherit;
   width: 100% !important;
   border: 0;
-  background-color: inherit;
+  background-color: transparent;
   color: inherit;
   font-size: inherit;
   position: absolute;
@@ -253,4 +251,8 @@ header > *:last-child > *:nth-child(2):active {
 
 .location-option {
   position: relative;
+}
+
+.sub-menu-option.activeBg {
+  background-color: var(--secondary-color) !important;
 }

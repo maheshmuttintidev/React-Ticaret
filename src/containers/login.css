@@ -148,14 +148,22 @@ input::placeholder {
   margin: 1rem 0 0 3rem;
 }
 .nav-link.forgot-password {
-  text-decoration: underline;
   margin-bottom: 0;
 }
 
 .paragraph.forgot-password,
+.paragraph.signup-text-parent,
 .paragraph.signup-text {
     font-family: "Caros Regular";
-    opacity: .5;
+}
+
+.paragraph.signup-text {
+  margin-top: 0;
+  opacity: .5;
+}
+
+.paragraph.forgot-password {
+  opacity: .5;
 }
 
 .paragraph.forgot-password:hover {
@@ -163,10 +171,14 @@ input::placeholder {
 }
 
 .nav-link.register {
+  position: relative;
+  top: -2px;
   opacity: .5;
 }
 
 .nav-link.register:hover {
   opacity: 1;
 }
-
+.paragraph.bold {
+  font-family: "Caros Bold" !important;
+}

@@ -3,17 +3,18 @@ import FbIcon from '../../../assets/footer/Icon awesome-facebook-f.svg'
 import InstaIcon from '../../../assets/footer/Icon awesome-instagram.svg'
 import LinkedInIcon from '../../../assets/footer/Icon awesome-linkedin.svg'
 import TwitterIcon from '../../../assets/footer/Icon awesome-twitter.svg'
-import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import './index.css'
 
 export default function Footer() {
+    const history = useHistory()
     return (
         <footer className="home-footer">
             <div>
                 <div className="logo-wrapper">
-                    <NavLink to="/">
+                    <span onClick={() => history.push('/')}>
                         <img src={Logo} alt="" />
-                    </NavLink>
+                    </span>
                 </div>
             </div>
             <div>

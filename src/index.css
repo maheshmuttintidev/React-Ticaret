@@ -164,7 +164,7 @@ body {
 *::after,
 *::before {
     box-sizing: border-box;
-    font-family: "Caros Regular", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Caros Regular";
 
 }
 

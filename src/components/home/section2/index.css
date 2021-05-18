@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    cursor: pointer;
   }
   .movie-card {
     flex-basis: 1 1 100%;
@@ -36,6 +35,7 @@
     height: 16em;
     border-radius: var(--border-radius);
     margin-right: 2rem;
+    cursor: pointer;
   }
   .img-movie > img {
     height: 100%;

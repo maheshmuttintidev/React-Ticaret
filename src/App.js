@@ -11,28 +11,27 @@ import Ticaretor from './components/protectedPages/ticaretorPage/ticaretor'
 import { ProtectedRoute } from './routes/protected.route'
 
 function App() {
-  const isUserLoggedIn = JSON.parse(sessionStorage.getItem("userData"))?.token ? true : false
-  const userId = JSON.parse(sessionStorage.getItem("userData"))?.userId
   const history = useHistory()
+  const userId = JSON.parse(sessionStorage.getItem("userData"))?.userId
   return (
     <>
       <Router forceRefresh={true}>
         <Switch>
           <Route exact path="/" render={props => (
-            <Home {...props} isUserLoggedIn={isUserLoggedIn} userId={userId} />
+            <Home {...props} userId={userId} />
           )} />
           <Route exact path="/login" render={props => (
-            <Login {...props} isUserLoggedIn={isUserLoggedIn} userId={userId} />
+            <Login {...props} userId={userId} />
           )} />
           <Route exact path="/register" render={props => (
-            <Register {...props} isUserLoggedIn={isUserLoggedIn} userId={userId} />
+            <Register {...props} userId={userId} />
           )} />
           <Route exact path="/forgot-password" render={props => (
-            <ForgotPasswordModel {...props} isUserLoggedIn={isUserLoggedIn} userId={userId} />
+            <ForgotPasswordModel {...props} userId={userId} />
           )} />
           <Route exact path="/location" component={Location} />
-          <ProtectedRoute path={`/ticaretor/${userId}`}>
-            <Ticaretor history={history}/>
+          <ProtectedRoute path='/ticaretor'>
+            <Ticaretor history={history} />
           </ProtectedRoute>
           <Route path="*" component={NotFound} />
         </Switch>

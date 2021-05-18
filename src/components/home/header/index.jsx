@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import {useDispatch} from 'react-redux'
 import Logo from '../../../assets/header/logo.png'
 import LocationIcon from '../../../assets/header/location.svg'
 import UserIcon from '../../../assets/header/user.svg'
@@ -11,43 +12,45 @@ import Option3 from '../../../assets/header_menu/aboutus.svg'
 import Option3Full from '../../../assets/header_menu/about_us.svg'
 import Option4 from '../../../assets/header_menu/setting.svg'
 import Option4Full from '../../../assets/header_menu/settings.svg'
-import { NavLink } from 'react-router-dom'
+import {useHistory } from 'react-router-dom'
 import Location from '../location'
-import classnames from 'classnames'
+import {logout} from '../../../redux/actions/user.actions'
 import './index.css'
 
 const Menu = (props) => {
-    const logout = () => {
-        sessionStorage.removeItem("userData")
-        props.history.push("/")
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const showLoginPopup = () => {
+        history.push('/login')
     }
+
     return (
         <>
             <div className="overlay-fixed">
                 <div className="sub-menu-wrapper">
                     <div>
                         <p className="">Hi... {props?.fullName}</p>
-                        {props?.fullName ? "" : <NavLink to="/login" className="sub-menu-login-option">Login</NavLink>}
+                        {props?.fullName ? "" : <span onClick={showLoginPopup} className="sub-menu-login-option">Login</span>}
                     </div>
                     <div>
-                        <div className={classnames(props?.fullName ? "enableCursor": "disableCursor")}>
+                        <div className={props?.fullName ? "enableCursor": "disableCursor"}>
                             <img src={props?.fullName ? Option1Full : Option1} alt="" />
-                            <p className={classnames(props?.fullName ? "enabled": "disabled")}>Booked ticket</p>
+                            <p className={props?.fullName ? "enabled": "disabled"}>Booked ticket</p>
                         </div>
-                        <div className={classnames(props?.fullName ? "enableCursor": "disableCursor")}>
+                        <div className={props?.fullName ? "enableCursor": "disableCursor"}>
                             <img src={props?.fullName ? Option2Full : Option2} alt="" />
-                            <p className={classnames(props?.fullName ? "enabled": "disabled")}>Ticket history</p>
+                            <p className={props?.fullName ? "enabled": "disabled"}>Ticket history</p>
                         </div>
-                        <div className={classnames(props?.fullName ? "enableCursor": "disableCursor")}>
+                        <div className={props?.fullName ? "enableCursor": "disableCursor"}>
                             <img src={props?.fullName ? Option3Full : Option3} alt="" />
-                            <p className={classnames(props?.fullName ? "enabled": "disabled")}>About Us</p>
+                            <p className={props?.fullName ? "enabled": "disabled"}>About Us</p>
                         </div>
-                        <div className={classnames(props?.fullName ? "enableCursor": "disableCursor")}>
+                        <div className={props?.fullName ? "enableCursor": "disableCursor"}>
                             <img src={props?.fullName ? Option4Full : Option4} alt="" />
-                            <p className={classnames(props?.fullName ? "enabled": "disabled")}>Settings</p>
+                            <p className={props?.fullName ? "enabled": "disabled"}>Settings</p>
                         </div>
-                        <div className={classnames(props?.fullName ? "btnEnabled" : "btnDisabled")}>
-                            <button className={classnames(props?.fullName ? "enableCursor" : "disableCursor")} onClick={logout}>Logout</button>
+                        <div className={props?.fullName ? "btnEnabled" : "btnDisabled"} onClick={() => dispatch(logout())}>
+                            <button className={props?.fullName ? "enableCursor" : "disableCursor"}>Logout</button>
                         </div>
                     </div>
                 </div>
@@ -57,20 +60,21 @@ const Menu = (props) => {
 }
 
 
-export default function Header({fullName, history}) {
+export default function Header({fullName}) {
     const [isClicked, setIsClicked] = useState(false)
     const [isLocationPopup, setIsLocationPopup] = useState(false)
+    const history = useHistory()
 
-    useEffect(() => {
-        console.log(isLocationPopup)
-    }, [isLocationPopup])
+    const displayLoginPopup = () => {
+        history.push('/login')
+    }
 
     return (
         <header className="home-header">
             <div className="logo-wrapper">
-                <NavLink to="/">
+                <span onClick={() => history.push("/")}>
                     <img src={Logo} alt="" />
-                </NavLink>
+                </span>
             </div>
             <div className="nav-wrapper">
                 <div className="location-option">
@@ -81,16 +85,16 @@ export default function Header({fullName, history}) {
                 </div>
                     {fullName ? 
                             <span style={{border: "0", width: "max-content"}}>{fullName}</span> : 
-                            <div className="login-option">
-                                <NavLink to="/login" className="nav-link mini-sub-heading">Login</NavLink>
+                            <div className="login-option" onClick={displayLoginPopup}>
+                                <span className="mini-sub-heading">Login</span>
                             </div>
                     }
-                <div className="sub-menu-option">
-                    <div onClick={() => setIsClicked(prevState => !prevState)}>
+                <div style={{maxWidth: "max-content !important"}} className={isClicked ? `sub-menu-option activeBg` : `sub-menu-option`} onClick={() => setIsClicked(prevState => !prevState)}>
+                    <div>
                         <img src={BurgerMenuIcon} alt="" />
                         <img src={UserIcon} alt="" />
                     </div>
-                    {isClicked && <Menu fullName={fullName} history={history} />}
+                    {isClicked && <Menu fullName={fullName} />}
                 </div>
             </div>
         </header>

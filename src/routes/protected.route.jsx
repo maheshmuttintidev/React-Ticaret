@@ -3,10 +3,10 @@ import React from 'react'
 import {Route, Redirect} from 'react-router-dom'
 
 export const ProtectedRoute = ({component: Component, ...rest}) => {
-    const isResponseDataExists = JSON.parse(sessionStorage.getItem('userData'))?.token ? true : false
+    const isUserLoggedIn = sessionStorage.getItem("userData")
     return (
         <Route {...rest} render={ props => {
-            if(isResponseDataExists) {
+            if(isUserLoggedIn) {
                 return <Component {...props} />
             } else {
                 return (

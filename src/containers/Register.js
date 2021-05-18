@@ -1,9 +1,13 @@
+// register component here used as "container component"
+// Here is I used the "useDispatch()" method to dispatch the "register()" action
+// "useSelector()" hook is used to select the prop that are in redux store
+
 import {useState, useEffect} from 'react'
-import {connect} from 'react-redux'
-import {register} from '../actions'
-import { NavLink } from 'react-router-dom'
+import {connect, useSelector} from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import Logo from '../assets/header/logo.png'
 import Footer from '../components/home/footer'
+import {register} from '../redux/actions/user.actions'
 import './register.css'
 
 export default connect(null, {register})(props => {
@@ -14,7 +18,8 @@ export default connect(null, {register})(props => {
     const [isValidFullname, setIsValidFullname] = useState('')
     const [isValidPassword, setIsValidPassword] = useState('')
     const [isValidMobileNumber, setIsValidMobileNumber] = useState('')
-    const isUserLoggedIn = props?.isUserLoggedIn
+    const isLoggedin = useSelector(state => state.isLoggedin)
+    const history = useHistory()
 
     useEffect(() => {
         if(fullName) {
@@ -52,26 +57,22 @@ export default connect(null, {register})(props => {
         e.preventDefault()
         try {
             await props.register({fullName, password, mobileNumber})
-            if(isUserLoggedIn) {
-                props.history.push(`ticaretor/${props?.userId}`)
-            } else {
-                props.history.push('/register')
-            }
         } catch(err) {
             alert("server is not running.!")
         }
     }
 
-    if(isUserLoggedIn) {
-        props.history.push(`ticaretor/${props?.userId}`)
+    if(isLoggedin) {
+        history.push(`/ticaretor`)
     }
+
     return (
         <>
             <div className="register-page-hero">
                 <div className="logo-wrapper">
-                    <NavLink to="/">
+                    <span onClick={() => history.push("/")}>
                         <img src={Logo} alt="" />
-                    </NavLink>
+                    </span>
                 </div>
                 <div className="register-wrapper">
                     <h2 className="sub-heading">

@@ -23,7 +23,7 @@ export default function Section2() {
             return (
                 <div key={movie.id} className="movie-details">
                     <div className="star-rating-container">
-                        <img onLoad={console.log("loading...")} loading="lazy" src={FullStarIcon} alt="star1" />
+                        <img loading="lazy" src={FullStarIcon} alt="star1" />
                         <img loading="lazy" src={FullStarIcon} alt="star2" />
                         <img loading="lazy" src={FullStarIcon} alt="star3" />
                         <img loading="lazy" src={HalfStarIcon} alt="star4" />
