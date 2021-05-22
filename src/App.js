@@ -4,6 +4,7 @@ import Login from './containers/Login'
 import Location from './components/home/location'
 import NotFound from './components/errorPage'
 import Register from './containers/Register'
+// added
 function App() {
   return (
     <>
