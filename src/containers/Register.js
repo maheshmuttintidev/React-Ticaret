@@ -66,6 +66,8 @@ export default connect(null, {register})(props => {
         history.push(`/ticaretor`)
     }
 
+
+
     return (
         <>
             <div className="register-page-hero">
@@ -94,7 +96,7 @@ export default connect(null, {register})(props => {
                             {isValidMobileNumber && <span style={{color: 'var(--secondary-color)'}}>{isValidMobileNumber}</span>}
                         </div>
                         <div className="otp-wrapper">
-                            <button type="button" className="form-btn otp" onClick={() => setOTPNotWorking("Sorry, It's not implemented yet..!")}>Get OTP</button>
+                            <button type="button" className="form-btn otp" onClick={() => setTimeout(setOTPNotWorking, 2000) ? setOTPNotWorking("Sorry, It's not implemented yet..!"): setOTPNotWorking("")}>Get OTP</button>
                             <input className="input-field otp" type="number" placeholder="Enter OTP" />
                         </div>
                         {OTPNotWorking && <span style={{paddingTop: '2rem', color: 'var(--secondary-color)'}}>{OTPNotWorking}</span>}

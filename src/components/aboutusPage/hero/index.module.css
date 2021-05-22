@@ -1,0 +1,28 @@
+.heroContainer {
+    height: 466px;
+    min-width: 300px;
+    background: url('../../../assets/about_page/about_hero_bg.png') center scroll no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 1rem;
+}
+.heroContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    z-index: -1;
+}
+.aboutP {
+    font-size: 26px;
+    margin-top: 0;
+    text-align: center;
+    min-width: 30ch;
+    max-width: 20ch;
+}

@@ -1,8 +1,35 @@
 
+
+.overlay-fixed-full {
+  z-index: 2;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 3px 3px var(--red-box-shadow-color);
+  transition: animation 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes top-anim {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   visibility: hidden;
 }
+
+
 
 .form-wrapper {
   width: 583px;
@@ -44,6 +71,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 1rem 0;
   color: var(--primary-font-color);
   padding: 0 1rem;
+  font-size: 16px;
 }
 .input-field.phone {
   margin-bottom: 21px;
@@ -67,6 +95,7 @@ input::placeholder {
   cursor: pointer;
   transition: background-color .1s ease-out;
   margin-bottom: 22px;
+  font-size: 18px;
 }
 .form-btn:hover {
   background-color: var(--hover-color);
@@ -179,6 +208,11 @@ input::placeholder {
 .nav-link.register:hover {
   opacity: 1;
 }
+
+.nav-link.forgot-password:hover {
+  text-decoration: underline;
+}
+
 .paragraph.bold {
   font-family: "Caros Bold" !important;
 }

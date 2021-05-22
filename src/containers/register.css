@@ -1,5 +1,4 @@
 .register-page-hero {
-  min-height: 100vh;
   background-image: url("../assets/header/register_bg.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -20,14 +19,14 @@
   z-index: -1;
 }
 .register-page-hero .logo-wrapper {
-  margin: 0 0 0 3rem;
   padding-top: 1rem;
+  padding-left: 3rem;
 }
 
 .register-wrapper {
   height: 700px;
   max-width: 663.98px;
-  margin: 4rem auto;
+  margin: 1rem auto;
   background-image: url("../assets/header/register_bg_ticket.png");
   background-size: 100% 100%;
   overflow: hidden;

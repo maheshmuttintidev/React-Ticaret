@@ -1,12 +1,12 @@
 
 import {withRouter, useHistory} from 'react-router-dom'
 import {useSelector} from 'react-redux'
-import Header from '../../home/header'
-import Hero from '../../home/hero'
-import Section1 from '../../home/section1'
-import Section2 from '../../home/section2'
-import Section3 from '../../home/section3'
-import Footer from '../../home/footer'
+import Header from './header'
+import Hero from './hero'
+import Section1 from './section1'
+import Section2 from './section2'
+import Section3 from './section3'
+import Footer from './footer'
 
 const Ticaretor = () => {
     const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name

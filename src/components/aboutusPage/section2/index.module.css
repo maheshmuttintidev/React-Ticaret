@@ -1,0 +1,17 @@
+.teamWrapper {
+    padding: 4rem 3rem;
+    text-align: center;
+    background-color: rgba(75, 73, 73, 0.1);
+}
+
+.teamMembersWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.teamMembersWrapper > * {
+    min-width: 10rem;
+}

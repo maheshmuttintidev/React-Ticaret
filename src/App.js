@@ -6,9 +6,11 @@ import Location from './components/home/location'
 import NotFound from './components/errorPage'
 import Register from './containers/Register'
 import ForgotPasswordModel from './containers/ForgotPasswordModel'
-// import { ProtectedRoute } from './routes/protected.route'
 import Ticaretor from './components/protectedPages/ticaretorPage/ticaretor'
 import { ProtectedRoute } from './routes/protected.route'
+import About from './components/aboutusPage/about'
+import ResaleTicketForm from './components/protectedPages/sellYourTicketPages/resaleTicketForm'
+import AccountDetails from './components/protectedPages/sellYourTicketPages/accountDetails'
 
 function App() {
   const history = useHistory()
@@ -30,8 +32,15 @@ function App() {
             <ForgotPasswordModel {...props} userId={userId} />
           )} />
           <Route exact path="/location" component={Location} />
-          <ProtectedRoute path='/ticaretor'>
+          <Route exact path="/about" component={About} />
+          <ProtectedRoute exact path='/ticaretor'>
             <Ticaretor history={history} />
+          </ProtectedRoute>
+          <ProtectedRoute exact path="/ticaretor/resale-ticket-form">
+              <ResaleTicketForm />
+          </ProtectedRoute>
+          <ProtectedRoute exact path="/ticaretor/resale-ticket-form/fill-account-details">
+              <AccountDetails />
           </ProtectedRoute>
           <Route path="*" component={NotFound} />
         </Switch>
