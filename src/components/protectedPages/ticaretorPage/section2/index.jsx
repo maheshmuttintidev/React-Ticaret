@@ -1,20 +1,36 @@
-import { Movies as movies } from "../../../../assets/img_links/ImagesLinks"
+import { useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
+import { getMoviesList } from "../../../../redux/actions/movies.actions"
 import EmptyStarIcon from "../../../../assets/buy_ticket/empty_star.svg"
 import HalfStarIcon from "../../../../assets/buy_ticket/half_star.svg"
 import FullStarIcon from "../../../../assets/buy_ticket/full_star.svg"
+import { NavLink } from "react-router-dom"
 import style from "./index.module.css"
 
 export default function Section2() {
+  const dispatch = useDispatch()
+  const movies = useSelector((state) => state.moviesList)
+
+  useEffect(() => {
+    dispatch(getMoviesList())
+  }, [dispatch])
+
   const loadMovieCard = () => {
-    let movie_card = movies.map((movie) => {
+    let movie_card = movies?.movies?.map((movie) => {
       return (
-        <div>
-          <div key={movie.id}>
+        <div key={movie.id}>
+          <div>
             <div className={style.imgMovie}>
-              <img loading="lazy" src={movie.img_url} alt="movie img" />
+              <NavLink
+                to={`/ticaretor/${escape(movie.name)
+                  .toLowerCase()
+                  .replaceAll("%20", "-")}/movie-details`}
+              >
+                <img loading="lazy" src={movie.img_url} alt="movie img" />
+              </NavLink>
             </div>
           </div>
-          <div key={movie.id} className={style.movieDetails}>
+          <div className={style.movieDetails}>
             <div className={style.starsWrapper}>
               <img loading="lazy" src={FullStarIcon} alt="star1" />
               <img loading="lazy" src={FullStarIcon} alt="star2" />
@@ -23,9 +39,11 @@ export default function Section2() {
               <img loading="lazy" src={EmptyStarIcon} alt="star5" />
             </div>
             <h2>{movie.name}</h2>
-            <p className={`${style.paragraph} ${style.movieCard}`}>UA</p>
             <p className={`${style.paragraph} ${style.movieCard}`}>
-              Telugu,Tamil,Kannada
+              {movie.availability}
+            </p>
+            <p className={`${style.paragraph} ${style.movieCard}`}>
+              {movie.languages}
             </p>
           </div>
         </div>

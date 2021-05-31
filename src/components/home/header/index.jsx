@@ -83,7 +83,7 @@ export default function Header() {
           <span style={{ fontSize: "20px" }}>Login</span>
         </div>
         <div
-          style={{ maxWidth: "max-content !important"}}
+          style={{ maxWidth: "max-content !important" }}
           className={
             isClicked
               ? `${style.subMenuOption} ${style.activeBg}`

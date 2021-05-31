@@ -1,35 +1,10 @@
-.section2Wrapper {
-  margin: 2rem 3rem;
-}
-.mcontainer {
-  position: relative;
-  min-width: 300px;
-}
-.movie-heading {
-  margin-bottom: 3rem;
-}
-.movies_container {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: scroll;
-}
-
-.imgMovie {
-  border-radius: var(--border-radius);
-  margin-right: 2rem;
-}
-.imgMovie img {
+.movieCardImage {
   cursor: pointer;
   width: 305px;
   height: 428px;
   border-radius: var(--border-radius);
   object-fit: all;
   border-radius: 14px;
-}
-
-.movieCardsContainer,
-.movieDetailsContainer {
-  display: flex;
 }
 
 .movieDetails {

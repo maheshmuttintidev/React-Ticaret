@@ -308,7 +308,11 @@ img::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--secondary-full-color);
+  background-color: var(--primary-font-color);
+  background-image: url("./assets/header/logo_title.svg");
+  background-position: center;
+  background-size: 20% 20%;
+  background-repeat: no-repeat;
   border-radius: 0 14px 14px;
 }
 

@@ -1,4 +1,3 @@
-import {useHistory} from 'react-router'
 import Home from './components/home/home'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './containers/Login'
@@ -7,13 +6,13 @@ import NotFound from './components/errorPage'
 import Register from './containers/Register'
 import ForgotPasswordModel from './containers/ForgotPasswordModel'
 import Ticaretor from './components/protectedPages/ticaretorPage/ticaretor'
-import { ProtectedRoute } from './routes/protected.route'
-import About from './components/aboutusPage/about'
+import About from './components/aboutusPage/about.server'
 import ResaleTicketForm from './components/protectedPages/sellYourTicketPages/resaleTicketForm'
 import AccountDetails from './components/protectedPages/sellYourTicketPages/accountDetails'
+import BuyTickets from './components/protectedPages/buyOurTicketPages/buyTickets'
+import MovieDetails from './components/protectedPages/buyOurTicketPages/movieDetails'
 
 function App() {
-  const history = useHistory()
   const userId = JSON.parse(sessionStorage.getItem("userData"))?.userId
   return (
     <>
@@ -33,15 +32,19 @@ function App() {
           )} />
           <Route exact path="/location" component={Location} />
           <Route exact path="/about" component={About} />
-          <ProtectedRoute exact path='/ticaretor'>
-            <Ticaretor history={history} />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/ticaretor/resale-ticket-form">
-              <ResaleTicketForm />
-          </ProtectedRoute>
-          <ProtectedRoute exact path="/ticaretor/resale-ticket-form/fill-account-details">
-              <AccountDetails />
-          </ProtectedRoute>
+          <Route exact path='/ticaretor'>
+            <Ticaretor />
+          </Route>
+          <Route exact path="/ticaretor/buy-tickets">
+            <BuyTickets />
+          </Route>
+          <Route exact path="/ticaretor/:moviename/movie-details" children={<MovieDetails />} />
+          <Route exact path="/ticaretor/resale-ticket-form">
+            <ResaleTicketForm />
+          </Route>
+          <Route exact path="/ticaretor/resale-ticket-form/fill-account-details">
+            <AccountDetails />
+          </Route>
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>

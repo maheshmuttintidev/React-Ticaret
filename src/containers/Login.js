@@ -8,10 +8,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import UserIcon from '../assets/register/user_profile_icon.svg'
-import GoogleIcon from '../assets/header/google_icon.svg'
-import FbIcon from '../assets/header/facebook_icon.svg'
+// import GoogleIcon from '../assets/header/google_icon.jpg'
+// import FbIcon from '../assets/header/facebook_icon.png'
 import Home from '../components/home/home'
 import { login } from '../redux/actions/user.actions'
+import { GoogleLogin } from 'react-google-login'
 import './login.css'
 
 export default function Login() {
@@ -27,6 +28,10 @@ export default function Login() {
         dispatch(login({ mobileNumber, password }))
         const error = JSON.parse(sessionStorage.getItem("userData"))?.message
         setError(error)
+    }
+
+    const responseGoogle = (response) => {
+        console.log(response)
     }
 
     if (isUserLoggedIn) {
@@ -77,14 +82,19 @@ export default function Login() {
                             </p>
                         </div>
                         <div className="auth-btns-wrapper">
-                            <button type="button" className="auth-btn">
-                                <img src={GoogleIcon} alt="" />
+                            {/* <button type="button" className="auth-btn">
+                                <img style={{ borderRadius: "50%" }} src={GoogleIcon} alt="" />
                                 <span className="paragraph bold">google</span>
-                            </button>
-                            <button type="button" className="auth-btn">
-                                <img src={FbIcon} alt="" />
-                                <span className="paragraph bold">facebook</span>
-                            </button>
+                            </button> */}
+                            <GoogleLogin
+                                clientId="AIzaSyBcb8TZbVZBcc3CHP1quh1hcFWpVHlw6Io"
+                                onSuccess={responseGoogle}
+                                onFailure={responseGoogle}
+                            />
+                            {/* <button type="button" className="auth-btn">
+                                {/* <img style={{ borderRadius: "50%" }} src={FbIcon} alt="" />
+                                <span className="paragraph bold">facebook</span> 
+                            </button> */}
                         </div>
                     </div>
                 </div>

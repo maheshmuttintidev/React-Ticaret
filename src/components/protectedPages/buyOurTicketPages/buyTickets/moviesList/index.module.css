@@ -1,0 +1,11 @@
+.moviesListContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  gap: 1rem;
+  margin: 2rem 2.5rem;
+}
+.moviesListContainer > * {
+  flex: 0 1 auto;
+  margin: auto;
+}

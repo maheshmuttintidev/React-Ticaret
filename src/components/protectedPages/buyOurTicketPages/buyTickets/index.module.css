@@ -1,0 +1,17 @@
+.moviesLanguages {
+  padding: 2rem 4rem 0;
+}
+
+.btnLanguage {
+  border: 1px solid var(--secondary-color);
+  border-radius: 14px;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  color: var(--primary-font-color);
+  font-size: 16px;
+  margin: 0 1rem 1rem 0;
+  width: 138px;
+  height: 54px;
+  text-align: center;
+  cursor: pointer;
+}

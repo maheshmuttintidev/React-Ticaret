@@ -2,12 +2,12 @@ header {
   display: flex;
   flex-flow: wrap;
   padding: 12px 3rem 1rem;
-  gap: 3rem 3rem;
+  gap: 3rem;
   position: sticky;
   top: 0;
   z-index: 2;
   background-color: var(--primary-bg-color);
-  box-shadow: 0 3px 5px rgba(12, 12, 12, .5);
+  box-shadow: 0 3px 5px rgba(12, 12, 12, 0.5);
 }
 
 @media screen and (max-width: 601px) {
@@ -20,7 +20,6 @@ header {
   }
 }
 
-
 header > * {
   flex: 1 1 auto;
   align-self: flex-start;
@@ -28,10 +27,14 @@ header > * {
 
 header > *:last-child {
   display: flex;
-  gap: 1rem;
+  gap: 2rem 1rem;
   align-items: center;
   justify-content: flex-end;
   align-self: flex-start;
+  background-color: inherit;
+  padding-bottom: 1rem;
+  border-radius: 0 0 5px 5px;
+  margin-top: 1px !important;
 }
 
 @media screen and (max-width: 580px) {
@@ -162,11 +165,11 @@ header > *:last-child > *:nth-child(2):active {
 }
 
 .enableCursor {
-    cursor: pointer;
-    width: calc(100% + 4rem);
-    position: relative;
-    left: -2rem;
-    padding: 0 2rem;
+  cursor: pointer;
+  width: calc(100% + 4rem);
+  position: relative;
+  left: -2rem;
+  padding: 0 2rem;
 }
 
 .enableCursor:hover {
@@ -174,16 +177,16 @@ header > *:last-child > *:nth-child(2):active {
 }
 
 .disableCursor {
-    cursor: text;
+  cursor: text;
 }
 
 .disabled {
-    color: var(--gray-font-color);
-    cursor: text;
+  color: var(--gray-font-color);
+  cursor: text;
 }
 
 .enabled {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .btnEnabled {
@@ -199,7 +202,7 @@ header > *:last-child > *:nth-child(2):active {
   position: relative;
   left: -1.5rem;
   margin: auto;
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   border-radius: 7px;
 }
 

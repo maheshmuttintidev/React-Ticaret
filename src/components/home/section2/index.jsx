@@ -1,6 +1,6 @@
 import { useEffect } from "react"
-import {useSelector, useDispatch} from 'react-redux'
-import {getMoviesList} from '../../../redux/actions/movies.actions'
+import { useSelector, useDispatch } from "react-redux"
+import { getMoviesList } from "../../../redux/actions/movies.actions"
 import EmptyStarIcon from "../../../assets/buy_ticket/empty_star.svg"
 import HalfStarIcon from "../../../assets/buy_ticket/half_star.svg"
 import FullStarIcon from "../../../assets/buy_ticket/full_star.svg"
@@ -15,7 +15,7 @@ export default function Section2() {
   }, [dispatch])
 
   const loadMovieCard = () => {
-    let movie_card = movies?.movies?.map(movie=> {
+    let movie_card = movies?.movies?.map((movie) => {
       return (
         <div key={movie.id}>
           <div>
@@ -32,9 +32,11 @@ export default function Section2() {
               <img loading="lazy" src={EmptyStarIcon} alt="star5" />
             </div>
             <h2>{movie.name}</h2>
-            <p className={`${style.paragraph} ${style.movieCard}`}>UA</p>
             <p className={`${style.paragraph} ${style.movieCard}`}>
-              Telugu,Tamil,Kannada
+              {movie.availability}
+            </p>
+            <p className={`${style.paragraph} ${style.movieCard}`}>
+              {movie.languages}
             </p>
           </div>
         </div>

@@ -33,6 +33,8 @@ header > *:last-child {
 .fullName {
   border: 0 !important;
   width: max-content !important;
+  margin: 0;
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 620px) {
@@ -94,7 +96,6 @@ header > *:last-child > *:last-child {
   }
 }
 
-
 .subMenuWrapper {
   display: flex;
   flex-direction: column;
@@ -128,15 +129,15 @@ header > *:last-child > *:last-child {
 }
 
 .enableCursor {
-    cursor: pointer;
-    width: calc(100% + 4rem);
-    position: relative;
-    left: -2rem;
-    padding: 0 2rem;
+  cursor: pointer;
+  width: calc(100% + 4rem);
+  position: relative;
+  left: -2rem;
+  padding: 0 2rem;
 }
 
 .enableCursor.lastOption {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .enableCursor:hover {
@@ -144,15 +145,15 @@ header > *:last-child > *:last-child {
 }
 
 .disableCursor {
-    cursor: text;
+  cursor: text;
 }
 
 .disabled {
-    color: var(--gray-font-color);
+  color: var(--gray-font-color);
 }
 
 .enabled {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .btnEnabled {
@@ -167,7 +168,7 @@ header > *:last-child > *:last-child {
   position: relative;
   left: -1.5rem;
   margin: auto;
-  padding: .6rem 0;
+  padding: 0.6rem 0;
   border-radius: 7px;
   cursor: pointer;
 }
