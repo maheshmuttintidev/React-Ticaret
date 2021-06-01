@@ -8,7 +8,6 @@ import Section3 from "./section3"
 import Footer from "./footer"
 
 const Ticaretor = () => {
-  const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name
   const isUserLoggedIn = useSelector((state) => state.isLoggedin)
   const history = useHistory()
 
@@ -18,7 +17,7 @@ const Ticaretor = () => {
 
   return (
     <>
-      <Header fullName={fullName} />
+      <Header />
       <Hero />
       <Section1 />
       <Section2 />

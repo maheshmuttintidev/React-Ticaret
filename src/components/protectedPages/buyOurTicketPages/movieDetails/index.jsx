@@ -8,7 +8,6 @@ import Footer from "../../ticaretorPage/footer"
 import styles from "./index.module.css"
 
 export default function MovieDetails() {
-  const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name
   const { moviename } = useParams()
   const dispatch = useDispatch()
   const { movies } = useSelector((state) => state.moviesList)
@@ -23,7 +22,7 @@ export default function MovieDetails() {
   )
   return (
     <>
-      <Header fullName={fullName} />
+      <Header />
       <section className={styles.movieDetailsWrapper}>
         <MovieDetailsHeroSection
           key={movieDetails?.id}

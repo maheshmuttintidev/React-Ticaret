@@ -58,11 +58,17 @@ const Menu = ({ fullName }) => {
               </div>
             </div>
             <div>
-              <div className={style.enableCursor}>
+              <div
+                className={style.enableCursor}
+                onClick={() => history.push("/ticaretor/booked-tickets")}
+              >
                 <img src={Option1Full} alt="" />
                 <p className={style.enabled}>Booked tickets</p>
               </div>
-              <div className={style.enableCursor}>
+              <div
+                className={style.enableCursor}
+                onClick={() => history.push("/ticaretor/tickets-history")}
+              >
                 <img src={Option2Full} alt="" />
                 <p className={style.enabled}>Tickets history</p>
               </div>
@@ -73,7 +79,10 @@ const Menu = ({ fullName }) => {
                 <img src={Option3Full} alt="" />
                 <p className={style.enabled}>About Us</p>
               </div>
-              <div className={`${style.enableCursor} ${style.lastOption}`}>
+              <div
+                className={`${style.enableCursor} ${style.lastOption}`}
+                onClick={() => history.push("/ticaretor/settings")}
+              >
                 <img src={Option4Full} alt="" />
                 <p className={style.enabled}>Settings</p>
               </div>
@@ -158,7 +167,10 @@ export default function Header() {
           </div>
           <span style={{ border: "0", width: "max-content" }}>{fullName}</span>
           <div
-            style={{ maxWidth: "max-content !important", backgroundColor: "var(--gray-bg-color)" }}
+            style={{
+              maxWidth: "max-content !important",
+              backgroundColor: "var(--gray-bg-color)",
+            }}
             className={
               isClicked
                 ? `${style.subMenuOption} ${style.activeBg}`
@@ -167,10 +179,7 @@ export default function Header() {
             onClick={() => setIsClicked((prevState) => !prevState)}
           >
             <div>
-              <img
-                src={BurgerMenuIconWhite}
-                alt=""
-              />
+              <img src={BurgerMenuIconWhite} alt="" />
               <img src={isClicked ? UserIconFull : UserIconFullInvert} alt="" />
             </div>
             {isClicked && <Menu fullName={fullName} />}

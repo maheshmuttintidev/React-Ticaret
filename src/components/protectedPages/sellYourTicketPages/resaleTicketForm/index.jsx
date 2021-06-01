@@ -5,7 +5,6 @@ import style from "./index.module.css"
 import { useHistory } from "react-router"
 import { useSelector } from "react-redux"
 export default function ResaleTicketForm() {
-  const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name
   const history = useHistory()
   const isUserLoggedIn = useSelector((state) => state.isLoggedin)
   if (!isUserLoggedIn) {
@@ -13,12 +12,12 @@ export default function ResaleTicketForm() {
   }
   return (
     <>
-      <Header fullName={fullName} />
+      <Header />
       <div className={style.resaleTicketFormWrapper}>
         <h2 style={{ fontSize: "25px" }}>Resale Your Ticket</h2>
         <form
           style={{ alignItems: "flex-start" }}
-          className="form-control"
+          className={style.resaleTicketFormContainer}
           encType="multipart/form-data"
         >
           <div className={style.inputFieldWrapper}>

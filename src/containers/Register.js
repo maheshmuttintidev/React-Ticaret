@@ -2,15 +2,15 @@
 // Here is I used the "useDispatch()" method to dispatch the "register()" action
 // "useSelector()" hook is used to select the prop that are in redux store
 
-import {useState, useEffect} from 'react'
-import {connect, useSelector} from 'react-redux'
+import { useState, useEffect } from 'react'
+import { connect, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import Logo from '../assets/header/logo.png'
 import Footer from '../components/home/footer'
-import {register} from '../redux/actions/user.actions'
+import { register } from '../redux/actions/user.actions'
 import './register.css'
 
-export default connect(null, {register})(props => {
+export default connect(null, { register })(props => {
     const [fullName, setFullName] = useState('')
     const [password, setPassword] = useState('')
     const [mobileNumber, setMobileNumber] = useState('')
@@ -18,12 +18,14 @@ export default connect(null, {register})(props => {
     const [isValidFullname, setIsValidFullname] = useState('')
     const [isValidPassword, setIsValidPassword] = useState('')
     const [isValidMobileNumber, setIsValidMobileNumber] = useState('')
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
     const isLoggedin = useSelector(state => state.isLoggedin)
     const history = useHistory()
-
+    const errorMessage = JSON.parse(sessionStorage.getItem("userData"))?.message
     useEffect(() => {
-        if(fullName) {
-            if(fullName.length < 8) {
+        if (fullName) {
+            if (fullName.length < 8) {
                 setIsValidFullname("Your fullname is atleast 8 characters")
             } else {
                 setIsValidFullname("")
@@ -32,8 +34,8 @@ export default connect(null, {register})(props => {
     }, [fullName])
 
     useEffect(() => {
-        if(password) {
-            if(password.length < 8) {
+        if (password) {
+            if (password.length < 8) {
                 setIsValidPassword("Password is atleast 8 characters")
             } else {
                 setIsValidPassword("")
@@ -42,8 +44,8 @@ export default connect(null, {register})(props => {
     }, [password])
 
     useEffect(() => {
-        if(mobileNumber) {
-            if(mobileNumber.length < 10) {
+        if (mobileNumber) {
+            if (mobileNumber.length < 10) {
                 setIsValidMobileNumber("Invalid mobile number")
             } else {
                 setIsValidMobileNumber("")
@@ -56,13 +58,15 @@ export default connect(null, {register})(props => {
     const registerUser = async (e) => {
         e.preventDefault()
         try {
-            await props.register({fullName, password, mobileNumber})
-        } catch(err) {
-            alert("server is not running.!")
+            await props.register({ fullName, password, mobileNumber })
+            setLoading(true)
+            setError(errorMessage)
+        } catch (err) {
+            setError("server is not running.!")
         }
     }
 
-    if(isLoggedin) {
+    if (isLoggedin) {
         history.push(`/ticaretor`)
     }
 
@@ -81,27 +85,30 @@ export default connect(null, {register})(props => {
                         Create an account
                     </h2>
                     <form className="form-control register" onSubmit={registerUser}>
+                        <span style={{
+                            color: "var(--secondary-color)"
+                        }}>{error && error}</span>
                         <div className="register-inputs">
                             <div>
-                                <input className="input-field" type="text" placeholder="Full Name" name="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} required autoComplete="off" />
+                                <input style={{ backgroundColor: "var(--gray-bg-color)" }} className="input-field" type="text" placeholder="Full Name" name="fullName" value={fullName} onChange={(e) => setFullName(e.target.value)} required autoComplete="off" />
                             </div>
-                            {isValidFullname && <span style={{color: 'var(--secondary-color)'}}>{isValidFullname}</span>}
+                            {isValidFullname && <span style={{ color: 'var(--secondary-color)' }}>{isValidFullname}</span>}
                             <div>
-                                <input className="input-field" type="password" placeholder="Password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required autoComplete="off" />
+                                <input style={{ backgroundColor: "var(--gray-bg-color)" }} className="input-field" type="password" placeholder="Password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} required autoComplete="off" />
                             </div>
-                            {isValidPassword && <span style={{color: 'var(--secondary-color)'}}>{isValidPassword}</span>}
+                            {isValidPassword && <span style={{ color: 'var(--secondary-color)' }}>{isValidPassword}</span>}
                             <div>
-                                <input className="input-field" type="number" placeholder="Mobile Number" name="mobileNumber" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)} required autoComplete="off" />
+                                <input style={{ backgroundColor: "var(--gray-bg-color)" }} className="input-field" type="number" placeholder="Mobile Number" name="mobileNumber" value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)} required autoComplete="off" />
                             </div>
-                            {isValidMobileNumber && <span style={{color: 'var(--secondary-color)'}}>{isValidMobileNumber}</span>}
+                            {isValidMobileNumber && <span style={{ color: 'var(--secondary-color)' }}>{isValidMobileNumber}</span>}
                         </div>
                         <div className="otp-wrapper">
-                            <button type="button" className="form-btn otp" onClick={() => setTimeout(setOTPNotWorking, 2000) ? setOTPNotWorking("Sorry, It's not implemented yet..!"): setOTPNotWorking("")}>Get OTP</button>
-                            <input className="input-field otp" type="number" placeholder="Enter OTP" />
+                            <button type="button" className="form-btn otp" onClick={() => setTimeout(setOTPNotWorking, 2000) ? setOTPNotWorking("Sorry, It's not implemented yet..!") : setOTPNotWorking("")}>Get OTP</button>
+                            <input style={{ backgroundColor: "var(--gray-bg-color)" }} className="input-field otp" type="number" placeholder="Enter OTP" />
                         </div>
-                        {OTPNotWorking && <span style={{paddingTop: '2rem', color: 'var(--secondary-color)'}}>{OTPNotWorking}</span>}
+                        {OTPNotWorking && <span style={{ paddingTop: '2rem', color: 'var(--secondary-color)' }}>{OTPNotWorking}</span>}
                         <div>
-                            <button type="submit" className="form-btn register">Register</button>
+                            <button type="submit" className="form-btn register">{loading ? "Loading..." : "Register"}</button>
                         </div>
                     </form>
                 </div>

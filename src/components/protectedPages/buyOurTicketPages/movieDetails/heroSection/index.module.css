@@ -22,4 +22,9 @@
 .flexRow {
   display: flex;
   gap: 2rem;
+  width: max-content;
+}
+
+.flexRow img {
+  margin-right: 0.5rem;
 }

@@ -23,7 +23,7 @@
   width: 658px;
   height: 61px;
   border-radius: 13px;
-  background-color: var(--input-fields-bg-color);
+  background-color: var(--gray-bg-color);
   margin: 1rem 0;
   color: var(--primary-font-color);
   padding: 0 1rem;
@@ -60,7 +60,7 @@
 }
 .formBtn:hover,
 .formBtn:active {
-    box-shadow: 0 3px 5px var(--secondary-color);
+  box-shadow: 0 3px 5px var(--secondary-color);
 }
 
 @media screen and (max-width: 790px) {

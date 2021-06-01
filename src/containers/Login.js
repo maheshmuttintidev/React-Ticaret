@@ -27,6 +27,7 @@ export default function Login() {
         e.preventDefault()
         dispatch(login({ mobileNumber, password }))
         const error = JSON.parse(sessionStorage.getItem("userData"))?.message
+        console.log(error)
         setError(error)
     }
 

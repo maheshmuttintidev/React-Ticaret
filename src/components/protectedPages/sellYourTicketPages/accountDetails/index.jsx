@@ -5,7 +5,6 @@ import Footer from "../../ticaretorPage/footer"
 import Header from "../../ticaretorPage/header"
 import style from "./index.module.css"
 export default function AccountDetails() {
-  const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name
   const isUserLoggedIn = useSelector((state) => state.isLoggedin)
   const history = useHistory()
   if (!isUserLoggedIn) {
@@ -13,7 +12,7 @@ export default function AccountDetails() {
   }
   return (
     <>
-      <Header fullName={fullName} />
+      <Header />
       <div style={{ margin: "3rem 0" }}>
         <form className="form-control">
           <div>

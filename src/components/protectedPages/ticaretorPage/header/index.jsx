@@ -48,11 +48,17 @@ const Menu = ({ fullName }) => {
             </div>
           </div>
           <div>
-            <div className={style.enableCursor}>
+            <div
+              className={style.enableCursor}
+              onClick={() => history.push("/ticaretor/booked-tickets")}
+            >
               <img src={Option1Full} alt="" />
               <p className={style.enabled}>Booked tickets</p>
             </div>
-            <div className={style.enableCursor}>
+            <div
+              className={style.enableCursor}
+              onClick={() => history.push("/ticaretor/tickets-history")}
+            >
               <img src={Option2Full} alt="" />
               <p className={style.enabled}>Tickets history</p>
             </div>
@@ -63,7 +69,10 @@ const Menu = ({ fullName }) => {
               <img src={Option3Full} alt="" />
               <p className={style.enabled}>About Us</p>
             </div>
-            <div className={`${style.enableCursor} ${style.lastOption}`}>
+            <div
+              className={`${style.enableCursor} ${style.lastOption}`}
+              onClick={() => history.push("/ticaretor/settings")}
+            >
               <img src={Option4Full} alt="" />
               <p className={style.enabled}>Settings</p>
             </div>
@@ -80,10 +89,11 @@ const Menu = ({ fullName }) => {
   )
 }
 
-export default function Header({ fullName }) {
+export default function Header() {
   const [isClicked, setIsClicked] = useState(false)
   const [isLocationPopup, setIsLocationPopup] = useState(false)
   const history = useHistory()
+  const fullName = JSON.parse(sessionStorage.getItem("userData"))?.name
   return (
     <header>
       <div style={{ cursor: "pointer" }}>
@@ -98,10 +108,9 @@ export default function Header({ fullName }) {
           </div>
           {isLocationPopup && <Location />}
         </div>
-          <span className={style.fullName}>
-            {fullName}
-          </span>
-        <div style={{backgroundColor: "var(--gray-bg-color)"}}
+        <span className={style.fullName}>{fullName}</span>
+        <div
+          style={{ backgroundColor: "var(--gray-bg-color)" }}
           className={
             isClicked
               ? `${style.subMenuOption} ${style.activeBg}`
@@ -111,7 +120,7 @@ export default function Header({ fullName }) {
         >
           <div>
             <img
-              style={{marginRight: "1rem"}}
+              style={{ marginRight: "1rem" }}
               src={BurgerMenuIconWhite}
               alt=""
             />

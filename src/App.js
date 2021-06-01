@@ -6,11 +6,14 @@ import NotFound from './components/errorPage'
 import Register from './containers/Register'
 import ForgotPasswordModel from './containers/ForgotPasswordModel'
 import Ticaretor from './components/protectedPages/ticaretorPage/ticaretor'
-import About from './components/aboutusPage/about.server'
+import About from './components/aboutusPage/about'
 import ResaleTicketForm from './components/protectedPages/sellYourTicketPages/resaleTicketForm'
 import AccountDetails from './components/protectedPages/sellYourTicketPages/accountDetails'
 import BuyTickets from './components/protectedPages/buyOurTicketPages/buyTickets'
 import MovieDetails from './components/protectedPages/buyOurTicketPages/movieDetails'
+import BookedTickets from './components/protectedPages/bookedTicketsPages'
+import TicketsHistory from './components/protectedPages/ticketsHistoryPages'
+import Settings from './components/protectedPages/settings'
 
 function App() {
   const userId = JSON.parse(sessionStorage.getItem("userData"))?.userId
@@ -44,6 +47,15 @@ function App() {
           </Route>
           <Route exact path="/ticaretor/resale-ticket-form/fill-account-details">
             <AccountDetails />
+          </Route>
+          <Route exact path="/ticaretor/booked-tickets">
+            <BookedTickets />
+          </Route>
+          <Route exact path="/ticaretor/tickets-history">
+            <TicketsHistory />
+          </Route>
+          <Route exact path="/ticaretor/settings">
+            <Settings />
           </Route>
           <Route path="*" component={NotFound} />
         </Switch>

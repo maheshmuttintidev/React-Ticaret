@@ -49,8 +49,8 @@
     justify-content: center;
   }
   .otp-wrapper > .form-btn.otp,
-  .otp-wrapper > .input-field.otp { 
-      width: 180px !important;
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
   }
 }
 
@@ -69,8 +69,8 @@
     font-size: 16px;
   }
   .otp-wrapper > .form-btn.otp,
-  .otp-wrapper > .input-field.otp { 
-      width: 180px !important;
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
   }
   .register-wrapper .sub-heading {
     position: relative;
@@ -78,7 +78,6 @@
     left: 2rem !important;
   }
 }
-
 
 @media (max-width: 320px) {
   .register-wrapper {
@@ -95,8 +94,8 @@
     font-size: 16px;
   }
   .otp-wrapper > .form-btn.otp,
-  .otp-wrapper > .input-field.otp { 
-      width: 180px !important;
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
   }
   .register-wrapper .sub-heading {
     position: relative;
