@@ -14,7 +14,6 @@ import MovieDetails from './components/protectedPages/buyOurTicketPages/movieDet
 import BookedTickets from './components/protectedPages/bookedTicketsPages'
 import TicketsHistory from './components/protectedPages/ticketsHistoryPages'
 import Settings from './components/protectedPages/settings'
-
 function App() {
   const userId = JSON.parse(sessionStorage.getItem("userData"))?.userId
   return (
@@ -24,6 +23,7 @@ function App() {
           <Route exact path="/" render={props => (
             <Home {...props} userId={userId} />
           )} />
+
           <Route exact path="/login" render={props => (
             <Login {...props} userId={userId} />
           )} />

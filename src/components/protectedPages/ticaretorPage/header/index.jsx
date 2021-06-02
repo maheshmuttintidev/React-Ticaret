@@ -36,7 +36,10 @@ const Menu = ({ fullName }) => {
             >
               <img
                 src={ProfileIcon}
-                style={{ width: "19px", margin: "auto" }}
+                style={{
+                  width: "19px",
+                  margin: "auto",
+                }}
                 alt="profile-avatar"
               />
               <span

@@ -193,9 +193,12 @@ body {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  -ms-user-select: none;
   font-family: "Caros Regular";
   scroll-behavior: smooth;
   overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smothing: antialiased;
 }
 
 *,

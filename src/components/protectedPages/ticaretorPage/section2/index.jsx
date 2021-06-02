@@ -6,17 +6,32 @@ import HalfStarIcon from "../../../../assets/buy_ticket/half_star.svg"
 import FullStarIcon from "../../../../assets/buy_ticket/full_star.svg"
 import { NavLink } from "react-router-dom"
 import style from "./index.module.css"
+import { useState } from "react"
+import { useRef } from "react"
+import TicaretMovieCardsContainerUI from "../../../fallbackUIs/moviesListContainerUI"
 
-export default function Section2() {
+const MovieList = () => {
   const dispatch = useDispatch()
   const movies = useSelector((state) => state.moviesList)
+  const [loading, setLoading] = useState(true)
+  const fetchMoviesFunctionRef = useRef(() => {})
 
+  fetchMoviesFunctionRef.current = async () => {
+    setLoading(true)
+    try {
+      dispatch(getMoviesList())
+      setLoading(false)
+    } catch (err) {
+      console.log("error happened")
+    }
+  }
   useEffect(() => {
-    dispatch(getMoviesList())
-  }, [dispatch])
-
-  const loadMovieCard = () => {
-    let movie_card = movies?.movies?.map((movie) => {
+    fetchMoviesFunctionRef.current()
+  }, [])
+  if (loading) {
+    return <TicaretMovieCardsContainerUI />
+  } else {
+    const movieList = movies?.movies?.map((movie) => {
       return (
         <div key={movie.id}>
           <div>
@@ -49,14 +64,19 @@ export default function Section2() {
         </div>
       )
     })
-    return movie_card
+    return <>{movieList}</>
   }
+}
+
+export default function Section2() {
   return (
     <section className={style.section2Wrapper}>
       <h2 className="sub-heading">Movies</h2>
       <div className={style.mcontainer}>
         <div className={style.movies_container}>
-          <div className={style.movieCardsContainer}>{loadMovieCard()}</div>
+          <div className={style.movieCardsContainer}>
+            <MovieList />
+          </div>
         </div>
       </div>
     </section>
