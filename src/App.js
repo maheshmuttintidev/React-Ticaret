@@ -1,5 +1,5 @@
 import Home from './components/home/home'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Login from './containers/Login'
 import Location from './components/home/location'
 import NotFound from './components/errorPage'
@@ -57,6 +57,7 @@ function App() {
           <Route exact path="/ticaretor/settings">
             <Settings />
           </Route>
+          <Redirect to="/" />
           <Route path="*" component={NotFound} />
         </Switch>
       </Router>

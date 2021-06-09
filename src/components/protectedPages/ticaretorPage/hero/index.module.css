@@ -28,7 +28,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  /* border: 3px dotted red; */
 }
 .heroWrapper > * > *:first-child {
   margin: 0;

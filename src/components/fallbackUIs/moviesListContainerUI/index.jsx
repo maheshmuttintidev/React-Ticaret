@@ -6,28 +6,38 @@ export default function TicaretMovieCardsContainerUI() {
     <div className={styles.moviesContainer}>
       <div className={styles.movieCardContainer}>
         <div className={styles.card}></div>
+        <div className={styles.stars}></div>
+        <div className={styles.textLong}></div>
+        <div className={styles.textSmall}></div>
         <div className={styles.textMedium}></div>
-        <div className={styles.textLarge}></div>
       </div>
       <div className={styles.movieCardContainer}>
         <div className={styles.card}></div>
+        <div className={styles.stars}></div>
+        <div className={styles.textLong}></div>
+        <div className={styles.textSmall}></div>
         <div className={styles.textMedium}></div>
-        <div className={styles.textLarge}></div>
       </div>
       <div className={styles.movieCardContainer}>
         <div className={styles.card}></div>
+        <div className={styles.stars}></div>
+        <div className={styles.textLong}></div>
+        <div className={styles.textSmall}></div>
         <div className={styles.textMedium}></div>
-        <div className={styles.textLarge}></div>
       </div>
       <div className={styles.movieCardContainer}>
         <div className={styles.card}></div>
+        <div className={styles.stars}></div>
+        <div className={styles.textLong}></div>
+        <div className={styles.textSmall}></div>
         <div className={styles.textMedium}></div>
-        <div className={styles.textLarge}></div>
       </div>
       <div className={styles.movieCardContainer}>
         <div className={styles.card}></div>
+        <div className={styles.stars}></div>
+        <div className={styles.textLong}></div>
+        <div className={styles.textSmall}></div>
         <div className={styles.textMedium}></div>
-        <div className={styles.textLarge}></div>
       </div>
     </div>
   )

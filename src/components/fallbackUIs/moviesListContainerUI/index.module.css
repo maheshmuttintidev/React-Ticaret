@@ -16,13 +16,25 @@
   background-color: var(--gray-bg-color);
 }
 
+.stars {
+  width: 250px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}
+
+.textSmall {
+  width: 200px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}
+
 .textMedium {
   width: 250px;
   height: 2rem;
   background-color: var(--gray-bg-color);
 }
 
-.textLarge {
+.textLong {
   width: 290px;
   height: 2rem;
   background-color: var(--gray-bg-color);

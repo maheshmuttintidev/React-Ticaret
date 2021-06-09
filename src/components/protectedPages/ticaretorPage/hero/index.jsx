@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom"
-import style from "./index.module.css"
+import styles from "./index.module.css"
 export default function Hero() {
   const history = useHistory()
   const gotoResaleForm = () => {
@@ -9,7 +9,7 @@ export default function Hero() {
     history.push("/ticaretor/buy-tickets")
   }
   return (
-    <section className={style.heroWrapper}>
+    <section className={styles.heroWrapper}>
       <div>
         <h2 className="heading">Wanna Sell Your Ticket?</h2>
         <p className="small-paragraph">
