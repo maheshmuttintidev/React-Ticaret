@@ -88,7 +88,7 @@ export default function Login() {
                                 <span className="paragraph bold">google</span>
                             </button> */}
                             <GoogleLogin
-                                clientId="AIzaSyBcb8TZbVZBcc3CHP1quh1hcFWpVHlw6Io"
+                                clientId="678202505087-0om3f9q25to0pgosvlonogvs92lhgpgi.apps.googleusercontent.com"
                                 onSuccess={responseGoogle}
                                 onFailure={responseGoogle}
                             />
