@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 import { getMoviesList } from "../../../../redux/actions/movies.actions"
 import { useDispatch, useSelector } from "react-redux"
 import MovieDetailsHeroSection from "./heroSection"
@@ -11,6 +11,11 @@ export default function MovieDetails() {
   const { moviename } = useParams()
   const dispatch = useDispatch()
   const { movies } = useSelector((state) => state.moviesList)
+  const isLoggedIn = useSelector((state) => state.isLoggedin)
+  const history = useHistory()
+  if (!isLoggedIn) {
+    history.push("/")
+  }
 
   useEffect(() => {
     dispatch(getMoviesList())
