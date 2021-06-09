@@ -2,8 +2,15 @@ import React from "react"
 import Header from "../ticaretorPage/header"
 import Footer from "../ticaretorPage/footer"
 import styles from "./index.module.css"
+import { useHistory } from "react-router-dom"
+import { useSelector } from "react-redux"
 
 export default function Settings() {
+  const isLoggedIn = useSelector((state) => state.isLoggedin)
+  const history = useHistory()
+  if (!isLoggedIn) {
+    history.push("/")
+  }
   return (
     <>
       <Header />
