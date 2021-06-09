@@ -3,7 +3,7 @@ import { BASE_URI_PRODUCTION } from "./uris"
 
 export const registerResponse = async (user) => {
     try {
-        return axios.post(`${BASE_URI_PRODUCTION}user/register`, user, { withCredentials: true })
+        return axios.post(`${BASE_URI_PRODUCTION}user/register`, user)
     } catch (err) {
         console.log("err", err)
     }

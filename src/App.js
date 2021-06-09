@@ -4,6 +4,7 @@ import Login from './containers/Login'
 import Location from './components/home/location'
 import NotFound from './components/errorPage'
 import Register from './containers/Register'
+
 import ForgotPasswordModel from './containers/ForgotPasswordModel'
 import Ticaretor from './components/protectedPages/ticaretorPage/ticaretor'
 import About from './components/aboutusPage/about'
