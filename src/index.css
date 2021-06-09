@@ -1,175 +1,209 @@
 @font-face {
-    font-family: 'Caros Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Regular'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros.woff') format('woff');
+  font-family: "Caros Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Regular"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Italic.woff') format('woff');
+  font-family: "Caros Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Thin';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Thin'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin.woff') format('woff');
+  font-family: "Caros Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Thin"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Thin Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Thin Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin Italic.woff') format('woff');
+  font-family: "Caros Thin Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Thin Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros ExtraLight';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros ExtraLight'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight.woff') format('woff');
+  font-family: "Caros ExtraLight";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros ExtraLight"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros ExtraLight Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros ExtraLight Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight Italic.woff') format('woff');
+  font-family: "Caros ExtraLight Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros ExtraLight Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Light';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Light'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Light.woff') format('woff');
+  font-family: "Caros Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Light"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Light.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Light Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Light Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Light Italic.woff') format('woff');
+  font-family: "Caros Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Light Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Light Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Medium';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Medium'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium.woff') format('woff');
+  font-family: "Caros Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Medium"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Medium Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Medium Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium Italic.woff') format('woff');
+  font-family: "Caros Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Medium Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Bold'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold.woff') format('woff');
+  font-family: "Caros Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Bold"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Bold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Bold Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold Italic.woff') format('woff');
+  font-family: "Caros Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Bold Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros ExtraBold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros ExtraBold'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold.woff') format('woff');
+  font-family: "Caros ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros ExtraBold"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros ExtraBold Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros ExtraBold Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold Italic.woff') format('woff');
+  font-family: "Caros ExtraBold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros ExtraBold Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Heavy';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Heavy'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy.woff') format('woff');
+  font-family: "Caros Heavy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Heavy"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Heavy Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Heavy Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy Italic.woff') format('woff');
+  font-family: "Caros Heavy Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Heavy Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy Italic.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Black';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Black'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Black.woff') format('woff');
+  font-family: "Caros Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Black"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Black.woff")
+      format("woff");
 }
 
 @font-face {
-    font-family: 'Caros Black Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Caros Black Italic'), url('../src/assets/caros-cufonfonts-webfont/cretype  Caros Black Italic.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'SegoeUI-Italic';
-    font-style: normal;
-    font-weight: normal;
-    src: local('SegoeUI-Italic'), url('../src/assets/caros-cufonfonts-webfont/BalsamiqSans-Italic.ttf') format('ttf');
+  font-family: "Caros Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Caros Black Italic"),
+    url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Black Italic.woff")
+      format("woff");
 }
 
 :root {
-    height: 100%;
-    width: 100%;
-    --primary-bg-color: #0C0C0C;
-    --primary-font-color: #FFFFFF;
-    --gray-border-color: #707070;
-    --gray-font-color: rgba(249, 249, 249, .5);
-    --gray-box-shadow-color: rgba(0, 0, 0, .46);
-    --hover-color: rgba(41, 37, 37, 0.795);
-    --hover-transition-delay: .4s;
-    --secondary-color: rgba(248, 68, 100, .95);
-    --secondary-full-color: rgba(248, 68, 100, 1);
-    --input-fields-bg-color: rgba(112, 112, 112, 0.31);
-    --red-box-shadow-color: rgba(248, 68, 100, 75);
-    font-family: "Caros Regular";
+  height: 100%;
+  width: 100%;
+  --primary-bg-color: #0c0c0c;
+  --primary-bg-color1: #0d0d0d;
+  --primary-font-color: #ffffff;
+  --gray-border-color: #707070;
+  --gray-font-color: rgba(249, 249, 249, 0.5);
+  --gray-box-shadow-color: rgba(0, 0, 0, 0.46);
+  --hover-color: rgba(41, 37, 37, 0.795);
+  --hover-transition-delay: 0.4s;
+  --secondary-color: rgba(248, 68, 100, 0.95);
+  --secondary-full-color: rgba(248, 68, 100, 1);
+  --input-fields-bg-color: rgba(112, 112, 112, 0.31);
+  --red-box-shadow-color: rgba(248, 68, 100, 0.75);
+  --overlay-bg-color: rgba(0, 0, 0, 0.75);
+  --gray-bg-color: #2c2c2c;
+  font-family: "Caros Regular";
 }
 
 body {
-    min-height: 100%;
-    height: 100%;
-    min-width: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--primary-bg-color);
-    color: var(--primary-font-color);
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    font-family: "Caros Regular";
+  scroll-snap-type: y mandatory;
+  min-height: 100%;
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-font-color);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-family: "Caros Regular";
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    font-family: "Caros Regular";
+  box-sizing: border-box;
+  font-family: "Caros Regular";
 }
-
 
 /* Typography */
 
@@ -179,80 +213,74 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Caros Bold";
+  font-family: "Caros Bold";
+}
+
+option {
+  background-color: var(--primary-bg-color);
 }
 
 .heading {
-    font-family: "Caros Bold";
-    font-size: var(--font-size, 40px) !important;
+  font-family: "Caros Bold";
+  font-size: var(--font-size, 40px) !important;
 }
 
 .sub-heading {
-    font-family: "Caros Bold";
-    font-size: var(--font-size, 30px) !important;
-}
-
-.mini-sub-heading {
-    font-size: var(--font-size, 20px) !important;
+  font-family: "Caros Bold";
+  font-size: var(--font-size, 30px) !important;
 }
 
 .paragraph,
 .nav-link.paragraph {
-    font-size: var(--font-size, 18px) !important;
-    font-family: "Caros Bold";
-    line-height: 24px;
-    margin: .5rem 0;
-}
-
-.paragraph.forgot-password,
-.paragraph.signup-text {
-    font-family: "Caros Regular";
-    opacity: .5;
-}
-
-.paragraph.movie-card {
-    font-family: "Caros Regular";
-    font-size: var(--font-size, 16px) !important;
-    height: max-content;
-    margin: .5rem 0;
-    opacity: .51;
+  font-size: var(--font-size, 18px) !important;
+  font-family: "Caros Bold";
+  line-height: 24px;
+  margin: 0.5rem 0;
 }
 
 .small-paragraph {
-    font-size: var(--font-size, 16px) !important;
+  font-size: var(--font-size, 16px) !important;
 }
 
 .very-small-paragraph {
-    font-size: var(--font-size, 14px) !important;
+  font-size: var(--font-size, 14px) !important;
 }
 
 p {
-    font-size: var(--font-size, 18px) !important;
+  font-size: var(--font-size, 18px) !important;
 }
 
 .btn {
-    border: 0;
-    outline: 0;
-    background-color: var(--secondary-color);
-    color: var(--primary-font-color);
-    border-radius: 3px;
-    padding: 1rem 2rem;
-    margin-right: 1rem;
-    margin-left: 5px;
-    font-size: 16px;
+  border: 0;
+  outline: 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-font-color);
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  margin-left: 5px;
+  font-size: 16px;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: var(--primary-font-color);
+  text-decoration: none;
+  color: var(--primary-font-color);
 }
 
 .nav-link.register {
-    margin-left: 5px;
-    margin-top: -5px;
-    text-decoration: underline;
+  margin-left: 5px;
+  margin-top: -5px;
+  text-decoration: underline;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 14px;
+  box-shadow: inset 0 3px 5px var(--secondary-color);
+  border: 3px solid var(--secondary-color);
+}
 
 /* Normalize inline elements*/
 
@@ -267,44 +295,48 @@ button,
 video,
 audio,
 a {
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    font-family: "Caros Regular";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-family: "Caros Regular";
 }
 
 img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--secondary-full-color);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-font-color);
+  background-image: url("./assets/header/logo_title.svg");
+  background-position: center;
+  background-size: 20% 20%;
+  background-repeat: no-repeat;
+  border-radius: 0 14px 14px;
 }
-
 
 /* Coloring */
 
 .secondary-color {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .paragraph.secondary-color {
-    color: var(--secondary-color) !important;
-    margin-bottom: 1rem;
+  color: var(--secondary-color) !important;
+  margin-bottom: 1rem;
 }
 
-.nav-wrapper>* {
-    border-radius: 7px !important;
+.nav-wrapper > * {
+  border-radius: 7px !important;
 }
 
-.nav-wrapper>*:nth-child(2) {
-    width: 122px;
-    height: 37px;
+.nav-wrapper > *:nth-child(2) {
+  width: 122px;
+  height: 37px;
 }
 
 .input-field:hover,
 .input-field:focus {
-    box-shadow: 0 3px 5px var(--secondary-color);
+  box-shadow: 0 3px 5px var(--secondary-color);
 }

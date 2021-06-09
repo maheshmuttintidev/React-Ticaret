@@ -1,0 +1,41 @@
+.settingsWrapper {
+  padding: 2rem 3rem 3rem;
+  background-image: url("../../../assets/body/update_profile_bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset 20rem 0 2rem rgba(0, 0, 0, 0.4),
+    inset 30rem 0 5rem rgba(0, 0, 0, 0.4),
+    inset 40rem 0 10rem rgba(0, 0, 0, 0.4),
+    inset 50rem 0 15rem rgba(0, 0, 0, 0.4);
+}
+
+.updateProfileFormContainer input {
+  background-color: var(--gray-bg-color);
+}
+
+.updateBtn {
+  border-radius: 14px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  min-width: 346px;
+  height: 67px;
+  outline: 0;
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+.horizontalFieldsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4rem;
+}
+
+.verticalFieldsWrapper {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.emailField {
+  width: 603px;
+  margin-bottom: 52px;
+}

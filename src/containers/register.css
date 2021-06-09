@@ -1,7 +1,7 @@
 .register-page-hero {
-  max-height: 100vh;
   background-image: url("../assets/header/register_bg.png");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   padding-bottom: 2rem;
   background-color: whitesmoke;
   position: relative;
@@ -19,22 +19,22 @@
   z-index: -1;
 }
 .register-page-hero .logo-wrapper {
-  margin: 0 0 0 3rem;
   padding-top: 1rem;
+  padding-left: 3rem;
 }
 
 .register-wrapper {
   height: 700px;
-  width: 663.98px;
-  margin: 4rem auto;
+  max-width: 663.98px;
+  margin: 1rem auto;
   background-image: url("../assets/header/register_bg_ticket.png");
   background-size: 100% 100%;
   overflow: hidden;
 }
-@media screen and (max-width: 750px) {
+@media (max-width: 750px) {
   .register-wrapper {
     height: 700px;
-    width: 500px;
+    max-width: 500px;
   }
   .form-control.register > div > div .input-field {
     width: 400px !important;
@@ -45,9 +45,62 @@
     margin: auto 0;
     font-size: 16px;
   }
+  .otp-wrapper {
+    justify-content: center;
+  }
   .otp-wrapper > .form-btn.otp,
-  .otp-wrapper > .input-field.otp { 
-      width: 180px !important;
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .register-wrapper {
+    height: 700px;
+    max-width: 350px;
+  }
+  .form-control.register > div > div .input-field {
+    width: 300px !important;
+  }
+  .form-btn.register {
+    width: 200px !important;
+    height: 64px !important;
+    margin: auto 0;
+    font-size: 16px;
+  }
+  .otp-wrapper > .form-btn.otp,
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
+  }
+  .register-wrapper .sub-heading {
+    position: relative;
+    top: 3rem;
+    left: 2rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .register-wrapper {
+    height: 700px;
+    max-width: 300px;
+  }
+  .form-control.register > div > div .input-field {
+    width: 250px !important;
+  }
+  .form-btn.register {
+    width: 200px !important;
+    height: 64px !important;
+    margin: auto 0;
+    font-size: 16px;
+  }
+  .otp-wrapper > .form-btn.otp,
+  .otp-wrapper > .input-field.otp {
+    width: 180px !important;
+  }
+  .register-wrapper .sub-heading {
+    position: relative;
+    top: 3rem;
+    left: 1rem !important;
   }
 }
 

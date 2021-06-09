@@ -1,0 +1,20 @@
+.section1Container {
+    padding: 4rem 3rem;
+}
+.section1SubContainer1 {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    gap: 3rem 1rem;
+}
+.paragraph {
+    min-width: 300px;
+    max-width: 643px;
+    font-size: 20px;
+    text-align: justify;
+}
+.networkImg {
+    min-width: 300px;
+    width: 100%;
+    object-fit: contain;
+}

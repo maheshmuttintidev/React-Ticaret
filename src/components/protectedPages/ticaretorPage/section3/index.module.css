@@ -1,0 +1,26 @@
+.section3Wrapper {
+  margin-top: 4rem;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 5rem 0;
+  background-color: rgba(75, 73, 73, 0.1);
+}
+
+.section3Wrapper > *:last-child {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  align-items: center;
+  gap: 3rem 5rem;
+  margin-top: 3rem;
+}
+.section3Wrapper > *:last-child > * {
+  width: 10em;
+  height: 4em;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

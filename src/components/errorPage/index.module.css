@@ -1,0 +1,19 @@
+.errorModelWrapper {
+    width: 300px;
+    height: 100%;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .errorModelWrapper img {
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .errorModelWrapper {
+      width: 500px;
+      padding-top: 2rem;
+    }
+  }

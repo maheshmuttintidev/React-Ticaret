@@ -1,4 +1,27 @@
+.overlay-fixed-full {
+  z-index: 2;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 3px 3px var(--red-box-shadow-color);
+  transition: animation 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+@keyframes top-anim {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   visibility: hidden;
@@ -7,12 +30,12 @@ input[type="number"]::-webkit-inner-spin-button {
 .form-wrapper {
   width: 583px;
   height: 647px;
-  background-image: url('../assets/header/ticket_background.png');
+  background-image: url("../assets/header/ticket_background.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  flex-flow: column ;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -23,7 +46,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .form-control {
   display: flex;
-  flex-flow: column ;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -33,6 +56,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .alternative-auths-wrapper > * {
   margin: 0 !important;
 }
+
 .input-field {
   border: 0;
   outline: 0;
@@ -43,6 +67,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 1rem 0;
   color: var(--primary-font-color);
   padding: 0 1rem;
+  font-size: 16px;
 }
 .input-field.phone {
   margin-bottom: 21px;
@@ -52,7 +77,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 input::placeholder {
   color: var(--primary-font-color);
-  opacity: .5;
+  opacity: 0.5;
 }
 .form-btn {
   border: 0;
@@ -64,8 +89,9 @@ input::placeholder {
   width: 186px;
   height: 50px;
   cursor: pointer;
-  transition: background-color .1s ease-out;
+  transition: background-color 0.1s ease-out;
   margin-bottom: 22px;
+  font-size: 18px;
 }
 .form-btn:hover {
   background-color: var(--hover-color);
@@ -74,7 +100,6 @@ input::placeholder {
   background-color: var(--secondary-color);
 }
 .auth-btns-wrapper {
-  padding-top: 2rem;
   width: max-content;
   display: flex;
   flex-wrap: wrap;
@@ -85,15 +110,19 @@ input::placeholder {
 .auth-btn {
   border: 0;
   outline: 0;
-  background-color: var(--input-fields-bg-color);
+  background-color: var(--gray-bg-color);
   border-radius: 11px;
-  color: var(--secondary-color);
+  color: var(--primary-font-color);
   width: 156px;
   height: 40px;
 }
+.auth-btn:hover {
+  box-shadow: 0 3px 5px var(--secondary-color);
+}
 .auth-btn span {
-  font-family: var(--heading-font) !important;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
+  position: relative;
+  bottom: 1px;
 }
 .auth-btn img {
   width: 18px;
@@ -146,4 +175,44 @@ input::placeholder {
 
 .logo-wrapper.error-page {
   margin: 1rem 0 0 3rem;
+}
+.nav-link.forgot-password {
+  margin-bottom: 0;
+}
+
+.paragraph.forgot-password,
+.paragraph.signup-text-parent,
+.paragraph.signup-text {
+  font-family: "Caros Regular";
+}
+
+.paragraph.signup-text {
+  margin-top: 0;
+  opacity: 0.5;
+}
+
+.paragraph.forgot-password {
+  opacity: 0.5;
+}
+
+.paragraph.forgot-password:hover {
+  opacity: 1;
+}
+
+.nav-link.register {
+  position: relative;
+  top: -2px;
+  opacity: 0.5;
+}
+
+.nav-link.register:hover {
+  opacity: 1;
+}
+
+.nav-link.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.paragraph.bold {
+  font-family: "Caros Bold" !important;
 }

@@ -1,0 +1,49 @@
+.section2Wrapper {
+  margin: 2rem 3rem;
+}
+.mcontainer {
+  position: relative;
+  min-width: 300px;
+}
+.movie-heading {
+  margin-bottom: 3rem;
+}
+.movies_container {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+}
+
+.imgMovie {
+  border-radius: var(--border-radius);
+  margin-right: 2rem;
+}
+.imgMovie img {
+  cursor: pointer;
+  width: 305px;
+  height: 428px;
+  border-radius: var(--border-radius);
+  object-fit: all;
+  border-radius: 14px;
+}
+
+.movieCardsContainer,
+.movieDetailsContainer {
+  display: flex;
+}
+
+.movieDetails {
+  width: 305px;
+  margin: 1.6rem 0;
+}
+
+.paragraph.movieCard {
+  font-family: "Caros Regular";
+  font-size: var(--font-size, 16px) !important;
+  margin: 0.5rem 0;
+  opacity: 0.51;
+}
+
+.starsWrapper > img {
+  margin-right: 8px;
+}
