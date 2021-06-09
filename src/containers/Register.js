@@ -19,7 +19,6 @@ export default connect(null, { register })(props => {
     const [isValidPassword, setIsValidPassword] = useState('')
     const [isValidMobileNumber, setIsValidMobileNumber] = useState('')
     const [error, setError] = useState('')
-    const [loading, setLoading] = useState(false)
     const isLoggedin = useSelector(state => state.isLoggedin)
     const history = useHistory()
     const errorMessage = JSON.parse(sessionStorage.getItem("userData"))?.message
@@ -59,7 +58,6 @@ export default connect(null, { register })(props => {
         e.preventDefault()
         try {
             await props.register({ fullName, password, mobileNumber })
-            setLoading(true)
             setError(errorMessage)
         } catch (err) {
             setError("server is not running.!")
@@ -108,7 +106,7 @@ export default connect(null, { register })(props => {
                         </div>
                         {OTPNotWorking && <span style={{ paddingTop: '2rem', color: 'var(--secondary-color)' }}>{OTPNotWorking}</span>}
                         <div>
-                            <button type="submit" className="form-btn register">{loading ? "Loading..." : "Register"}</button>
+                            <button type="submit" className="form-btn register">Register</button>
                         </div>
                     </form>
                 </div>
