@@ -2,6 +2,7 @@
   font-family: "Caros Regular";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Regular"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros.woff")
       format("woff");
@@ -11,6 +12,7 @@
   font-family: "Caros Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Italic.woff")
       format("woff");
@@ -20,6 +22,7 @@
   font-family: "Caros Thin";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Thin"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin.woff")
       format("woff");
@@ -29,6 +32,7 @@
   font-family: "Caros Thin Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Thin Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Thin Italic.woff")
       format("woff");
@@ -38,6 +42,7 @@
   font-family: "Caros ExtraLight";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros ExtraLight"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight.woff")
       format("woff");
@@ -47,6 +52,7 @@
   font-family: "Caros ExtraLight Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros ExtraLight Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraLight Italic.woff")
       format("woff");
@@ -56,6 +62,7 @@
   font-family: "Caros Light";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Light"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Light.woff")
       format("woff");
@@ -65,6 +72,7 @@
   font-family: "Caros Light Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Light Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Light Italic.woff")
       format("woff");
@@ -74,6 +82,7 @@
   font-family: "Caros Medium";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Medium"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium.woff")
       format("woff");
@@ -83,6 +92,7 @@
   font-family: "Caros Medium Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Medium Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Medium Italic.woff")
       format("woff");
@@ -92,6 +102,7 @@
   font-family: "Caros Bold";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Bold"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold.woff")
       format("woff");
@@ -101,6 +112,7 @@
   font-family: "Caros Bold Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Bold Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Bold Italic.woff")
       format("woff");
@@ -110,6 +122,7 @@
   font-family: "Caros ExtraBold";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros ExtraBold"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold.woff")
       format("woff");
@@ -119,6 +132,7 @@
   font-family: "Caros ExtraBold Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros ExtraBold Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros ExtraBold Italic.woff")
       format("woff");
@@ -128,6 +142,7 @@
   font-family: "Caros Heavy";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Heavy"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy.woff")
       format("woff");
@@ -137,6 +152,7 @@
   font-family: "Caros Heavy Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Heavy Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Heavy Italic.woff")
       format("woff");
@@ -146,6 +162,7 @@
   font-family: "Caros Black";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Black"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Black.woff")
       format("woff");
@@ -155,6 +172,7 @@
   font-family: "Caros Black Italic";
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: local("Caros Black Italic"),
     url("../src/assets/caros-cufonfonts-webfont/cretype  Caros Black Italic.woff")
       format("woff");

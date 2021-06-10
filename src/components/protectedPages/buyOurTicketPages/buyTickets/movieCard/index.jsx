@@ -4,7 +4,8 @@ import EmptyStarIcon from "../../../../../assets/buy_ticket/empty_star.svg"
 import HalfStarIcon from "../../../../../assets/buy_ticket/half_star.svg"
 import FullStarIcon from "../../../../../assets/buy_ticket/full_star.svg"
 import { NavLink } from "react-router-dom"
-export default function MovieCard({ name, img_url }) {
+export default function MovieCard({ movie }) {
+  const { name, img_url, availability, languages } = movie
   return (
     <div>
       <NavLink
@@ -23,10 +24,10 @@ export default function MovieCard({ name, img_url }) {
           <img loading="lazy" src={HalfStarIcon} alt="star4" />
           <img loading="lazy" src={EmptyStarIcon} alt="star5" />
         </div>
-        <p className={`${styles.paragraph} ${styles.movieCard}`}>UA</p>
         <p className={`${styles.paragraph} ${styles.movieCard}`}>
-          Telugu,Tamil,Kannada
+          {availability}
         </p>
+        <p className={`${styles.paragraph} ${styles.movieCard}`}>{languages}</p>
       </div>
     </div>
   )

@@ -11,12 +11,14 @@ import { getMoviesList } from "../../../../../redux/actions/movies.actions"
 
 export default function MovieDetailsHeroSection() {
   const dispatch = useDispatch()
-  const { movies } = useSelector((state) => state?.moviesList)
+  let movies = useSelector((state) => state.moviesList)
   let { moviename } = useParams()
 
   useEffect(() => {
     dispatch(getMoviesList())
   }, [dispatch])
+
+  movies = movies?.movieList?.movies
 
   moviename = moviename
     .replaceAll("-", " ")

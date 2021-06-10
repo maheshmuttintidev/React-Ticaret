@@ -32,7 +32,12 @@ export default function Login() {
     }
 
     const responseGoogle = (response) => {
-        console.log(response)
+        let data = Object.assign({}, response.profileObj)
+        let token = Object.assign({}, response.tokenObj)
+        data = Object.defineProperty(data, "token", { value: token?.access_token, writable: false, enumerable: true, configurable: true })
+        sessionStorage.setItem("userData", JSON.stringify(data))
+        console.log(data)
+        history.push("/ticaretor")
     }
 
     if (isUserLoggedIn) {
