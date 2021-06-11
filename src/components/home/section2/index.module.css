@@ -37,11 +37,21 @@
   margin: 1.6rem 0;
 }
 
+.movieDetails > h2 {
+  position: relative;
+  bottom: 2px;
+}
+
+.paragraph {
+  position: relative;
+  bottom: 0.6rem;
+}
+
 .paragraph.movieCard {
   font-family: "Caros Regular";
   font-size: var(--font-size, 16px) !important;
-  margin: .5rem 0;
-  opacity: .51;
+  margin: 0.5rem 0;
+  opacity: 0.51;
 }
 
 .starsWrapper > img {

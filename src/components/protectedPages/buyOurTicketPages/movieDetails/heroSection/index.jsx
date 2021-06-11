@@ -1,13 +1,9 @@
 import React, { useEffect } from "react"
-import EmptyStarIcon from "../../../../../assets/buy_ticket/empty_star.svg"
-import HalfStarIcon from "../../../../../assets/buy_ticket/half_star.svg"
-import FullStarIcon from "../../../../../assets/buy_ticket/full_star.svg"
-import MovieTypeIcon from "../../../../../assets/buy_ticket/movie_icon.svg"
-import TimerIcon from "../../../../../assets/buy_ticket/time_icon.svg"
 import styles from "./index.module.css"
 import { useParams } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { getMoviesList } from "../../../../../redux/actions/movies.actions"
+import StarRating from "../../buyTickets/movieCard/starRating"
 
 export default function MovieDetailsHeroSection() {
   const dispatch = useDispatch()
@@ -38,6 +34,12 @@ export default function MovieDetailsHeroSection() {
     movie_type,
     duration,
     description,
+    movie_icon,
+    time_icon,
+    full_star,
+    half_star,
+    empty_star,
+    rating,
   } = moviesListData
   return (
     <section
@@ -51,37 +53,41 @@ export default function MovieDetailsHeroSection() {
                     inset 30rem 0 10rem rgba(0, 0, 0, .4),
                     inset 50rem 0 15rem rgba(0, 0, 0, .4),
                     inset 10rem 0 10rem rgba(0, 0, 0, 1),
-                    inset 40rem 0 15rem rgba(0, 0, 0, .6)`,
+                    inset 40rem 0 20rem rgba(0, 0, 0, .6),
+                    inset 40rem 0 22rem rgba(0, 0, 0, .7)`,
       }}
     >
-      <h2>{name}</h2>
+      <h2 style={{ fontSize: "40px" }}>{name}</h2>
       <div className={styles.movieDetails}>
-        <div className={styles.starsWrapper}>
-          <img loading="lazy" src={FullStarIcon} alt="star1" />
-          <img loading="lazy" src={FullStarIcon} alt="star2" />
-          <img loading="lazy" src={FullStarIcon} alt="star3" />
-          <img loading="lazy" src={HalfStarIcon} alt="star4" />
-          <img loading="lazy" src={EmptyStarIcon} alt="star5" />
-        </div>
+        <StarRating
+          rating={rating}
+          full_star={full_star}
+          half_star={half_star}
+          empty_star={empty_star}
+        />
         <div style={{ marginTop: "1.5rem" }}>
-          <p className={`${styles.paragraph} ${styles.movieCard}`}>
-            {availability}
-          </p>
           <p className={`${styles.paragraph} ${styles.movieCard}`}>
             {languages}
           </p>
           <div className={styles.flexRow}>
             <div>
-              <img src={MovieTypeIcon} alt="" />
+              <img src={movie_icon} alt="" />
               <span>{movie_type}</span>
             </div>
             <div>
-              <img src={TimerIcon} alt="" />
+              <img src={time_icon} alt="" />
               <span>{duration}</span>
+            </div>
+            <div>
+              <p className={`${styles.paragraph} ${styles.movieCard}`}>
+                {availability}
+              </p>
             </div>
           </div>
           <div>
-            <p style={{ width: "40ch" }}>{description}</p>
+            <p style={{ width: "40ch", color: "var(--hero-text-color)" }}>
+              {description}
+            </p>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   overflow: hidden;
+  margin: 2rem 0 3rem;
 }
 
 .movieCardContainer {

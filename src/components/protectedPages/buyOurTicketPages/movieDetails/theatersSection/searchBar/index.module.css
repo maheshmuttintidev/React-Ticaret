@@ -1,0 +1,8 @@
+.searchIcon {
+  position: absolute;
+  left: calc(100% - 45px);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--hero-text-color);
+  font-size: 21.5px;
+}

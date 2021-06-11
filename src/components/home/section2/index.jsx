@@ -1,11 +1,9 @@
 import { useEffect, useRef } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { getMoviesList } from "../../../redux/actions/movies.actions"
-import EmptyStarIcon from "../../../assets/buy_ticket/empty_star.svg"
-import HalfStarIcon from "../../../assets/buy_ticket/half_star.svg"
-import FullStarIcon from "../../../assets/buy_ticket/full_star.svg"
 import TicaretMovieCardsContainerUI from "../../fallbackUIs/moviesListContainerUI"
 import styles from "./index.module.css"
+import StarRating from "./starRating"
 
 export default function Section2() {
   const dispatch = useDispatch()
@@ -38,13 +36,12 @@ export default function Section2() {
               </div>
             </div>
             <div className={styles.movieDetails}>
-              <div className={styles.starsWrapper}>
-                <img loading="lazy" src={FullStarIcon} alt="star1" />
-                <img loading="lazy" src={FullStarIcon} alt="star2" />
-                <img loading="lazy" src={FullStarIcon} alt="star3" />
-                <img loading="lazy" src={HalfStarIcon} alt="star4" />
-                <img loading="lazy" src={EmptyStarIcon} alt="star5" />
-              </div>
+              <StarRating
+                rating={movie.star_rating}
+                full_star={movie.full_star}
+                half_star={movie.half_star}
+                empty_star={movie.empty_star}
+              />
               <h2>{movie.name}</h2>
               <p className={`${styles.paragraph} ${styles.movieCard}`}>
                 {movie.availability}

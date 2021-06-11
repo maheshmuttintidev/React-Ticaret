@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0 33px;
+  margin: 0 0 64px;
+}
+.wrapper > *:not(:nth-child(2)) {
+  position: relative;
+  top: 22px;
+}
+.datesWrapper {
+  display: flex;
+  gap: 0 33px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.datesWrapper > *:not(:nth-child(2)) {
+  margin-top: 70px;
+  font-size: 13px;
+}
+
+.datesWrapper > *:not(:nth-child(2))::after {
+  top: calc(100% + 5px);
+}
+
+.datesWrapper > *:nth-child(2) {
+  font-size: 20px;
+  margin-top: 38px;
+}

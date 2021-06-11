@@ -9,7 +9,11 @@
 
 .movieDetails {
   width: 305px;
-  margin: 1.6rem 0;
+  margin: -1rem 0 2rem 0;
+}
+
+.movieDetails > * {
+  margin-top: 0.6rem !important;
 }
 
 .paragraph.movieCard {

@@ -5,14 +5,14 @@
 
 .movieDetails {
   width: 305px;
-  margin: 1.6rem 0;
+  margin: -1.6rem 0 1.6rem;
 }
 
 .paragraph.movieCard {
   font-family: "Caros Regular";
   font-size: var(--font-size, 16px) !important;
   margin: 0.5rem 0;
-  opacity: 0.51;
+  color: var(--hero-text-color);
 }
 
 .starsWrapper > img {
@@ -21,10 +21,15 @@
 
 .flexRow {
   display: flex;
+  align-items: center;
   gap: 2rem;
   width: max-content;
+  color: var(--hero-text-color);
 }
 
+.flexRow > * {
+  color: var(--hero-text-color);
+}
 .flexRow img {
   margin-right: 0.5rem;
 }

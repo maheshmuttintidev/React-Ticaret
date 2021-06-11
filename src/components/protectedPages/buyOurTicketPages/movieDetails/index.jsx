@@ -6,6 +6,7 @@ import MovieDetailsHeroSection from "./heroSection"
 import Header from "../../ticaretorPage/header"
 import Footer from "../../ticaretorPage/footer"
 import styles from "./index.module.css"
+import TheatersSection from "./theatersSection"
 
 export default function MovieDetails() {
   const { moviename } = useParams()
@@ -33,6 +34,9 @@ export default function MovieDetails() {
           key={movieDetails?.id}
           movieDetails={movieDetails}
         />
+      </section>
+      <section className={styles.theatersSection}>
+        <TheatersSection />
       </section>
       <Footer />
     </>

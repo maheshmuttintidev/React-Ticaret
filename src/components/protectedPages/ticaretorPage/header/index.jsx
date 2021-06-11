@@ -18,6 +18,8 @@ import style from "./index.module.css"
 const Menu = ({ fullName }) => {
   const dispatch = useDispatch()
   const history = useHistory()
+  const profileIcon = JSON.parse(sessionStorage.getItem("userData")).imageUrl
+  console.log(profileIcon)
   return (
     <>
       <div className={style.overlayFixed}>
@@ -35,10 +37,11 @@ const Menu = ({ fullName }) => {
               }}
             >
               <img
-                src={ProfileIcon}
+                src={profileIcon ? profileIcon : ProfileIcon}
                 style={{
-                  width: "19px",
+                  width: profileIcon ? "27px" : "19px",
                   margin: "auto",
+                  borderRadius: "50%",
                 }}
                 alt="profile-avatar"
               />

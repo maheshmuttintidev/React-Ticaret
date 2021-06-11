@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { BASE_URI_PRODUCTION } from './uris'
+import { BASE_URI_DEV } from './uris'
 
 export const getMoviesResponse = async () => {
     try {
-        return await axios.get(`${BASE_URI_PRODUCTION}movies-list`)
+        return await axios.get(`${BASE_URI_DEV}movies-list`)
     } catch (e) {
         return
     }
