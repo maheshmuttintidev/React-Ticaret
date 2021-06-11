@@ -1,0 +1,43 @@
+.moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.movieCardContainer {
+  display: flex;
+  flex: 1 1 auto;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.card {
+  height: 428px;
+  width: 305px;
+  background-color: var(--gray-bg-color);
+}
+
+.stars {
+  width: 250px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}
+
+.textSmall {
+  width: 200px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}
+
+.textMedium {
+  width: 250px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}
+
+.textLong {
+  width: 290px;
+  height: 2rem;
+  background-color: var(--gray-bg-color);
+}

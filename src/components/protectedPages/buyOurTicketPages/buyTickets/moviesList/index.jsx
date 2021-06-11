@@ -3,7 +3,7 @@ import { getMoviesList } from "../../../../../redux/actions/movies.actions"
 import { useDispatch, useSelector } from "react-redux"
 import styles from "./index.module.css"
 import MovieCard from "../movieCard"
-import TicaretMovieCardsContainerUI from "../../../../fallbackUIs/moviesListContainerUI"
+import MoviesListUI from "../../../../fallbackUIs/moviesListUI"
 
 export default function MoviesList() {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ export default function MoviesList() {
   if (isLoading) {
     return (
       <div style={{ margin: "0 3.2rem" }}>
-        <TicaretMovieCardsContainerUI />
+        <MoviesListUI />
       </div>
     )
   } else {
