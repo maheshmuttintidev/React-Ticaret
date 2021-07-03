@@ -14,8 +14,8 @@
     "font-awesome": "^4.7.0",
     "prop-types": "^15.7.2",
     "query-string": "^4.3.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0-alpha-a0d2d1e1e",
+    "react-dom": "^18.0.0-alpha-a0d2d1e1e",
     "react-google-login": "^5.2.2",
     "react-hook-form": "^7.8.3",
     "react-icons": "^4.2.0",
@@ -36,7 +36,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCE_MAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
